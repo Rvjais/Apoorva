@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <title>Doctor portrait placeholder</title>
+  <rect width="800" height="1000" fill="#dce7de"/>
+  <ellipse cx="400" cy="490" rx="278" ry="338" fill="#edf1e8"/>
+  <ellipse cx="400" cy="490" rx="300" ry="364" fill="none" stroke="#89a798" stroke-opacity=".4"/>
+  <path d="M256 441c-32-182 23-269 145-269 121 0 177 102 147 269l-28 71H281Z" fill="#3c5b50"/>
+  <path d="M177 939c0-192 43-349 148-367h150c110 18 150 175 150 367Z" fill="#fffaf2"/>
+  <path d="M348 509h104v118c-27 31-74 31-104 0Z" fill="#d2b59e"/>
+  <ellipse cx="400" cy="381" rx="105" ry="143" fill="#ddc1aa"/>
+  <path d="M286 341c-6-125 57-175 119-175 100 0 154 81 136 180-65-32-83-57-114-94-32 58-79 82-141 89Z" fill="#3c5b50"/>
+  <path d="m325 572 75 78-95 71-35-133M475 572l-75 78 95 71 35-133" fill="#e3ebe2"/>
+  <path d="M400 650v289M290 795h74" fill="none" stroke="#9ab2a2" stroke-width="3"/>
+  <circle cx="400" cy="761" r="6" fill="#9ab2a2"/><circle cx="400" cy="825" r="6" fill="#9ab2a2"/>
+  <text x="400" y="965" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#57776b">PORTRAIT PLACEHOLDER</text>
+</svg>
