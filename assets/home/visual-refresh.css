@@ -1,0 +1,2629 @@
+/* The compositions highlighted by the user: Clinic Dermatech's rounded banner,
+   Garekars' 2/3/2 photo tiles and blurred booking backdrop, and Dr. Anwesha's
+   staggered, numbered treatment cards. Colors follow the supplied Skinic logo. */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+:root {
+  --ink: #282720;
+  --muted: #776f63;
+  --cream: #f6f1ea;
+  --sage: #eae1d5;
+  --line: #d9cdbb;
+  --accent: #987636;
+  --width: 1280px;
+}
+body {
+  background: var(--cream);
+}
+.container {
+  width: min(var(--width), calc(100% - 80px));
+}
+.section {
+  padding-block: 85px;
+}
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.button {
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  min-height: 48px;
+  padding: 14px 25px;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #42352120;
+}
+.eyebrow {
+  letter-spacing: 2.6px;
+  font-size: 10px;
+}
+html {
+  scroll-padding-top: 115px;
+}
+
+/* Layered navigation, with the original logo set on its own charcoal plaque. */
+.topbar {
+  background: #675a45;
+  color: #fffaf1;
+  border: 0;
+  font-size: 10px;
+}
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 8px;
+  gap: 20px;
+}
+.topbar p {
+  font-size: 10px;
+}
+.topbar p span {
+  color: #eee2cc;
+}
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.topbar .top-instagram {
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: 1px solid #cfc1a388;
+  margin: 0;
+}
+.topbar .top-instagram svg {
+  width: 12px;
+  height: 12px;
+}
+.site-header {
+  background: #ece4d8;
+  color: var(--ink);
+  border-bottom: 1px solid #d8cdbc;
+  box-shadow: none;
+  z-index: 40;
+}
+.header-inner {
+  height: 96px;
+  gap: 28px;
+  justify-content: space-between;
+}
+.site-header .brand {
+  width: 138px;
+  background: #25241f;
+  border-radius: 8px;
+}
+.site-header .brand > img {
+  width: 135.72%;
+  left: -17.65%;
+  top: -25.1%;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: var(--ink);
+  font-size: 12px;
+  text-transform: none;
+  font-weight: 650;
+  margin-left: auto;
+}
+.desktop-nav > a {
+  padding-block: 20px;
+}
+.desktop-nav a:first-child,
+.desktop-nav a:hover {
+  color: var(--ink);
+}
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+  padding-block: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.nav-dropdown summary > span {
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+.nav-dropdown[open] summary > span {
+  transform: rotate(45deg);
+}
+.nav-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: -22px;
+  width: 275px;
+  background: #fffaf2;
+  box-shadow: 0 12px 35px #2b221920;
+  border: 1px solid #ddd0bb;
+  border-radius: 15px;
+  padding: 18px 20px;
+}
+.nav-panel > p {
+  margin: 0 0 10px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: #907744;
+}
+.nav-panel > button,
+.nav-panel > a {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  width: 100%;
+  background: transparent;
+  padding: 12px 0;
+  border-top: 1px solid #e7ddcf;
+  font:
+    500 12px "Manrope",
+    sans-serif;
+  text-align: left;
+  color: var(--ink);
+}
+.nav-panel > button:hover,
+.nav-panel > a:hover {
+  color: #987636;
+}
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+.header-phone svg {
+  width: 25px;
+  height: 25px;
+}
+.header-phone small {
+  display: block;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.header-phone strong {
+  font-size: 16px;
+  color: #91753d;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+.header-actions {
+  gap: 10px;
+}
+.header-actions .button {
+  border-radius: 999px;
+  text-transform: none;
+  font-size: 11px;
+  letter-spacing: 0.1px;
+  min-height: 46px;
+  padding-inline: 20px;
+  white-space: nowrap;
+}
+.menu-toggle {
+  color: var(--ink);
+  border: 1px solid #b09b71;
+  border-radius: 50%;
+}
+.mobile-nav {
+  background: #ece4d8;
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+  padding: 15px 25px 24px;
+}
+.mobile-nav a {
+  color: var(--ink);
+  border-color: #d8cdbc;
+}
+
+/* Clinic Dermatech's wide, rounded campaign banner and left social rail. */
+.campaign-shell {
+  position: relative;
+  padding: 15px 40px 0 110px;
+}
+.social-rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #d6c8b4;
+  border-top: 0;
+  border-radius: 0 0 30px 0;
+  padding: 24px 10px;
+}
+.social-rail a {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 12px;
+  font-weight: 650;
+}
+.social-rail .rail-talk {
+  padding: 17px 12px;
+  background: #fffaf2;
+  border-radius: 999px;
+  box-shadow: 0 2px 13px #3b2d1a0b;
+}
+.campaign-hero {
+  position: relative;
+  height: clamp(510px, 37.8vw, 660px);
+  overflow: hidden;
+  border-radius: 30px;
+  background: #3e3024;
+  isolation: isolate;
+}
+.campaign-slides,
+.campaign-slide {
+  position: absolute;
+  inset: 0;
+}
+.campaign-slide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+.campaign-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 1;
+}
+.campaign-image {
+  position: absolute;
+  inset: 0 0 0 30%;
+  overflow: hidden;
+}
+.campaign-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 38%;
+}
+.campaign-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #3e3024 0%,
+    #3e3024 35%,
+    #3e3024c9 46%,
+    #3e30244a 61%,
+    #3e302412 76%
+  );
+  pointer-events: none;
+}
+.campaign-copy {
+  position: relative;
+  z-index: 2;
+  width: 57%;
+  height: 100%;
+  padding: clamp(38px, 4vw, 72px) clamp(35px, 4.8vw, 85px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff8e8;
+}
+.campaign-copy .eyebrow {
+  color: #e2c792;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  white-space: nowrap;
+}
+.campaign-copy .eyebrow span {
+  color: #d6c2a7;
+  letter-spacing: 0.8px;
+}
+.campaign-title {
+  font:
+    400 clamp(38px, 3.7vw, 70px)/1.1 "Gilda Display",
+    Georgia,
+    serif;
+  letter-spacing: -1.6px;
+  margin: 0 0 23px;
+  color: #fff7e9;
+}
+.campaign-title em {
+  color: #e2ba74;
+  font:
+    italic 400 clamp(57px, 5.2vw, 100px)/1.2 "Gilda Display",
+    Georgia,
+    serif;
+  letter-spacing: -2.5px;
+}
+.campaign-description {
+  max-width: 430px;
+  color: #eee0cb;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0 0 25px;
+}
+.campaign-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 17px;
+}
+.campaign-actions .button {
+  background: #dec291;
+  border-color: #dec291;
+  color: #322619;
+  font-size: 9px;
+  padding-inline: 19px;
+  min-height: 43px;
+  letter-spacing: 0.8px;
+  gap: 14px;
+}
+.campaign-actions .button:hover {
+  background: #efdab2;
+}
+.campaign-secondary {
+  font-size: 10px;
+  color: #fff4df;
+  padding-block: 10px;
+  border-bottom: 1px solid #b99c69;
+}
+.campaign-secondary span {
+  padding-left: 12px;
+}
+.campaign-doctor {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-top: 32px;
+  font-size: 11px;
+  color: #fff4df;
+}
+.campaign-doctor small {
+  display: block;
+  color: #d0baa0;
+  font-size: 8px;
+  line-height: 1.6;
+  margin-top: 3px;
+  letter-spacing: 0.2px;
+}
+.campaign-seal {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #b1986e;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font:
+    14px "Gilda Display",
+    Georgia,
+    serif;
+  color: #e2ba74;
+}
+.campaign-credit {
+  position: absolute;
+  right: 19px;
+  bottom: 12px;
+  z-index: 3;
+  color: #fff7e7;
+  background: #30261999;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 8px;
+}
+.campaign-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 8px 0;
+  gap: 20px;
+}
+.campaign-dots {
+  display: flex;
+  align-items: center;
+  background: #ffffff8a;
+  padding: 4px 9px;
+  border-radius: 999px;
+}
+.campaign-dots button {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  background: transparent;
+  border: 0;
+  min-width: 20px;
+  min-height: 20px;
+}
+.campaign-dots span {
+  width: 6px;
+  height: 6px;
+  background: #c9c0b4;
+  border-radius: 50%;
+  transition:
+    width 0.3s,
+    background 0.3s;
+}
+.campaign-dots button[aria-pressed="true"] span {
+  width: 17px;
+  border-radius: 20px;
+  background: #6c5940;
+}
+.campaign-label {
+  font-size: 10px;
+  color: #8a7860;
+  margin: 0 auto 0 0;
+}
+.campaign-label span {
+  color: #978b79;
+}
+.campaign-arrows {
+  display: flex;
+  gap: 7px;
+}
+.campaign-arrows button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c4b69d;
+  border-radius: 50%;
+  background: transparent;
+  color: #7f6a43;
+  font-size: 17px;
+  display: grid;
+  place-items: center;
+}
+.campaign-arrows #hero-pause {
+  font-size: 12px;
+}
+.skinic-advantage {
+  padding-block: 35px 50px;
+  border-bottom: 1px solid #d7cbb7;
+}
+.skinic-advantage > h2 {
+  text-align: center;
+  font:
+    600 clamp(27px, 3vw, 48px)/1.25 "Playfair Display",
+    Georgia,
+    serif;
+  color: #948365;
+  margin: 0 0 28px;
+}
+.advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.advantage-item {
+  text-align: center;
+  padding: 0 15px;
+}
+.advantage-item + .advantage-item {
+  border-left: 1px solid #d9cdbb;
+}
+.advantage-item > strong {
+  display: block;
+  font:
+    400 55px/1.1 "Manrope",
+    sans-serif;
+  letter-spacing: -4px;
+  color: #a18b60;
+  min-height: 61px;
+}
+.advantage-item .count-plus {
+  font-size: 34px;
+}
+.advantage-item > svg {
+  width: 47px;
+  height: 61px;
+  color: #a18b60;
+}
+.advantage-item p {
+  color: #665b47;
+  font-weight: 650;
+  font-size: 11px;
+  margin: 12px 0 5px;
+}
+.advantage-item small {
+  font-size: 9px;
+  color: #8a7c65;
+}
+
+/* A considered clinician introduction, and practical concern navigation. */
+#doctor {
+  padding-block: 75px;
+}
+.doctor-grid {
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 75px;
+  align-items: center;
+}
+.doctor-identity {
+  max-width: 460px;
+  margin: 0;
+}
+.doctor-identity > img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.doctor-nameplate {
+  border-radius: 13px;
+  box-shadow: 0 8px 25px #493e2412;
+  left: 22px;
+  right: -20px;
+  bottom: 35px;
+  padding: 20px 25px;
+}
+.doctor-nameplate h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+.doctor-copy h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  text-transform: none;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.doctor-copy > p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.doctor-background-disclosure {
+  margin-top: 30px;
+  border-radius: 10px;
+}
+#concerns {
+  padding-top: 55px;
+  padding-bottom: 70px;
+}
+#concerns .section-heading h2 {
+  font-size: 40px;
+}
+.concern-options {
+  gap: 8px;
+}
+.concern-option {
+  border-radius: 8px;
+}
+.care-panel {
+  border-radius: 18px;
+  background: #eee5d7;
+  border: 1px solid #dbcfba;
+  padding: 35px;
+}
+.care-panel h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* Garekars' photographic overlay tiles: two wide, three narrow, two wide. */
+.service-mosaic-section {
+  background: #f9f5ee;
+  border-top: 1px solid #e6dbca;
+}
+.mosaic-heading {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  column-gap: 80px;
+  align-items: end;
+  margin: 0 0 38px;
+}
+.mosaic-heading > .eyebrow {
+  grid-column: 1/-1;
+  margin-bottom: 18px;
+}
+.mosaic-heading h2 {
+  font:
+    500 44px/1.18 "Playfair Display",
+    Georgia,
+    serif;
+  margin: 0;
+}
+.mosaic-heading h2 em {
+  font-style: normal;
+  color: #a28a5a;
+}
+.mosaic-heading > p:last-child {
+  font-size: 12px;
+  line-height: 1.9;
+  max-width: 420px;
+  color: var(--muted);
+  padding-bottom: 5px;
+}
+.service-mosaic {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+}
+.mosaic-tile {
+  position: relative;
+  grid-column: span 2;
+  display: block;
+  border: 0;
+  background: #5e493a;
+  padding: 0;
+  text-align: left;
+  color: white;
+  overflow: hidden;
+  border-radius: 3px;
+  min-width: 0;
+}
+.mosaic-wide {
+  grid-column: span 3;
+}
+.mosaic-tile .position-re {
+  height: 315px;
+  position: relative;
+  overflow: hidden;
+}
+.mosaic-wide .position-re {
+  height: 290px;
+}
+.mosaic-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.mosaic-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    #30271b1a 45%,
+    #20190dc4 100%
+  );
+  pointer-events: none;
+}
+.mosaic-tile .con {
+  position: absolute;
+  z-index: 1;
+  bottom: 22px;
+  left: 24px;
+  right: 24px;
+  transition: transform 0.4s ease;
+}
+.mosaic-tile .con p {
+  color: #fff3d9;
+  font-size: 8px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+.mosaic-tile h3 {
+  font:
+    400 27px/1.2 "Gilda Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.3px;
+  color: white;
+  margin-bottom: 11px;
+}
+.mosaic-tile .line {
+  height: 1px;
+  width: 45px;
+  background: #fff7e3aa;
+  transition: width 0.45s;
+}
+.mosaic-discover {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.4s,
+    opacity 0.4s,
+    margin 0.4s;
+}
+.mosaic-discover > span {
+  font-size: 18px;
+  line-height: 1;
+}
+.mosaic-tile:hover img,
+.mosaic-tile:focus-visible img {
+  transform: scale(1.055);
+}
+.mosaic-tile:hover .line,
+.mosaic-tile:focus-visible .line {
+  width: 100%;
+}
+.mosaic-tile:hover .mosaic-discover,
+.mosaic-tile:focus-visible .mosaic-discover {
+  max-height: 25px;
+  opacity: 1;
+  margin-top: 14px;
+}
+.mosaic-directory-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 45px;
+  margin-top: 28px;
+}
+
+/* Dr. Anwesha's alternating tall/short photograph cards with oversized numerals. */
+#treatments {
+  background: #fdfaf5;
+  padding-block: 80px;
+}
+#treatments > .container {
+  width: min(1740px, calc(100% - 80px));
+}
+#treatments .section-heading {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+#treatments-title {
+  font:
+    500 40px/1.2 "Playfair Display",
+    Georgia,
+    serif;
+}
+#treatments-title em {
+  color: #a18b60;
+  font-style: normal;
+}
+#treatments .section-heading > p {
+  font-size: 12px;
+  max-width: 500px;
+}
+.reference-gallery {
+  margin-top: 38px;
+}
+.gallery-toolbar {
+  max-width: 1280px;
+  margin: 0 auto 27px;
+}
+.gallery-tabs button {
+  padding: 11px 22px;
+  font-size: 11px;
+  border-radius: 999px;
+}
+.gallery-tabs button[aria-pressed="true"] {
+  background: #e8ddc7;
+  color: #3d3322;
+}
+.gallery-track {
+  gap: 34px;
+  padding-bottom: 22px;
+  align-items: start;
+}
+.gallery-slide {
+  flex-basis: calc((100% - 102px) / 4);
+}
+.gallery-photo {
+  height: auto;
+  aspect-ratio: 0.8;
+  border-radius: 0;
+  position: relative;
+}
+.gallery-slide:nth-child(even) .gallery-photo {
+  aspect-ratio: 1;
+}
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+.procedure-photo-arrow {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff8e6e3;
+  font-size: 22px;
+  color: #54401c;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+.gallery-card:hover .procedure-photo-arrow,
+.gallery-card:focus-visible .procedure-photo-arrow {
+  opacity: 1;
+  transform: none;
+}
+.gallery-card-copy {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 16px;
+  margin-top: 25px;
+}
+.gallery-number {
+  font:
+    700 clamp(55px, 5vw, 94px)/0.95 "Manrope",
+    sans-serif;
+  letter-spacing: -5px;
+  color: #e7d6b8;
+}
+.gallery-card-text {
+  padding-top: 6px;
+}
+.gallery-card h3 {
+  font:
+    700 clamp(10px, 0.9vw, 15px)/1.5 "Manrope",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  margin-bottom: 10px;
+}
+.gallery-card p {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #857864;
+}
+.gallery-caption {
+  max-width: 1280px;
+  margin: 10px auto 0;
+}
+.service-directory {
+  max-width: 1280px;
+  margin: 38px auto 0;
+  border: 1px solid #ddcfb8;
+  border-radius: 13px;
+  background: #f6f0e5;
+  overflow: hidden;
+}
+.service-directory > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  padding: 24px 28px;
+  cursor: pointer;
+}
+.service-directory > summary::-webkit-details-marker {
+  display: none;
+}
+.service-directory > summary strong {
+  display: block;
+  font:
+    500 23px "Playfair Display",
+    Georgia,
+    serif;
+  color: #5e4c2b;
+}
+.service-directory > summary small {
+  display: block;
+  font-size: 10px;
+  color: #857864;
+  margin-top: 6px;
+}
+.directory-toggle {
+  font-size: 27px;
+  font-weight: 300;
+  color: #967a43;
+  transition: transform 0.3s;
+}
+.service-directory[open] .directory-toggle {
+  transform: rotate(45deg);
+}
+.directory-body {
+  padding: 5px 28px 26px;
+}
+.directory-body .directory-heading {
+  display: none;
+}
+.directory-body .treatment-toolbar {
+  margin-top: 12px;
+}
+.directory-body .treatment-card {
+  background: #fdfaf4;
+}
+
+/* Keep the selected split panel and Isya consultation collage in the same palette. */
+.reference-why {
+  margin: 0;
+}
+.why-copy {
+  background: #b89855;
+}
+.why-copy h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 40px;
+}
+.why-photo {
+  border: 0;
+}
+.why-photo-cta {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.reference-visit {
+  background: #eae0ce;
+}
+.visit-copy h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 31px;
+}
+.visit-copy {
+  border-radius: 18px;
+  background: #fefbf5;
+}
+.visit-photo-column > div {
+  border-radius: 6px;
+}
+.social-section {
+  background: #f9f5ee;
+}
+.social-link {
+  border-radius: 12px;
+  background: #efe6d8;
+}
+.faq-section {
+  background: #eae1d5;
+}
+.faq-item {
+  border-color: #d4c5ad;
+}
+
+/* Garekars' blurred background and translucent booking panel. */
+.appointment-backdrop {
+  position: relative;
+  padding: 85px 0;
+  color: #fff8e8;
+  background: #4d3d29;
+  overflow: hidden;
+  isolation: isolate;
+}
+.appointment-background {
+  position: absolute;
+  inset: -25px;
+  z-index: -2;
+}
+.appointment-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(7px) brightness(0.55) sepia(0.3);
+  transform: scale(1.06);
+}
+.appointment-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, #352411aa, #4b38145c 45%, #1e191bc7);
+  z-index: -1;
+}
+.appointment-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+  max-width: 1150px;
+}
+.appointment-glass {
+  background: #ad8b4d63;
+  border: 1px solid #f3dfa43a;
+  padding: 35px;
+  backdrop-filter: blur(10px);
+  border-radius: 3px;
+}
+.appointment-glass .eyebrow,
+.appointment-location .eyebrow {
+  color: #edd4a2;
+}
+.appointment-glass h2 {
+  font:
+    400 35px/1.2 "Gilda Display",
+    Georgia,
+    serif;
+  color: #fff8e8;
+  margin: 0 0 15px;
+  letter-spacing: -0.7px;
+}
+.appointment-intro {
+  color: #e7d9c0;
+  font-size: 11px;
+  margin-bottom: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f4e4c166;
+}
+.appointment-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px 18px;
+}
+.appointment-field {
+  display: block;
+  font-size: 11px;
+  font-weight: 650;
+  color: #fff5e2;
+}
+.appointment-field > span {
+  color: #ead198;
+}
+.appointment-field > small {
+  color: #e0cfae;
+  font-size: 8px;
+  font-weight: 400;
+}
+.appointment-field input,
+.appointment-field select {
+  width: 100%;
+  display: block;
+  min-width: 0;
+  height: 39px;
+  border: 0;
+  border-bottom: 1px solid #e9dbbfaa;
+  color: #fff9ea;
+  background: transparent;
+  border-radius: 0;
+  padding: 5px 0;
+  font:
+    400 13px "Manrope",
+    sans-serif;
+  outline-offset: 4px;
+  color-scheme: dark;
+  margin-top: 7px;
+}
+.appointment-field select {
+  padding-right: 13px;
+}
+.appointment-field option {
+  background: #fffaf0;
+  color: #322a1c;
+}
+.appointment-field input:focus,
+.appointment-field select:focus {
+  border-bottom-color: #fffaf0;
+}
+.appointment-field.field-full {
+  grid-column: 1/-1;
+}
+.appointment-glass .button {
+  border-radius: 0;
+  margin-top: 26px;
+  padding-inline: 20px;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  background: #d7b575;
+  border-color: #d7b575;
+  color: #312517;
+}
+.appointment-form-note {
+  font-size: 9px;
+  line-height: 1.7;
+  color: #e1d1b5;
+  margin: 15px 0 0;
+  max-width: 360px;
+}
+.appointment-location h3 {
+  font:
+    400 44px/1.15 "Gilda Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.8px;
+  margin: 0 0 22px;
+}
+.appointment-location h3 em {
+  color: #dec08b;
+  font-style: normal;
+}
+.appointment-location > p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #e3d6bd;
+  max-width: 430px;
+}
+.location-panel {
+  display: flex;
+  gap: 17px;
+  margin-block: 30px;
+  padding-block: 22px;
+  border-block: 1px solid #d6c19866;
+}
+.location-panel > svg {
+  width: 27px;
+  height: 27px;
+  color: #e9c889;
+}
+.location-panel small {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  color: #dec494;
+  margin-bottom: 10px;
+}
+.location-panel address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.location-panel a {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 10px;
+  border-bottom: 1px solid #d2b87f;
+  padding-bottom: 3px;
+}
+.appointment-phone {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font:
+    400 26px/1.5 "Gilda Display",
+    Georgia,
+    serif;
+  color: #ecd2a1;
+}
+.appointment-phone svg {
+  width: 24px;
+  height: 24px;
+}
+.appointment-phone small {
+  display: block;
+  font:
+    10px "Manrope",
+    sans-serif;
+  color: #e3d6bd;
+  margin-bottom: 6px;
+}
+.appointment-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 35px;
+  font-size: 12px;
+  margin-top: 22px;
+  color: #fff8e8;
+}
+.appointment-preparation {
+  margin-top: 25px;
+  padding: 20px;
+  background: #33291f44;
+  border: 1px solid #b2996866;
+}
+.appointment-preparation strong {
+  font-size: 11px;
+  font-weight: 650;
+}
+.appointment-preparation p {
+  font-size: 10px;
+  color: #e3d6bd;
+  line-height: 1.8;
+  margin-top: 7px;
+}
+.appointment-image-credit {
+  position: absolute;
+  right: 24px;
+  bottom: 14px;
+  font-size: 8px;
+  color: #e0d4bf;
+}
+.footer {
+  background: #25231d;
+}
+.mobile-care-bar > button {
+  border-radius: 999px;
+}
+
+/* Visible motion: hero entrances, photo drift, and staggered scroll reveals.
+   Content is fully visible if JavaScript is unavailable. */
+@keyframes banner-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.055);
+  }
+}
+@keyframes banner-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.campaign-slide.is-active .campaign-image img {
+  animation: banner-drift 10s ease-out both;
+}
+.campaign-slide.is-active .campaign-copy .eyebrow {
+  animation: banner-enter 0.75s 0.15s both;
+}
+.campaign-slide.is-active .campaign-title {
+  animation: banner-enter 0.95s 0.25s both;
+}
+.campaign-slide.is-active .campaign-description {
+  animation: banner-enter 0.95s 0.4s both;
+}
+.campaign-slide.is-active .campaign-actions {
+  animation: banner-enter 0.95s 0.55s both;
+}
+.campaign-slide.is-active .campaign-doctor {
+  animation: banner-enter 0.95s 0.7s both;
+}
+.motion-ready [data-reveal] {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion-ready [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.motion-ready [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+.campaign-hero:has(:focus-visible) {
+  outline: 2px solid #b08a39;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1800px) {
+  .campaign-shell {
+    padding: 16px 80px 0 150px;
+  }
+  .campaign-copy {
+    width: 55%;
+  }
+}
+@media (max-width: 1200px) {
+  .header-inner {
+    gap: 20px;
+  }
+  .desktop-nav {
+    gap: 23px;
+    font-size: 11px;
+  }
+  .header-phone {
+    display: none;
+  }
+  .campaign-shell {
+    padding-left: 85px;
+    padding-right: 30px;
+  }
+  .social-rail {
+    width: 54px;
+    height: 565px;
+  }
+  .campaign-copy {
+    width: 65%;
+    padding: 40px;
+  }
+  .campaign-title {
+    font-size: 44px;
+  }
+  .campaign-title em {
+    font-size: 66px;
+  }
+  .campaign-actions {
+    gap: 13px;
+  }
+  .campaign-description {
+    max-width: 370px;
+  }
+  .campaign-image {
+    left: 30%;
+  }
+  .campaign-doctor {
+    margin-top: 23px;
+  }
+  .doctor-grid {
+    gap: 45px;
+  }
+  .gallery-track {
+    gap: 26px;
+  }
+  .gallery-slide {
+    flex-basis: calc((100% - 52px) / 3);
+  }
+  .gallery-card-copy {
+    gap: 13px;
+  }
+  .gallery-card h3 {
+    font-size: 11px;
+  }
+  .appointment-layout {
+    gap: 50px;
+  }
+}
+@media (max-width: 950px) {
+  .desktop-nav {
+    display: none;
+  }
+  .header-phone {
+    display: flex;
+    margin-left: auto;
+  }
+  .site-header .brand {
+    width: 126px;
+  }
+  .header-inner {
+    height: 90px;
+  }
+  .menu-toggle {
+    display: grid;
+    width: 37px;
+    height: 37px;
+  }
+  .campaign-shell {
+    padding: 17px 30px 0;
+  }
+  .social-rail {
+    display: none;
+  }
+  .campaign-hero {
+    height: 510px;
+  }
+  .campaign-copy {
+    padding: 35px;
+    width: 70%;
+  }
+  .campaign-copy .eyebrow span {
+    display: block;
+    margin-top: 7px;
+  }
+  .campaign-copy .eyebrow {
+    margin-bottom: 20px;
+  }
+  .campaign-title {
+    font-size: 39px;
+  }
+  .campaign-title em {
+    font-size: 59px;
+  }
+  .campaign-description {
+    max-width: 330px;
+    font-size: 11px;
+  }
+  .campaign-doctor {
+    margin-top: 23px;
+  }
+  .campaign-label {
+    font-size: 9px;
+  }
+  .campaign-label span {
+    display: none;
+  }
+  .container {
+    width: calc(100% - 60px);
+  }
+  .skinic-advantage > h2 {
+    font-size: 34px;
+  }
+  .advantage-item > strong {
+    font-size: 46px;
+  }
+  .advantage-item p {
+    font-size: 10px;
+  }
+  .advantage-item small {
+    font-size: 8px;
+  }
+  .mosaic-heading {
+    column-gap: 35px;
+  }
+  .mosaic-heading h2 {
+    font-size: 37px;
+  }
+  .mosaic-tile .position-re {
+    height: 280px;
+  }
+  .mosaic-wide .position-re {
+    height: 255px;
+  }
+  .mosaic-tile .con {
+    left: 18px;
+    right: 18px;
+  }
+  .mosaic-tile h3 {
+    font-size: 24px;
+  }
+  .mosaic-tile .con p {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+  .service-mosaic {
+    gap: 16px;
+  }
+  #treatments > .container {
+    width: calc(100% - 60px);
+  }
+  .appointment-layout {
+    gap: 35px;
+  }
+  .appointment-glass {
+    padding: 28px;
+  }
+  .appointment-location h3 {
+    font-size: 35px;
+  }
+  .appointment-fields {
+    gap: 20px 13px;
+  }
+}
+@media (max-width: 700px) {
+  .section {
+    padding-block: 55px;
+  }
+  .topbar .container {
+    width: calc(100% - 36px);
+    padding-block: 7px;
+  }
+  .topbar p {
+    font-size: 8px;
+  }
+  .topbar p span {
+    display: none;
+  }
+  .top-links {
+    gap: 15px;
+  }
+  .top-links > a:not(.top-instagram) {
+    display: none;
+  }
+  .topbar .top-instagram {
+    width: 18px;
+    height: 18px;
+  }
+  .container {
+    width: calc(100% - 40px);
+  }
+  .header-inner {
+    height: 81px;
+    gap: 15px;
+    width: calc(100% - 36px);
+  }
+  .site-header .brand {
+    width: 113px;
+  }
+  .header-phone {
+    display: none;
+  }
+  .header-actions {
+    margin-left: auto;
+    gap: 9px;
+  }
+  .header-actions .button {
+    font-size: 10px;
+    min-height: 41px;
+    padding: 12px 16px;
+  }
+  .menu-toggle {
+    width: 35px;
+    height: 35px;
+  }
+  .campaign-shell {
+    padding: 14px 18px 0;
+  }
+  .campaign-hero {
+    height: 600px;
+    border-radius: 23px;
+  }
+  .campaign-copy {
+    width: 100%;
+    padding: 31px 27px;
+    justify-content: flex-end;
+  }
+  .campaign-image {
+    inset: 0;
+  }
+  .campaign-image img {
+    object-position: 40% 28%;
+  }
+  .campaign-slide::after {
+    background: linear-gradient(
+      180deg,
+      #3e302426 0%,
+      #3e302475 28%,
+      #3e3024f0 48%,
+      #3e3024 100%
+    );
+  }
+  .campaign-copy .eyebrow {
+    margin-bottom: 15px;
+    font-size: 8px;
+  }
+  .campaign-copy .eyebrow span {
+    display: inline;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  .campaign-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+    letter-spacing: -1.1px;
+  }
+  .campaign-title em {
+    font-size: 53px;
+    letter-spacing: -2px;
+  }
+  .campaign-description {
+    max-width: 390px;
+    font-size: 11px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .campaign-actions {
+    gap: 8px 15px;
+  }
+  .campaign-actions .button {
+    font-size: 8px;
+    padding-inline: 18px;
+    min-height: 40px;
+  }
+  .campaign-secondary {
+    font-size: 9px;
+  }
+  .campaign-doctor {
+    margin-top: 19px;
+  }
+  .campaign-doctor small {
+    font-size: 7px;
+  }
+  .campaign-seal {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+  .campaign-credit {
+    right: 10px;
+    bottom: 7px;
+    font-size: 6px;
+  }
+  .campaign-controls {
+    gap: 11px;
+    padding-top: 13px;
+  }
+  .campaign-label {
+    display: none;
+  }
+  .campaign-arrows {
+    margin-left: auto;
+  }
+  .skinic-advantage {
+    padding-block: 30px 35px;
+  }
+  .skinic-advantage > h2 {
+    font-size: 28px;
+    margin-bottom: 27px;
+  }
+  .advantage-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 0;
+  }
+  .advantage-item {
+    padding-inline: 10px;
+  }
+  .advantage-item:nth-child(3) {
+    border-left: 0;
+  }
+  .advantage-item > strong {
+    font-size: 47px;
+    min-height: 52px;
+  }
+  .advantage-item > svg {
+    height: 45px;
+    width: 35px;
+  }
+  .advantage-item p {
+    font-size: 10px;
+  }
+  #doctor {
+    padding-block: 50px;
+  }
+  .doctor-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .doctor-identity {
+    max-width: none;
+  }
+  .doctor-identity > img {
+    height: 310px;
+  }
+  .doctor-nameplate {
+    right: 16px;
+    left: 16px;
+    bottom: 35px;
+    padding: 18px 23px;
+  }
+  .doctor-copy h2 {
+    font-size: 35px;
+  }
+  #concerns {
+    padding-block: 35px 55px;
+  }
+  #concerns .section-heading h2 {
+    font-size: 34px;
+  }
+  .care-panel {
+    padding: 27px;
+  }
+  .mosaic-heading {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    margin-bottom: 27px;
+  }
+  .mosaic-heading > .eyebrow {
+    margin-bottom: 0;
+  }
+  .mosaic-heading h2 {
+    font-size: 35px;
+  }
+  .mosaic-heading > p:last-child {
+    font-size: 11px;
+    padding: 0;
+  }
+  .service-mosaic {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .mosaic-tile,
+  .mosaic-wide {
+    grid-column: span 1;
+  }
+  .mosaic-tile:last-child {
+    grid-column: 1/-1;
+  }
+  .mosaic-tile .position-re,
+  .mosaic-wide .position-re {
+    height: 250px;
+  }
+  .mosaic-tile:last-child .position-re {
+    height: 230px;
+  }
+  .mosaic-tile .con {
+    left: 14px;
+    right: 14px;
+    bottom: 17px;
+  }
+  .mosaic-tile h3 {
+    font-size: 21px;
+  }
+  .mosaic-tile .con p {
+    font-size: 6px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+  }
+  .mosaic-discover {
+    opacity: 1;
+    max-height: 25px;
+    margin-top: 10px;
+    font-size: 8px;
+  }
+  .mosaic-tile .line {
+    width: 30px;
+  }
+  .mosaic-directory-link {
+    gap: 20px;
+    font-size: 10px;
+    margin-top: 25px;
+  }
+  #treatments {
+    padding-block: 55px;
+  }
+  #treatments > .container {
+    width: calc(100% - 40px);
+  }
+  #treatments-title {
+    font-size: 33px;
+  }
+  .gallery-toolbar {
+    gap: 10px;
+    margin-bottom: 23px;
+  }
+  .gallery-tabs {
+    gap: 3px;
+  }
+  .gallery-tabs button {
+    padding: 9px 12px;
+    font-size: 9px;
+  }
+  .gallery-controls {
+    gap: 5px;
+  }
+  .gallery-controls button {
+    width: 29px;
+    height: 29px;
+    font-size: 17px;
+  }
+  .gallery-track {
+    gap: 22px;
+  }
+  .gallery-slide {
+    flex-basis: calc((100% - 22px) / 2);
+  }
+  .gallery-number {
+    font-size: 56px;
+    letter-spacing: -4px;
+  }
+  .gallery-card-copy {
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .gallery-card h3 {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .gallery-card p {
+    font-size: 8px;
+  }
+  .procedure-photo-arrow {
+    opacity: 1;
+    transform: none;
+    width: 27px;
+    height: 27px;
+    font-size: 18px;
+    top: 11px;
+    right: 11px;
+  }
+  .service-directory > summary {
+    padding: 21px;
+  }
+  .service-directory > summary strong {
+    font-size: 21px;
+  }
+  .directory-body {
+    padding-inline: 20px;
+  }
+  .why-copy h2 {
+    font-size: 33px;
+  }
+  .visit-copy h2 {
+    font-size: 29px;
+  }
+  .appointment-backdrop {
+    padding: 55px 0 70px;
+  }
+  .appointment-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .appointment-glass {
+    padding: 29px;
+  }
+  .appointment-location {
+    padding: 0 9px;
+  }
+  .appointment-location h3 {
+    font-size: 36px;
+  }
+  .appointment-image-credit {
+    left: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 7px;
+  }
+  html {
+    scroll-padding-top: 96px;
+  }
+}
+@media (max-width: 440px) {
+  .campaign-hero {
+    height: 630px;
+  }
+  .campaign-copy {
+    padding: 27px 23px 29px;
+  }
+  .campaign-image img {
+    object-position: 35% 20%;
+  }
+  .campaign-copy .eyebrow span {
+    display: block;
+    margin-top: 5px;
+  }
+  .campaign-title {
+    font-size: 33px;
+  }
+  .campaign-title em {
+    font-size: 47px;
+  }
+  .campaign-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  .campaign-doctor {
+    margin-top: 16px;
+  }
+  .gallery-slide {
+    flex-basis: 78%;
+  }
+  .gallery-card h3 {
+    font-size: 12px;
+  }
+  .gallery-card p {
+    font-size: 10px;
+  }
+  .gallery-number {
+    font-size: 68px;
+  }
+  .gallery-toolbar {
+    flex-wrap: wrap;
+  }
+  .gallery-tabs {
+    gap: 2px;
+  }
+  .gallery-tabs button {
+    padding: 9px 13px;
+  }
+  .gallery-controls {
+    margin-left: auto;
+  }
+  .gallery-photo {
+    aspect-ratio: 0.83;
+  }
+  .gallery-slide:nth-child(even) .gallery-photo {
+    aspect-ratio: 1;
+  }
+  .mosaic-tile .position-re,
+  .mosaic-wide .position-re {
+    height: 225px;
+  }
+  .mosaic-tile h3 {
+    font-size: 19px;
+  }
+  .gallery-caption {
+    gap: 15px;
+    font-size: 8px;
+  }
+  .appointment-glass {
+    padding: 26px 23px;
+  }
+  .appointment-glass h2 {
+    font-size: 32px;
+  }
+  .appointment-fields {
+    gap: 23px 12px;
+  }
+  .appointment-field {
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .site-header .brand {
+    width: 99px;
+  }
+  .header-inner {
+    gap: 10px;
+  }
+  .header-actions {
+    gap: 7px;
+  }
+  .header-actions .button {
+    font-size: 9px;
+    padding-inline: 12px;
+  }
+  .menu-toggle {
+    width: 32px;
+    height: 32px;
+  }
+  .campaign-shell {
+    padding-inline: 14px;
+  }
+  .campaign-copy {
+    padding-inline: 20px;
+  }
+  .campaign-copy .eyebrow {
+    letter-spacing: 1.5px;
+  }
+  .campaign-title {
+    font-size: 29px;
+  }
+  .campaign-title em {
+    font-size: 42px;
+  }
+  .campaign-description {
+    font-size: 10px;
+  }
+  .gallery-tabs button {
+    padding-inline: 10px;
+  }
+  .gallery-card-copy {
+    grid-template-columns: 58px 1fr;
+    gap: 12px;
+  }
+  .gallery-number {
+    font-size: 61px;
+  }
+  .mosaic-tile h3 {
+    font-size: 17px;
+  }
+  .mosaic-tile .position-re,
+  .mosaic-wide .position-re {
+    height: 215px;
+  }
+  .mosaic-tile .con {
+    left: 11px;
+    right: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready [data-reveal]:not(.is-revealed) {
+    opacity: 1;
+    transform: none;
+  }
+  .campaign-slide,
+  .campaign-copy *,
+  .campaign-image img,
+  .gallery-photo img,
+  .mosaic-tile img {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* The supplied Clinic Dermatech footer: full photo, five columns, rounded email
+   field, social circles, and a contact band. Links and contact data belong to Skinic. */
+.photo-footer {
+  position: relative;
+  isolation: isolate;
+  padding: 65px 0 22px;
+  background: #182330 url("footer-background.jpeg") center top / cover no-repeat;
+  color: #fff9ee;
+}
+.photo-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #11171916, #11171940 70%, #10171fcc);
+  pointer-events: none;
+}
+.photo-footer .footer-content {
+  width: min(1720px, calc(100% - 120px));
+}
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  align-items: start;
+  gap: 45px;
+  min-height: 455px;
+  padding-bottom: 45px;
+}
+.photo-footer h2 {
+  font:
+    500 24px/1.25 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.3px;
+  color: #fff9ee;
+  margin: 0 0 22px;
+}
+.footer-newsletter > p:not(.footer-email-note) {
+  max-width: 355px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #f5efe6;
+  margin-bottom: 25px;
+}
+.footer-email-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 425px;
+  padding: 10px 12px 10px 20px;
+  min-height: 66px;
+  border: 1px solid #ffffff0a;
+  border-radius: 999px;
+  background: #0b151fe8;
+  box-shadow: 0 8px 24px #00000012;
+}
+.footer-email-pill:focus-within {
+  border-color: #d1a743;
+}
+.footer-email-pill input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  color: #fffaf0;
+  background: transparent;
+  border: 0;
+  padding: 8px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.footer-email-pill input::placeholder {
+  color: #f7f2e9;
+  opacity: 1;
+}
+.footer-email-pill input:focus-visible {
+  outline: none;
+}
+.footer-email-pill button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 75px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  color: #252019;
+  background: #d1a743;
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+.footer-email-pill button:hover {
+  background: #e1bf70;
+  transform: translateX(2px);
+}
+.footer-email-pill button svg {
+  width: 20px;
+  height: 20px;
+}
+.footer-email-note {
+  color: #c8c4bd;
+  font-size: 9px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+.photo-footer .footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+.photo-footer .footer-social a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff42;
+  border-radius: 50%;
+  color: #fff9ee;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background 0.25s;
+}
+.photo-footer .footer-social a:hover {
+  color: #e4c77f;
+  border-color: #d1a743;
+  background: #d1a74314;
+}
+.photo-footer .footer-social svg {
+  width: 19px;
+  height: 19px;
+}
+.footer-column {
+  min-width: 0;
+}
+.footer-link-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+.footer-link-list a,
+.footer-link-list button,
+.footer-clinic-city {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f5efe6;
+  text-align: left;
+  font:
+    400 13px/1.65 "Manrope",
+    sans-serif;
+  transition: color 0.25s;
+}
+.footer-link-list a:hover,
+.footer-link-list button:hover,
+.footer-clinic-city:hover {
+  color: #e4c77f;
+}
+.footer-clinic address {
+  color: #d6d1c7;
+  font-size: 11px;
+  line-height: 1.9;
+  font-style: normal;
+  margin-top: 15px;
+}
+.footer-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #e4c77f;
+  font-size: 11px;
+  margin-top: 15px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #b99a5966;
+}
+.footer-clinic-note {
+  color: #d6d1c7;
+  font-size: 10px;
+  line-height: 1.8;
+  margin: 22px 0;
+}
+.footer-clinic-booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: transparent;
+  border: 1px solid #bda36b77;
+  border-radius: 999px;
+  padding: 12px 15px;
+  color: #e4c77f;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+.footer-clinic-booking:hover {
+  background: #d1a7431a;
+  border-color: #d1a743;
+}
+.footer-contact-band {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  background: #0b151feb;
+  border: 1px solid #e4c77f14;
+  border-radius: 26px;
+  padding: 26px 32px;
+}
+.footer-contact-band h2 {
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+.footer-contact-band p {
+  color: #c1c2be;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.footer-contact-band > a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+.footer-contact-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  height: 42px;
+  background: #c9aa651a;
+  border: 1px solid #c9aa653d;
+  border-radius: 50%;
+  color: #e4c77f;
+}
+.footer-contact-band small {
+  display: block;
+  color: #d2d0c6;
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+.footer-contact-band strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff9ee;
+  overflow-wrap: anywhere;
+}
+.photo-footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid #ffffff1f;
+  padding-top: 21px;
+  margin-top: 28px;
+}
+.photo-footer .footer-bottom .brand {
+  width: 130px;
+}
+.photo-footer .footer-bottom p {
+  margin: 0 auto 0 0;
+  color: #e2ded5;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.photo-footer .footer-bottom p span {
+  color: #bbbcb7;
+  font-size: 9px;
+}
+.photo-footer .back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: #e4c77f;
+  white-space: nowrap;
+  font-size: 10px;
+}
+.photo-footer .back-top span {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #bba36977;
+  border-radius: 50%;
+  font-size: 16px;
+}
+.footer-request-email {
+  color: #846328;
+  background: #eee3ce;
+  padding: 14px 17px;
+  border-radius: 9px;
+  margin: 22px 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.footer-request-note {
+  margin-top: 18px;
+  font-size: 11px;
+  color: var(--muted);
+}
+@media (min-width: 1700px) {
+  .footer-main-grid {
+    gap: 52px;
+    min-height: 500px;
+  }
+  .photo-footer h2 {
+    font-size: 26px;
+  }
+  .footer-link-list a,
+  .footer-link-list button,
+  .footer-clinic-city {
+    font-size: 15px;
+  }
+  .footer-link-list {
+    gap: 13px;
+  }
+  .footer-newsletter > p:not(.footer-email-note) {
+    font-size: 15px;
+    max-width: 395px;
+  }
+}
+@media (max-width: 1150px) {
+  .photo-footer .footer-content {
+    width: calc(100% - 80px);
+  }
+  .footer-main-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px 28px;
+    min-height: 0;
+  }
+  .footer-newsletter {
+    grid-column: 1/-1;
+    max-width: 450px;
+  }
+  .footer-newsletter > p:not(.footer-email-note) {
+    max-width: 410px;
+  }
+  .footer-contact-band {
+    gap: 25px;
+    padding: 25px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-contact-band > div {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 700px) {
+  .photo-footer {
+    padding: 45px 0 100px;
+    background-size: auto 800px;
+    background-position: center top;
+  }
+  .photo-footer::before {
+    background: linear-gradient(
+      180deg,
+      #10171f00,
+      #10171f45 500px,
+      #182330 800px
+    );
+  }
+  .photo-footer .footer-content {
+    width: calc(100% - 44px);
+  }
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+    padding-bottom: 35px;
+  }
+  .photo-footer h2 {
+    font-size: 22px;
+    margin-bottom: 19px;
+  }
+  .footer-newsletter {
+    max-width: none;
+  }
+  .footer-newsletter > p:not(.footer-email-note) {
+    font-size: 13px;
+    max-width: 360px;
+    margin-bottom: 21px;
+  }
+  .footer-email-pill {
+    min-height: 62px;
+    padding-left: 18px;
+  }
+  .footer-email-pill button {
+    flex-basis: 66px;
+    height: 40px;
+  }
+  .photo-footer .footer-social {
+    margin-top: 23px;
+  }
+  .footer-link-list {
+    gap: 12px;
+  }
+  .footer-link-list a,
+  .footer-link-list button,
+  .footer-clinic-city {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+  .footer-clinic-note {
+    font-size: 10px;
+  }
+  .footer-clinic-booking {
+    padding: 11px 13px;
+    gap: 7px;
+    font-size: 9px;
+  }
+  .footer-contact-band {
+    grid-template-columns: 1fr;
+    padding: 25px 23px;
+    gap: 23px;
+    border-radius: 21px;
+  }
+  .footer-contact-band h2 {
+    margin-bottom: 7px;
+  }
+  .footer-contact-band > div {
+    grid-column: auto;
+  }
+  .photo-footer .footer-bottom {
+    flex-wrap: wrap;
+    gap: 17px 22px;
+  }
+  .photo-footer .footer-bottom .brand {
+    width: 115px;
+  }
+  .photo-footer .footer-bottom p {
+    order: 3;
+    flex-basis: 100%;
+    font-size: 9px;
+  }
+  .photo-footer .footer-bottom p span {
+    font-size: 8px;
+  }
+  .photo-footer .back-top {
+    margin-left: auto;
+  }
+}
+@media (max-width: 360px) {
+  .photo-footer .footer-content {
+    width: calc(100% - 36px);
+  }
+  .footer-main-grid {
+    gap: 32px 19px;
+  }
+  .photo-footer h2 {
+    font-size: 20px;
+  }
+  .footer-link-list a,
+  .footer-link-list button,
+  .footer-clinic-city {
+    font-size: 11px;
+  }
+  .footer-email-pill input {
+    font-size: 12px;
+  }
+  .footer-email-pill button {
+    flex-basis: 56px;
+  }
+}
+
+/* Size the banner against available viewport height, including the masthead,
+   slider controls, and the fixed mobile action bar rather than only its width. */
+.campaign-hero {
+  height: min(
+    clamp(380px, 36vw, 600px),
+    calc(100svh - var(--hero-viewport-inset, 204px))
+  );
+}
+.social-rail {
+  height: 100%;
+}
+@media (min-width: 701px) and (max-height: 800px) {
+  .campaign-copy {
+    padding-block: 28px;
+  }
+  .campaign-copy .eyebrow {
+    margin-bottom: 14px;
+  }
+  .campaign-title {
+    font-size: clamp(32px, 6svh, 48px);
+    margin-bottom: 17px;
+  }
+  .campaign-title em {
+    font-size: clamp(46px, 8.5svh, 68px);
+  }
+  .campaign-description {
+    margin-bottom: 17px;
+  }
+  .campaign-doctor {
+    margin-top: 19px;
+  }
+}
+@media (min-width: 701px) and (max-height: 650px) {
+  .campaign-copy {
+    padding-block: 20px;
+  }
+  .campaign-copy .eyebrow {
+    margin-bottom: 10px;
+    font-size: 8px;
+  }
+  .campaign-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .campaign-title em {
+    font-size: 47px;
+  }
+  .campaign-description {
+    font-size: 10px;
+    line-height: 1.8;
+    margin-bottom: 13px;
+    max-width: 430px;
+  }
+  .campaign-doctor {
+    margin-top: 13px;
+  }
+  .campaign-seal {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 701px) and (max-height: 550px) {
+  .campaign-copy {
+    padding-block: 14px;
+  }
+  .campaign-copy .eyebrow {
+    margin-bottom: 8px;
+  }
+  .campaign-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .campaign-title em {
+    font-size: 42px;
+  }
+  .campaign-description {
+    max-width: none;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .campaign-actions .button {
+    min-height: 37px;
+    padding-block: 10px;
+  }
+  .campaign-doctor {
+    margin-top: 10px;
+  }
+  .campaign-seal {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 700px) {
+  .campaign-hero {
+    height: min(630px, calc(100svh - var(--hero-viewport-inset, 248px)));
+  }
+}
+@media (max-width: 700px) and (max-height: 750px) {
+  .campaign-copy {
+    padding: 21px 23px;
+  }
+  .campaign-copy .eyebrow {
+    margin-bottom: 9px;
+  }
+  .campaign-copy .eyebrow span {
+    margin-top: 3px;
+  }
+  .campaign-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .campaign-title em {
+    font-size: 41px;
+  }
+  .campaign-description {
+    font-size: 10px;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+  .campaign-actions {
+    gap: 2px 12px;
+  }
+  .campaign-actions .button {
+    min-height: 38px;
+    padding-block: 10px;
+  }
+  .campaign-secondary {
+    padding-block: 7px;
+  }
+  .campaign-doctor {
+    margin-top: 12px;
+  }
+  .campaign-seal {
+    width: 29px;
+    height: 29px;
+  }
+}
+@media (max-width: 360px) and (max-height: 650px) {
+  .campaign-copy {
+    padding: 14px;
+  }
+  .campaign-copy .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+  }
+  .campaign-title {
+    font-size: 23px;
+    margin-bottom: 9px;
+  }
+  .campaign-title em {
+    font-size: 36px;
+  }
+  .campaign-description {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 9px;
+  }
+  .campaign-actions .button {
+    min-height: 36px;
+    padding-block: 9px;
+  }
+  .campaign-secondary {
+    padding-block: 6px;
+  }
+  .campaign-doctor {
+    margin-top: 9px;
+    gap: 10px;
+  }
+  .campaign-doctor small {
+    font-size: 6px;
+  }
+  .campaign-seal {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,831 @@
+/* Adapted from the supplied, working reference sections. See SOURCE-SECTIONS.md. */
+
+/* Clinic Dermatech: rounded treatment photos, category tabs, circular arrows. */
+.reference-gallery {
+  margin: 40px auto 0;
+}
+.gallery-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.gallery-tabs {
+  display: flex;
+  gap: 8px;
+}
+.gallery-tabs button {
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  padding: 14px 29px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.gallery-tabs button[aria-pressed="true"] {
+  background: #e4d5ae;
+  color: #24231e;
+}
+.gallery-controls,
+.care-controls {
+  display: flex;
+  gap: 10px;
+}
+.gallery-controls button,
+.care-controls button {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #a68c51;
+  border-radius: 50%;
+  background: transparent;
+  color: #735718;
+  font-size: 23px;
+  cursor: pointer;
+}
+.gallery-controls button:disabled,
+.care-controls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.gallery-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 2px 0 12px;
+}
+.gallery-track::-webkit-scrollbar,
+.care-track::-webkit-scrollbar {
+  display: none;
+}
+.gallery-slide {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+.gallery-slide[hidden] {
+  display: none;
+}
+.gallery-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.gallery-photo {
+  height: 390px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-card:hover img {
+  transform: scale(1.035);
+}
+.gallery-card-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-top: 23px;
+}
+.gallery-card-text {
+  min-width: 0;
+}
+.gallery-card h3 {
+  font:
+    650 15px/1.5 "Manrope",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 7px;
+}
+.gallery-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--muted);
+  max-width: 290px;
+}
+.gallery-card-arrow {
+  flex: 0 0 39px;
+  height: 39px;
+  border: 1px solid #ab9053;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #735718;
+  font-size: 21px;
+}
+.gallery-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #d6cbb4;
+  padding-bottom: 25px;
+  margin: 22px 0 0;
+  font-size: 11px;
+  color: #70654f;
+}
+#treatments .directory-heading {
+  margin-top: 47px;
+}
+
+/* Dr. Anwesha: full-width split feature panel and the original icon/text rows. */
+.reference-why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #c39b43;
+  color: #1e1c16;
+}
+.why-copy {
+  position: relative;
+  padding: 75px max(45px, calc((100vw - 1260px) / 2));
+  padding-right: 60px;
+  overflow: hidden;
+  background: linear-gradient(125deg, #cfad65, #b98f34);
+}
+.why-copy::before,
+.why-copy::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ffffff55;
+  border-radius: 44% 56% 62% 38%;
+  pointer-events: none;
+}
+.why-copy::before {
+  right: -180px;
+  top: -180px;
+  transform: rotate(-25deg);
+}
+.why-copy::after {
+  left: -250px;
+  bottom: -100px;
+  transform: rotate(20deg);
+}
+.why-copy .eyebrow {
+  color: #332912;
+}
+.why-copy h2 {
+  font:
+    700 34px/1.2 "Manrope",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.7px;
+  margin: 0 0 20px;
+}
+.why-intro {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+  color: #392f1d;
+}
+.why-points {
+  display: grid;
+  gap: 33px;
+  margin-top: 44px;
+}
+.reference-why .wdt-content-item {
+  display: grid;
+  grid-template-columns: 67px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.reference-why .wdt-content-icon {
+  display: grid;
+  place-items: center;
+  width: 67px;
+  height: 67px;
+  border: 1px solid #ffffff90;
+  background: #ffffff23;
+  border-radius: 50%;
+  color: #262015;
+}
+.reference-why .wdt-content-icon svg {
+  width: 29px;
+  height: 29px;
+}
+.reference-why .wdt-content-title h3 {
+  font:
+    650 17px/1.5 "Manrope",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin: 0 0 7px;
+}
+.reference-why .wdt-content-description {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #392f1d;
+}
+.why-photo {
+  position: relative;
+  min-height: 740px;
+  border-left: 5px solid var(--cream);
+  overflow: hidden;
+}
+.why-photo > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+.why-photo-note {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  background: #fbf9f2e8;
+  padding: 12px 17px;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+.why-photo-cta {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 45px;
+  left: 34px;
+  right: 34px;
+  border: 0;
+  padding: 0 0 0 24px;
+  min-height: 64px;
+  background: var(--cream);
+  color: var(--ink);
+  font:
+    700 13px "Manrope",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-align: left;
+  cursor: pointer;
+}
+.why-photo-cta span {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  background: #d1a743;
+  font-size: 28px;
+  margin-left: 16px;
+}
+.why-photo small {
+  position: absolute;
+  bottom: 17px;
+  right: 34px;
+  font-size: 9px;
+  background: #fbf9f2d9;
+  padding: 3px 7px;
+}
+
+/* Isya: white consultation card plus two staggered image columns. */
+.reference-visit {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.8fr 0.55fr 0.55fr;
+  gap: 22px;
+  padding: 65px max(30px, calc((100vw - 1296px) / 2)) 85px;
+  background: #efe4ca;
+  align-items: center;
+}
+.visit-copy {
+  background: #fffefa;
+  border-radius: 20px;
+  border-top: 5px solid #b68c32;
+  box-shadow: 0 3px 12px #5b482a17;
+  padding: 40px;
+}
+.visit-copy h2 {
+  font-family: var(--serif);
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0 0 18px;
+  color: #735718;
+}
+.visit-copy > p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 510px;
+  color: var(--muted);
+}
+.visit-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0;
+  display: grid;
+  gap: 18px;
+}
+.visit-checklist li {
+  position: relative;
+  padding-left: 28px;
+}
+.visit-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #916b1c;
+  font-size: 17px;
+}
+.visit-checklist strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 650;
+  margin-bottom: 3px;
+}
+.visit-checklist span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+.visit-bring {
+  padding: 17px 18px;
+  background: #f3efe5;
+  margin-bottom: 24px;
+}
+.visit-bring strong {
+  font-size: 12px;
+}
+.visit-bring p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 5px 0 0;
+}
+.visit-photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.visit-photo-column > div {
+  overflow: hidden;
+}
+.visit-photo-column img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.visit-photo-column:not(.visit-photo-column-reverse) > div:first-child img,
+.visit-photo-column-reverse > div:last-child img {
+  height: 345px;
+}
+.visit-photo-column:not(.visit-photo-column-reverse) > div:last-child img,
+.visit-photo-column-reverse > div:first-child img {
+  height: 195px;
+}
+.visit-image-credit {
+  position: absolute;
+  bottom: 26px;
+  right: max(30px, calc((100vw - 1296px) / 2));
+  left: 30px;
+  text-align: right;
+  font-size: 9px;
+  color: #70654f;
+  margin: 0;
+}
+
+/* Garekars: one-third intro, two cream/photo cards, serif labels, dark background. */
+.reference-care {
+  background: #171714;
+  color: var(--cream);
+  padding: 105px 0;
+}
+.reference-care > .container {
+  max-width: 1140px;
+}
+.care-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+.care-intro .eyebrow {
+  color: #d1a743;
+}
+.care-intro h2 {
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.17;
+  color: var(--cream);
+  margin: 0 0 26px;
+}
+.care-intro > p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #bdb9ad;
+  margin-bottom: 30px;
+  max-width: 320px;
+}
+.care-phone {
+  display: block;
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.5;
+  color: #d1a743;
+  margin-bottom: 32px;
+}
+.care-phone span {
+  display: block;
+  font:
+    12px "Manrope",
+    sans-serif;
+  color: #bdb9ad;
+  margin-bottom: 9px;
+}
+.care-controls button {
+  color: #d1a743;
+  border-color: #74623a;
+}
+.care-deck {
+  min-width: 0;
+}
+.care-track {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.reference-care .pricing-card {
+  flex: 0 0 calc((100% - 28px) / 2);
+  min-width: 0;
+  background: #f8f5f0;
+  scroll-snap-align: start;
+}
+.care-card-photo {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+.care-card-photo img {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.care-card-photo:hover img {
+  transform: scale(1.035);
+}
+.reference-care .pricing-card .desc {
+  padding: 30px;
+  color: var(--ink);
+}
+.reference-care .pricing-card .name {
+  font: 400 24px/1.2 var(--serif);
+  margin: 0 0 14px;
+  min-height: 58px;
+}
+.reference-care .pricing-card .amount {
+  font: 400 36px/1 var(--serif);
+  color: #916b1c;
+  margin: 0 0 25px;
+}
+.care-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  display: grid;
+  gap: 9px;
+}
+.care-card-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 11px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.care-card-list li::before {
+  content: "✓";
+  color: #916b1c;
+  position: absolute;
+  left: 0;
+}
+.care-card-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font:
+    650 10px "Manrope",
+    sans-serif;
+  background: transparent;
+  color: #735718;
+  padding: 10px 0 0;
+  border: 0;
+  border-top: 1px solid #ded4c0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.care-card-link span {
+  margin-left: auto;
+  font-size: 19px;
+}
+.reference-gallery button:focus-visible,
+.reference-care button:focus-visible,
+.why-photo-cta:focus-visible {
+  outline: 3px solid #916b1c;
+  outline-offset: 4px;
+}
+.reference-care button:focus-visible {
+  outline-color: #d1a743;
+  outline-offset: -4px;
+}
+
+@media (max-width: 1100px) {
+  .gallery-photo {
+    height: 300px;
+  }
+  .why-copy {
+    padding: 60px 35px;
+  }
+  .reference-why .wdt-content-item {
+    grid-template-columns: 55px 1fr;
+    gap: 17px;
+  }
+  .reference-why .wdt-content-icon {
+    width: 55px;
+    height: 55px;
+  }
+  .why-photo {
+    min-height: 730px;
+  }
+  .reference-visit {
+    grid-template-columns: 1.5fr 0.65fr 0.65fr;
+    gap: 16px;
+  }
+  .visit-copy {
+    padding: 30px;
+  }
+  .visit-copy h2 {
+    font-size: 29px;
+  }
+  .care-row {
+    gap: 28px;
+  }
+  .reference-care .pricing-card .desc {
+    padding: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .gallery-slide {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+  .gallery-track {
+    gap: 20px;
+  }
+  .gallery-photo {
+    height: 330px;
+  }
+  .reference-why {
+    grid-template-columns: 1fr;
+  }
+  .why-copy {
+    padding: 55px 30px;
+  }
+  .why-points {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .reference-why .wdt-content-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    align-content: start;
+  }
+  .why-photo {
+    min-height: 450px;
+    border: 0;
+  }
+  .why-photo > img {
+    object-position: 50% 37%;
+  }
+  .reference-visit {
+    grid-template-columns: 1fr 1fr;
+    padding-block: 50px 75px;
+  }
+  .visit-copy {
+    grid-column: 1/-1;
+  }
+  .visit-photo-column {
+    gap: 16px;
+  }
+  .visit-photo-column:not(.visit-photo-column-reverse) > div:first-child img,
+  .visit-photo-column-reverse > div:last-child img {
+    height: 300px;
+  }
+  .visit-photo-column:not(.visit-photo-column-reverse) > div:last-child img,
+  .visit-photo-column-reverse > div:first-child img {
+    height: 180px;
+  }
+  .care-row {
+    grid-template-columns: 1fr;
+  }
+  .reference-care {
+    padding: 65px 0;
+  }
+  .care-intro {
+    position: relative;
+  }
+  .care-intro > p:not(.eyebrow) {
+    max-width: 530px;
+  }
+  .care-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .care-phone {
+    margin-bottom: 0;
+  }
+  .care-deck {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .reference-gallery {
+    margin-top: 28px;
+  }
+  .gallery-toolbar {
+    margin-bottom: 18px;
+    gap: 10px;
+  }
+  .gallery-tabs {
+    gap: 2px;
+  }
+  .gallery-tabs button {
+    padding: 11px 17px;
+    font-size: 12px;
+  }
+  .gallery-controls {
+    gap: 6px;
+  }
+  .gallery-controls button {
+    width: 33px;
+    height: 33px;
+    font-size: 19px;
+  }
+  .gallery-track {
+    gap: 16px;
+  }
+  .gallery-slide {
+    flex-basis: 88%;
+  }
+  .gallery-photo {
+    height: 310px;
+    border-radius: 14px;
+  }
+  .gallery-card-copy {
+    margin-top: 17px;
+    gap: 12px;
+  }
+  .gallery-card h3 {
+    font-size: 13px;
+  }
+  .gallery-card p {
+    font-size: 12px;
+  }
+  .gallery-caption {
+    font-size: 9px;
+    gap: 14px;
+  }
+  .gallery-caption > span:last-child {
+    max-width: 150px;
+    text-align: right;
+  }
+  .why-copy {
+    padding: 50px 24px;
+  }
+  .why-copy h2 {
+    font-size: 28px;
+  }
+  .why-points {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    margin-top: 30px;
+  }
+  .reference-why .wdt-content-item {
+    grid-template-columns: 52px 1fr;
+    gap: 17px;
+  }
+  .reference-why .wdt-content-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .reference-why .wdt-content-title h3 {
+    font-size: 14px;
+  }
+  .reference-why .wdt-content-description {
+    font-size: 12px;
+  }
+  .why-photo {
+    min-height: 460px;
+  }
+  .why-photo-note {
+    top: 22px;
+    left: 22px;
+    font-size: 9px;
+    padding: 10px 12px;
+  }
+  .why-photo-cta {
+    left: 22px;
+    right: 22px;
+    bottom: 44px;
+    min-height: 55px;
+    padding-left: 16px;
+    font-size: 10px;
+  }
+  .why-photo-cta span {
+    width: 55px;
+  }
+  .reference-visit {
+    padding: 45px 20px 75px;
+    gap: 12px;
+  }
+  .visit-copy {
+    padding: 28px 22px;
+    border-radius: 14px;
+  }
+  .visit-copy h2 {
+    font-size: 29px;
+  }
+  .visit-photo-column {
+    gap: 12px;
+  }
+  .visit-photo-column:not(.visit-photo-column-reverse) > div:first-child img,
+  .visit-photo-column-reverse > div:last-child img {
+    height: 245px;
+  }
+  .visit-photo-column:not(.visit-photo-column-reverse) > div:last-child img,
+  .visit-photo-column-reverse > div:first-child img {
+    height: 140px;
+  }
+  .visit-image-credit {
+    bottom: 24px;
+    right: 20px;
+    left: 20px;
+    font-size: 8px;
+  }
+  .reference-care {
+    padding: 55px 0;
+  }
+  .care-intro h2 {
+    font-size: 35px;
+  }
+  .care-controls {
+    gap: 7px;
+  }
+  .care-controls button {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+  .care-phone {
+    font-size: 22px;
+  }
+  .care-track {
+    gap: 16px;
+  }
+  .reference-care .pricing-card {
+    flex-basis: 88%;
+  }
+  .care-card-photo img {
+    height: 195px;
+  }
+  .reference-care .pricing-card .desc {
+    padding: 25px;
+  }
+  .reference-care .pricing-card .name {
+    min-height: 0;
+    font-size: 25px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-photo img,
+  .care-card-photo img {
+    transition: none;
+  }
+}
