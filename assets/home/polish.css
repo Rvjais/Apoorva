@@ -1,0 +1,42 @@
+/* Final cosmetic pass. Loaded after visual-refresh.css so these small
+   alignment and legibility corrections win without altering the design. */
+
+/* Centre controls that have different intrinsic heights. */
+.topbar .container {
+  align-items: center;
+}
+
+.header-actions {
+  align-items: center;
+}
+
+.site-header .brand {
+  flex-shrink: 0;
+}
+
+/* Avoid single-word last lines in running copy. */
+p {
+  text-wrap: pretty;
+}
+
+/* Keep repeated numbers on a consistent width. */
+.advantage-item strong,
+.appointment-phone,
+.footer-contact-band strong {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The smallest mobile labels were falling below a comfortable reading size. */
+@media (max-width: 700px) {
+  .mosaic-tile .con p {
+    font-size: 7px;
+  }
+
+  .mosaic-discover {
+    font-size: 9px;
+  }
+
+  .gallery-caption {
+    font-size: 9px;
+  }
+}
