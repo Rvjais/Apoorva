@@ -40,3 +40,195 @@ p {
     font-size: 9px;
   }
 }
+
+/* ------------------------------------------------------------------
+   Alignment & symmetry pass.
+   Every section shares the same outer edges as .container, and the
+   side-by-side sections (concerns, social, FAQ, appointment) share one
+   column line.
+   ------------------------------------------------------------------ */
+
+:root {
+  --page-gutter: 40px;
+  /* Full-bleed sections inset their content to the .container edges. */
+  --page-inset: max(var(--page-gutter), calc((100% - var(--width)) / 2));
+  /* Gap between the two halves of every 50/50 split. */
+  --split-gap: 65px;
+}
+@media (max-width: 1150px) {
+  :root {
+    --split-gap: 45px;
+  }
+}
+@media (max-width: 950px) {
+  :root {
+    --page-gutter: 30px;
+    --split-gap: 28px;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --page-gutter: 20px;
+  }
+  /* The masthead sat 2px outside the content edges on phones. */
+  .topbar .container,
+  .header-inner {
+    width: calc(100% - 2 * var(--page-gutter));
+  }
+}
+
+/* Hero: equal space either side of the banner, and the slide controls
+   line up with the banner's edges instead of sitting 8px inside them. */
+.campaign-shell {
+  padding-left: 104px;
+}
+.campaign-controls {
+  padding-inline: 0;
+}
+.social-rail a {
+  text-orientation: sideways;
+}
+/* Pull the italic line back so its slanted capital lines up optically
+   with the upright line beneath it. */
+.campaign-title em {
+  margin-left: -0.15em;
+}
+@media (min-width: 1800px) {
+  .campaign-shell {
+    padding-left: 144px;
+  }
+}
+@media (max-width: 1200px) {
+  .campaign-shell {
+    padding-left: 84px;
+  }
+}
+@media (max-width: 950px) {
+  .campaign-shell {
+    padding-inline: var(--page-gutter);
+  }
+}
+
+/* Stats: icons and numbers share one box height so every label sits on
+   the same line. */
+.advantage-item > svg {
+  display: block;
+  margin-inline: auto;
+}
+
+/* Doctor: the photo fills its column, so the gap to the copy matches
+   the grid gap instead of leaving a wide empty strip. */
+.doctor-identity {
+  max-width: none;
+}
+
+/* Concerns: every row keeps the same inset, so icons no longer jump
+   sideways when a row is selected. */
+.concern-option,
+.concern-option[aria-pressed="true"] {
+  padding-inline: 18px;
+}
+@media (max-width: 950px) {
+  .concern-option,
+  .concern-option[aria-pressed="true"] {
+    padding-inline: 14px;
+  }
+}
+
+/* 50/50 splits share one column line, and split headings start their
+   intro paragraph on the same line as the content below. */
+@media (min-width: 701px) {
+  .finder-layout,
+  .faq-grid,
+  .appointment-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--split-gap);
+  }
+  #concerns .section-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--split-gap);
+    align-items: end;
+  }
+  /* The services heading follows the photo tiles beneath it instead. */
+  .mosaic-heading {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+  }
+}
+@media (min-width: 951px) {
+  .mosaic-heading {
+    column-gap: 22px;
+  }
+}
+/* Below this width the three social cards get too narrow for their
+   labels, so the row keeps its original wider card column. */
+@media (min-width: 1151px) {
+  .social-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--split-gap);
+  }
+}
+
+/* Treatment gallery: sits on the page grid, and every card is the same
+   height so the numbered captions form one row. */
+#treatments > .container {
+  width: min(var(--width), calc(100% - 2 * var(--page-gutter)));
+}
+.gallery-slide:nth-child(even) .gallery-photo {
+  aspect-ratio: 0.8;
+}
+@media (max-width: 440px) {
+  .gallery-slide:nth-child(even) .gallery-photo {
+    aspect-ratio: 0.83;
+  }
+}
+
+/* Why Skinic: the gold panel's copy starts on the page edge. */
+@media (min-width: 801px) {
+  .why-copy {
+    padding-left: max(var(--page-gutter), calc(100% - var(--width) / 2));
+  }
+}
+@media (max-width: 700px) {
+  .why-copy {
+    padding-inline: var(--page-gutter);
+  }
+}
+
+/* First visit: card and photos share the page edges. */
+.reference-visit {
+  padding-inline: var(--page-inset);
+}
+.visit-image-credit {
+  right: var(--page-inset);
+}
+
+/* Appointment: full page width, and the contact rows share one icon
+   column and one text column. */
+.appointment-layout {
+  max-width: none;
+}
+.appointment-phone {
+  gap: 17px;
+}
+.appointment-phone svg {
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+}
+.appointment-email {
+  gap: 12px;
+  padding-left: 44px;
+}
+@media (max-width: 700px) {
+  /* Stacked under the form: share the form card's edges. */
+  .appointment-location {
+    padding-inline: 0;
+  }
+}
+
+/* Footer: same outer edges as every other section. */
+.photo-footer .footer-content {
+  width: min(var(--width), calc(100% - 2 * var(--page-gutter)));
+}
