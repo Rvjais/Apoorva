@@ -26,8 +26,8 @@
   cursor: pointer;
 }
 .gallery-tabs button[aria-pressed="true"] {
-  background: #e4d5ae;
-  color: #24231e;
+  background: #e3d4bd;
+  color: #2e2018;
 }
 .gallery-controls,
 .care-controls {
@@ -40,10 +40,10 @@
   place-items: center;
   width: 43px;
   height: 43px;
-  border: 1px solid #a68c51;
+  border: 1px solid #b38752;
   border-radius: 50%;
   background: transparent;
-  color: #735718;
+  color: #7b5235;
   font-size: 23px;
   cursor: pointer;
 }
@@ -109,7 +109,7 @@
 }
 .gallery-card h3 {
   font:
-    650 15px/1.5 "Manrope",
+    650 15px/1.5 "Lato",
     sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -125,22 +125,22 @@
 .gallery-card-arrow {
   flex: 0 0 39px;
   height: 39px;
-  border: 1px solid #ab9053;
+  border: 1px solid #b78b55;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: #735718;
+  color: #7b5235;
   font-size: 21px;
 }
 .gallery-caption {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  border-bottom: 1px solid #d6cbb4;
+  border-bottom: 1px solid #d7cabe;
   padding-bottom: 25px;
   margin: 22px 0 0;
   font-size: 11px;
-  color: #70654f;
+  color: #786251;
 }
 #treatments .directory-heading {
   margin-top: 47px;
@@ -150,15 +150,15 @@
 .reference-why {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #c39b43;
-  color: #1e1c16;
+  background: #c39a60;
+  color: #251a13;
 }
 .why-copy {
   position: relative;
   padding: 75px max(45px, calc((100vw - 1260px) / 2));
   padding-right: 60px;
   overflow: hidden;
-  background: linear-gradient(125deg, #cfad65, #b98f34);
+  background: linear-gradient(125deg, #d0ac72, #b98e57);
 }
 .why-copy::before,
 .why-copy::after {
@@ -181,11 +181,11 @@
   transform: rotate(20deg);
 }
 .why-copy .eyebrow {
-  color: #332912;
+  color: #37271e;
 }
 .why-copy h2 {
   font:
-    700 34px/1.2 "Manrope",
+    700 34px/1.2 "Lato",
     sans-serif;
   text-transform: uppercase;
   letter-spacing: -0.7px;
@@ -195,7 +195,7 @@
   font-size: 14px;
   line-height: 1.9;
   margin: 0;
-  color: #392f1d;
+  color: #3e2d24;
 }
 .why-points {
   display: grid;
@@ -216,7 +216,7 @@
   border: 1px solid #ffffff90;
   background: #ffffff23;
   border-radius: 50%;
-  color: #262015;
+  color: #2c1e17;
 }
 .reference-why .wdt-content-icon svg {
   width: 29px;
@@ -224,7 +224,7 @@
 }
 .reference-why .wdt-content-title h3 {
   font:
-    650 17px/1.5 "Manrope",
+    650 17px/1.5 "Lato",
     sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -233,7 +233,7 @@
 .reference-why .wdt-content-description {
   font-size: 13px;
   line-height: 1.9;
-  color: #392f1d;
+  color: #3e2d24;
 }
 .why-photo {
   position: relative;
@@ -252,7 +252,7 @@
   position: absolute;
   top: 34px;
   left: 34px;
-  background: #fbf9f2e8;
+  background: #fbf9f5e8;
   padding: 12px 17px;
   font-size: 11px;
   letter-spacing: 0.3px;
@@ -271,7 +271,7 @@
   background: var(--cream);
   color: var(--ink);
   font:
-    700 13px "Manrope",
+    700 13px "Lato",
     sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -283,7 +283,7 @@
   display: grid;
   place-items: center;
   width: 64px;
-  background: #d1a743;
+  background: #cda76b;
   font-size: 28px;
   margin-left: 16px;
 }
@@ -292,7 +292,7 @@
   bottom: 17px;
   right: 34px;
   font-size: 9px;
-  background: #fbf9f2d9;
+  background: #fbf9f5d9;
   padding: 3px 7px;
 }
 
@@ -303,14 +303,14 @@
   grid-template-columns: 1.8fr 0.55fr 0.55fr;
   gap: 22px;
   padding: 65px max(30px, calc((100vw - 1296px) / 2)) 85px;
-  background: #efe4ca;
+  background: #ece4da;
   align-items: center;
 }
 .visit-copy {
-  background: #fffefa;
+  background: #fefefd;
   border-radius: 20px;
-  border-top: 5px solid #b68c32;
-  box-shadow: 0 3px 12px #5b482a17;
+  border-top: 5px solid #b68b55;
+  box-shadow: 0 3px 12px #60453317;
   padding: 40px;
 }
 .visit-copy h2 {
@@ -319,7 +319,7 @@
   line-height: 1.2;
   font-weight: 400;
   margin: 0 0 18px;
-  color: #735718;
+  color: #7b5235;
 }
 .visit-copy > p:not(.eyebrow) {
   font-size: 13px;
@@ -343,7 +343,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #916b1c;
+  color: #976742;
   font-size: 17px;
 }
 .visit-checklist strong {
@@ -360,7 +360,7 @@
 }
 .visit-bring {
   padding: 17px 18px;
-  background: #f3efe5;
+  background: #f4eee8;
   margin-bottom: 24px;
 }
 .visit-bring strong {
@@ -400,13 +400,13 @@
   left: 30px;
   text-align: right;
   font-size: 9px;
-  color: #70654f;
+  color: #786251;
   margin: 0;
 }
 
 /* Garekars: one-third intro, two cream/photo cards, serif labels, dark background. */
 .reference-care {
-  background: #171714;
+  background: #1e1510;
   color: var(--cream);
   padding: 105px 0;
 }
@@ -419,7 +419,7 @@
   gap: 40px;
 }
 .care-intro .eyebrow {
-  color: #d1a743;
+  color: #cda76b;
 }
 .care-intro h2 {
   font-family: var(--serif);
@@ -432,7 +432,7 @@
 .care-intro > p:not(.eyebrow) {
   font-size: 13px;
   line-height: 1.9;
-  color: #bdb9ad;
+  color: #c6b7a9;
   margin-bottom: 30px;
   max-width: 320px;
 }
@@ -441,20 +441,20 @@
   font-family: var(--serif);
   font-size: 25px;
   line-height: 1.5;
-  color: #d1a743;
+  color: #cda76b;
   margin-bottom: 32px;
 }
 .care-phone span {
   display: block;
   font:
-    12px "Manrope",
+    12px "Lato",
     sans-serif;
-  color: #bdb9ad;
+  color: #c6b7a9;
   margin-bottom: 9px;
 }
 .care-controls button {
-  color: #d1a743;
-  border-color: #74623a;
+  color: #cda76b;
+  border-color: #825c40;
 }
 .care-deck {
   min-width: 0;
@@ -502,7 +502,7 @@
 }
 .reference-care .pricing-card .amount {
   font: 400 36px/1 var(--serif);
-  color: #916b1c;
+  color: #976742;
   margin: 0 0 25px;
 }
 .care-card-list {
@@ -521,7 +521,7 @@
 }
 .care-card-list li::before {
   content: "✓";
-  color: #916b1c;
+  color: #976742;
   position: absolute;
   left: 0;
 }
@@ -530,13 +530,13 @@
   align-items: center;
   gap: 13px;
   font:
-    650 10px "Manrope",
+    650 10px "Lato",
     sans-serif;
   background: transparent;
-  color: #735718;
+  color: #7b5235;
   padding: 10px 0 0;
   border: 0;
-  border-top: 1px solid #ded4c0;
+  border-top: 1px solid #dfd3c7;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -548,11 +548,11 @@
 .reference-gallery button:focus-visible,
 .reference-care button:focus-visible,
 .why-photo-cta:focus-visible {
-  outline: 3px solid #916b1c;
+  outline: 3px solid #976742;
   outline-offset: 4px;
 }
 .reference-care button:focus-visible {
-  outline-color: #d1a743;
+  outline-color: #cda76b;
   outline-offset: -4px;
 }
 

@@ -1,0 +1,195 @@
+/* Skinic brand layer — loaded last.
+   Source: "Skinic – Brand Guidelines".
+   Colour: Espresso is the anchor, Champagne Gold a refined accent (never a
+   large field), Cocoa and Rose Brown add warmth, Sand and Ivory keep the
+   identity soft and spacious.
+   Type: Cormorant Garamond for headlines and short premium statements,
+   Lato for body copy, subheads, clinical information and UI. */
+
+/* ---- Typefaces ------------------------------------------------------- */
+/* Cormorant has a much smaller x-height than the display faces it replaces;
+   size-adjust lets every existing font-size rule keep working unchanged. */
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  size-adjust: 112%;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Variable-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  size-adjust: 112%;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-300.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-400-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600 800;
+  font-display: swap;
+}
+
+/* ---- Palette --------------------------------------------------------- */
+:root {
+  --espresso: #302119;
+  --champagne: #cba467;
+  --cocoa: #956441;
+  --rose-brown: #a67b70;
+  --sand: #e7ddd2;
+  --ivory: #f5f0ea;
+
+  /* Semantic tokens used throughout the earlier stylesheets. */
+  --ink: var(--espresso);
+  --muted: #6e5a4c;
+  --cream: var(--ivory);
+  --sage: var(--sand);
+  --line: #dbcfc3;
+  /* Accent text sits on ivory, where champagne gold is too faint to read;
+     cocoa carries the warmth with legible contrast. */
+  --accent: var(--cocoa);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: Lato, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+/* ---- Espresso anchors ------------------------------------------------ */
+.topbar {
+  background: var(--espresso);
+  color: var(--ivory);
+}
+.topbar p span {
+  color: var(--sand);
+}
+
+/* "Why choose Skinic" was a full gold field; the guidelines keep gold to
+   accents, so the panel sits on espresso with champagne details. */
+.reference-why {
+  background: var(--espresso);
+}
+/* Text colour stays on the copy side so the photo's light labels keep dark text. */
+.why-copy {
+  background: var(--espresso);
+  color: var(--ivory);
+}
+.why-copy::before,
+.why-copy::after {
+  border-color: #cba46740;
+}
+.why-copy .eyebrow {
+  color: var(--champagne);
+}
+.why-copy h2,
+.reference-why .wdt-content-title h3 {
+  color: var(--ivory);
+}
+.why-intro {
+  color: #dbcfc3;
+}
+.reference-why .wdt-content-icon {
+  border-color: #cba46780;
+  background: #cba46714;
+  color: var(--champagne);
+}
+.reference-why .wdt-content-description {
+  color: #c7b8aa;
+}
+
+/* Booking panel: espresso glass instead of a translucent gold field. */
+.appointment-glass {
+  background: #3021198f;
+  border-color: #cba46745;
+}
+
+/* Footer photo is cool-toned; carry it in espresso so it sits in the palette. */
+.photo-footer {
+  background-color: var(--espresso);
+  background-blend-mode: luminosity;
+}
+.photo-footer::before {
+  background: linear-gradient(180deg, #30211966, #302119a6 70%, #1f1510e0);
+}
+
+/* Cormorant's old-style figures are part of its character, but phone
+   numbers read more clearly with lining figures. */
+.appointment-phone,
+.footer-contact-band strong,
+.header-phone strong {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* ---- Logo ------------------------------------------------------------ */
+/* Primary logo from the guidelines (assets/brand/skinic-logo.png). It is
+   shown whole — the previous logo was cropped out of a larger image. */
+.brand {
+  aspect-ratio: auto;
+  overflow: visible;
+}
+.brand > img,
+.site-header .brand > img {
+  position: static;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+/* The header is light (sand), so the logo sits directly on it. */
+.site-header .brand {
+  width: 95px;
+  background: none;
+  border-radius: 0;
+}
+/* On dark surfaces the guidelines place the logo on an ivory field. */
+.photo-footer .footer-bottom .brand {
+  width: 150px;
+  padding: 14px 22px;
+  background: var(--ivory);
+  border-radius: 12px;
+}
+@media (max-width: 950px) {
+  .site-header .brand {
+    width: 86px;
+  }
+}
+@media (max-width: 700px) {
+  .site-header .brand {
+    width: 72px;
+  }
+  .photo-footer .footer-bottom .brand {
+    width: 128px;
+    padding: 12px 18px;
+  }
+}
+@media (max-width: 360px) {
+  .site-header .brand {
+    width: 64px;
+  }
+}

@@ -1,20 +1,13 @@
 /* The compositions highlighted by the user: Clinic Dermatech's rounded banner,
    Garekars' 2/3/2 photo tiles and blurred booking backdrop, and Dr. Anwesha's
-   staggered, numbered treatment cards. Colors follow the supplied Skinic logo. */
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/PlayfairDisplay-Variable.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-}
+   staggered, numbered treatment cards. Colours follow the Skinic brand guidelines (see brand.css). */
 :root {
-  --ink: #282720;
-  --muted: #776f63;
-  --cream: #f6f1ea;
-  --sage: #eae1d5;
-  --line: #d9cdbb;
-  --accent: #987636;
+  --ink: #33231b;
+  --muted: #826c5c;
+  --cream: #f6f1eb;
+  --sage: #eae1d7;
+  --line: #d9cdc0;
+  --accent: #a17247;
   --width: 1280px;
 }
 body {
@@ -27,7 +20,7 @@ body {
   padding-block: 85px;
 }
 h2 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
   letter-spacing: -0.03em;
 }
@@ -40,7 +33,7 @@ h2 {
 }
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px #42352120;
+  box-shadow: 0 6px 20px #46332920;
 }
 .eyebrow {
   letter-spacing: 2.6px;
@@ -52,8 +45,8 @@ html {
 
 /* Layered navigation, with the original logo set on its own charcoal plaque. */
 .topbar {
-  background: #675a45;
-  color: #fffaf1;
+  background: #6e5748;
+  color: #fcfaf8;
   border: 0;
   font-size: 10px;
 }
@@ -67,7 +60,7 @@ html {
   font-size: 10px;
 }
 .topbar p span {
-  color: #eee2cc;
+  color: #ebe2d8;
 }
 .top-links {
   display: flex;
@@ -78,7 +71,7 @@ html {
   width: 22px;
   height: 22px;
   background: transparent;
-  border: 1px solid #cfc1a388;
+  border: 1px solid #d0c0ac88;
   margin: 0;
 }
 .topbar .top-instagram svg {
@@ -86,9 +79,9 @@ html {
   height: 12px;
 }
 .site-header {
-  background: #ece4d8;
+  background: #ece4da;
   color: var(--ink);
-  border-bottom: 1px solid #d8cdbc;
+  border-bottom: 1px solid #d9ccc0;
   box-shadow: none;
   z-index: 40;
 }
@@ -99,7 +92,7 @@ html {
 }
 .site-header .brand {
   width: 138px;
-  background: #25241f;
+  background: #302119;
   border-radius: 8px;
 }
 .site-header .brand > img {
@@ -153,9 +146,9 @@ html {
   top: calc(100% + 10px);
   left: -22px;
   width: 275px;
-  background: #fffaf2;
-  box-shadow: 0 12px 35px #2b221920;
-  border: 1px solid #ddd0bb;
+  background: #fcfaf8;
+  box-shadow: 0 12px 35px #2f201920;
+  border: 1px solid #dcd0c4;
   border-radius: 15px;
   padding: 18px 20px;
 }
@@ -164,7 +157,7 @@ html {
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 1.4px;
-  color: #907744;
+  color: #a07047;
 }
 .nav-panel > button,
 .nav-panel > a {
@@ -175,16 +168,16 @@ html {
   width: 100%;
   background: transparent;
   padding: 12px 0;
-  border-top: 1px solid #e7ddcf;
+  border-top: 1px solid #e7ddd2;
   font:
-    500 12px "Manrope",
+    500 12px "Lato",
     sans-serif;
   text-align: left;
   color: var(--ink);
 }
 .nav-panel > button:hover,
 .nav-panel > a:hover {
-  color: #987636;
+  color: #a17247;
 }
 .header-phone {
   display: flex;
@@ -203,7 +196,7 @@ html {
 }
 .header-phone strong {
   font-size: 16px;
-  color: #91753d;
+  color: #9f6f46;
   font-weight: 650;
   letter-spacing: -0.5px;
 }
@@ -221,18 +214,18 @@ html {
 }
 .menu-toggle {
   color: var(--ink);
-  border: 1px solid #b09b71;
+  border: 1px solid #ba986c;
   border-radius: 50%;
 }
 .mobile-nav {
-  background: #ece4d8;
+  background: #ece4da;
   color: var(--ink);
   border-top: 1px solid var(--line);
   padding: 15px 25px 24px;
 }
 .mobile-nav a {
   color: var(--ink);
-  border-color: #d8cdbc;
+  border-color: #d9ccc0;
 }
 
 /* Clinic Dermatech's wide, rounded campaign banner and left social rail. */
@@ -250,7 +243,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid #d6c8b4;
+  border: 1px solid #d5c8bb;
   border-top: 0;
   border-radius: 0 0 30px 0;
   padding: 24px 10px;
@@ -263,16 +256,16 @@ html {
 }
 .social-rail .rail-talk {
   padding: 17px 12px;
-  background: #fffaf2;
+  background: #fcfaf8;
   border-radius: 999px;
-  box-shadow: 0 2px 13px #3b2d1a0b;
+  box-shadow: 0 2px 13px #3d2c230b;
 }
 .campaign-hero {
   position: relative;
   height: clamp(510px, 37.8vw, 660px);
   overflow: hidden;
   border-radius: 30px;
-  background: #3e3024;
+  background: #302119;
   isolation: isolate;
 }
 .campaign-slides,
@@ -311,11 +304,11 @@ html {
   inset: 0;
   background: linear-gradient(
     90deg,
-    #3e3024 0%,
-    #3e3024 35%,
-    #3e3024c9 46%,
-    #3e30244a 61%,
-    #3e302412 76%
+    #302119 0%,
+    #302119 35%,
+    #302119c9 46%,
+    #3021194a 61%,
+    #30211912 76%
   );
   pointer-events: none;
 }
@@ -328,39 +321,39 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff8e8;
+  color: #fbf8f5;
 }
 .campaign-copy .eyebrow {
-  color: #e2c792;
+  color: #e1c79a;
   font-size: 9px;
   letter-spacing: 2px;
   margin-bottom: 25px;
   white-space: nowrap;
 }
 .campaign-copy .eyebrow span {
-  color: #d6c2a7;
+  color: #d2c2b0;
   letter-spacing: 0.8px;
 }
 .campaign-title {
   font:
-    400 clamp(38px, 3.7vw, 70px)/1.1 "Gilda Display",
+    400 clamp(38px, 3.7vw, 70px)/1.1 "Cormorant Garamond",
     Georgia,
     serif;
   letter-spacing: -1.6px;
   margin: 0 0 23px;
-  color: #fff7e9;
+  color: #faf7f4;
 }
 .campaign-title em {
-  color: #e2ba74;
+  color: #dabc88;
   font:
-    italic 400 clamp(57px, 5.2vw, 100px)/1.2 "Gilda Display",
+    italic 400 clamp(57px, 5.2vw, 100px)/1.2 "Cormorant Garamond",
     Georgia,
     serif;
   letter-spacing: -2.5px;
 }
 .campaign-description {
   max-width: 430px;
-  color: #eee0cb;
+  color: #e9e0d6;
   font-size: 12px;
   line-height: 1.9;
   margin: 0 0 25px;
@@ -372,9 +365,9 @@ html {
   gap: 17px;
 }
 .campaign-actions .button {
-  background: #dec291;
-  border-color: #dec291;
-  color: #322619;
+  background: #ddc295;
+  border-color: #ddc295;
+  color: #35251d;
   font-size: 9px;
   padding-inline: 19px;
   min-height: 43px;
@@ -382,13 +375,13 @@ html {
   gap: 14px;
 }
 .campaign-actions .button:hover {
-  background: #efdab2;
+  background: #e8dbc5;
 }
 .campaign-secondary {
   font-size: 10px;
-  color: #fff4df;
+  color: #f8f5f0;
   padding-block: 10px;
-  border-bottom: 1px solid #b99c69;
+  border-bottom: 1px solid #c2995f;
 }
 .campaign-secondary span {
   padding-left: 12px;
@@ -399,11 +392,11 @@ html {
   align-items: center;
   margin-top: 32px;
   font-size: 11px;
-  color: #fff4df;
+  color: #f8f5f0;
 }
 .campaign-doctor small {
   display: block;
-  color: #d0baa0;
+  color: #ccbba7;
   font-size: 8px;
   line-height: 1.6;
   margin-top: 3px;
@@ -412,23 +405,23 @@ html {
 .campaign-seal {
   width: 42px;
   height: 42px;
-  border: 1px solid #b1986e;
+  border: 1px solid #b99568;
   display: grid;
   place-items: center;
   border-radius: 50%;
   font:
-    14px "Gilda Display",
+    14px "Cormorant Garamond",
     Georgia,
     serif;
-  color: #e2ba74;
+  color: #dabc88;
 }
 .campaign-credit {
   position: absolute;
   right: 19px;
   bottom: 12px;
   z-index: 3;
-  color: #fff7e7;
-  background: #30261999;
+  color: #faf7f3;
+  background: #34241c99;
   padding: 3px 7px;
   border-radius: 3px;
   font-size: 8px;
@@ -459,7 +452,7 @@ html {
 .campaign-dots span {
   width: 6px;
   height: 6px;
-  background: #c9c0b4;
+  background: #cdbfb2;
   border-radius: 50%;
   transition:
     width 0.3s,
@@ -468,15 +461,15 @@ html {
 .campaign-dots button[aria-pressed="true"] span {
   width: 17px;
   border-radius: 20px;
-  background: #6c5940;
+  background: #715744;
 }
 .campaign-label {
   font-size: 10px;
-  color: #8a7860;
+  color: #8f7663;
   margin: 0 auto 0 0;
 }
 .campaign-label span {
-  color: #978b79;
+  color: #9d897b;
 }
 .campaign-arrows {
   display: flex;
@@ -485,10 +478,10 @@ html {
 .campaign-arrows button {
   width: 30px;
   height: 30px;
-  border: 1px solid #c4b69d;
+  border: 1px solid #c5b5a6;
   border-radius: 50%;
   background: transparent;
-  color: #7f6a43;
+  color: #8c6447;
   font-size: 17px;
   display: grid;
   place-items: center;
@@ -498,15 +491,15 @@ html {
 }
 .skinic-advantage {
   padding-block: 35px 50px;
-  border-bottom: 1px solid #d7cbb7;
+  border-bottom: 1px solid #d7cabe;
 }
 .skinic-advantage > h2 {
   text-align: center;
   font:
-    600 clamp(27px, 3vw, 48px)/1.25 "Playfair Display",
+    600 clamp(27px, 3vw, 48px)/1.25 "Cormorant Garamond",
     Georgia,
     serif;
-  color: #948365;
+  color: #9c8067;
   margin: 0 0 28px;
 }
 .advantage-grid {
@@ -518,15 +511,15 @@ html {
   padding: 0 15px;
 }
 .advantage-item + .advantage-item {
-  border-left: 1px solid #d9cdbb;
+  border-left: 1px solid #d9cdc0;
 }
 .advantage-item > strong {
   display: block;
   font:
-    400 55px/1.1 "Manrope",
+    400 55px/1.1 "Lato",
     sans-serif;
   letter-spacing: -4px;
-  color: #a18b60;
+  color: #ad875b;
   min-height: 61px;
 }
 .advantage-item .count-plus {
@@ -535,17 +528,17 @@ html {
 .advantage-item > svg {
   width: 47px;
   height: 61px;
-  color: #a18b60;
+  color: #ad875b;
 }
 .advantage-item p {
-  color: #665b47;
+  color: #6e5848;
   font-weight: 650;
   font-size: 11px;
   margin: 12px 0 5px;
 }
 .advantage-item small {
   font-size: 9px;
-  color: #8a7c65;
+  color: #907a6a;
 }
 
 /* A considered clinician introduction, and practical concern navigation. */
@@ -569,19 +562,19 @@ html {
 }
 .doctor-nameplate {
   border-radius: 13px;
-  box-shadow: 0 8px 25px #493e2412;
+  box-shadow: 0 8px 25px #513a2e12;
   left: 22px;
   right: -20px;
   bottom: 35px;
   padding: 20px 25px;
 }
 .doctor-nameplate h3 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 21px;
   font-weight: 500;
 }
 .doctor-copy h2 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
   text-transform: none;
   font-size: 42px;
@@ -610,20 +603,20 @@ html {
 }
 .care-panel {
   border-radius: 18px;
-  background: #eee5d7;
-  border: 1px solid #dbcfba;
+  background: #ede5db;
+  border: 1px solid #dacec2;
   padding: 35px;
 }
 .care-panel h3 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 30px;
   font-weight: 500;
 }
 
 /* Garekars' photographic overlay tiles: two wide, three narrow, two wide. */
 .service-mosaic-section {
-  background: #f9f5ee;
-  border-top: 1px solid #e6dbca;
+  background: #f9f5f0;
+  border-top: 1px solid #e5dbd0;
 }
 .mosaic-heading {
   display: grid;
@@ -638,14 +631,14 @@ html {
 }
 .mosaic-heading h2 {
   font:
-    500 44px/1.18 "Playfair Display",
+    500 44px/1.18 "Cormorant Garamond",
     Georgia,
     serif;
   margin: 0;
 }
 .mosaic-heading h2 em {
   font-style: normal;
-  color: #a28a5a;
+  color: #b08552;
 }
 .mosaic-heading > p:last-child {
   font-size: 12px;
@@ -664,7 +657,7 @@ html {
   grid-column: span 2;
   display: block;
   border: 0;
-  background: #5e493a;
+  background: #5f493b;
   padding: 0;
   text-align: left;
   color: white;
@@ -696,8 +689,8 @@ html {
   background: linear-gradient(
     180deg,
     transparent 30%,
-    #30271b1a 45%,
-    #20190dc4 100%
+    #35251d1a 45%,
+    #231812c4 100%
   );
   pointer-events: none;
 }
@@ -710,7 +703,7 @@ html {
   transition: transform 0.4s ease;
 }
 .mosaic-tile .con p {
-  color: #fff3d9;
+  color: #f7f3ee;
   font-size: 8px;
   line-height: 1.5;
   letter-spacing: 2px;
@@ -719,7 +712,7 @@ html {
 }
 .mosaic-tile h3 {
   font:
-    400 27px/1.2 "Gilda Display",
+    400 27px/1.2 "Cormorant Garamond",
     Georgia,
     serif;
   letter-spacing: -0.3px;
@@ -729,7 +722,7 @@ html {
 .mosaic-tile .line {
   height: 1px;
   width: 45px;
-  background: #fff7e3aa;
+  background: #faf7f3aa;
   transition: width 0.45s;
 }
 .mosaic-discover {
@@ -771,7 +764,7 @@ html {
 
 /* Dr. Anwesha's alternating tall/short photograph cards with oversized numerals. */
 #treatments {
-  background: #fdfaf5;
+  background: #fcfaf8;
   padding-block: 80px;
 }
 #treatments > .container {
@@ -783,12 +776,12 @@ html {
 }
 #treatments-title {
   font:
-    500 40px/1.2 "Playfair Display",
+    500 40px/1.2 "Cormorant Garamond",
     Georgia,
     serif;
 }
 #treatments-title em {
-  color: #a18b60;
+  color: #ad875b;
   font-style: normal;
 }
 #treatments .section-heading > p {
@@ -808,8 +801,8 @@ html {
   border-radius: 999px;
 }
 .gallery-tabs button[aria-pressed="true"] {
-  background: #e8ddc7;
-  color: #3d3322;
+  background: #e7ddd1;
+  color: #433028;
 }
 .gallery-track {
   gap: 34px;
@@ -840,9 +833,9 @@ html {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #fff8e6e3;
+  background: #fbf8f4e3;
   font-size: 22px;
-  color: #54401c;
+  color: #593d2b;
   opacity: 0;
   transform: translateY(6px);
   transition:
@@ -863,17 +856,17 @@ html {
 }
 .gallery-number {
   font:
-    700 clamp(55px, 5vw, 94px)/0.95 "Manrope",
+    700 clamp(55px, 5vw, 94px)/0.95 "Lato",
     sans-serif;
   letter-spacing: -5px;
-  color: #e7d6b8;
+  color: #e3d6c6;
 }
 .gallery-card-text {
   padding-top: 6px;
 }
 .gallery-card h3 {
   font:
-    700 clamp(10px, 0.9vw, 15px)/1.5 "Manrope",
+    700 clamp(10px, 0.9vw, 15px)/1.5 "Lato",
     sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.6px;
@@ -882,7 +875,7 @@ html {
 .gallery-card p {
   font-size: 10px;
   line-height: 1.7;
-  color: #857864;
+  color: #8b7666;
 }
 .gallery-caption {
   max-width: 1280px;
@@ -891,9 +884,9 @@ html {
 .service-directory {
   max-width: 1280px;
   margin: 38px auto 0;
-  border: 1px solid #ddcfb8;
+  border: 1px solid #dbcfc3;
   border-radius: 13px;
-  background: #f6f0e5;
+  background: #f5f0ea;
   overflow: hidden;
 }
 .service-directory > summary {
@@ -911,21 +904,21 @@ html {
 .service-directory > summary strong {
   display: block;
   font:
-    500 23px "Playfair Display",
+    500 23px "Cormorant Garamond",
     Georgia,
     serif;
-  color: #5e4c2b;
+  color: #654835;
 }
 .service-directory > summary small {
   display: block;
   font-size: 10px;
-  color: #857864;
+  color: #8b7666;
   margin-top: 6px;
 }
 .directory-toggle {
   font-size: 27px;
   font-weight: 300;
-  color: #967a43;
+  color: #a37448;
   transition: transform 0.3s;
 }
 .service-directory[open] .directory-toggle {
@@ -941,7 +934,7 @@ html {
   margin-top: 12px;
 }
 .directory-body .treatment-card {
-  background: #fdfaf4;
+  background: #fcfaf7;
 }
 
 /* Keep the selected split panel and Isya consultation collage in the same palette. */
@@ -949,10 +942,10 @@ html {
   margin: 0;
 }
 .why-copy {
-  background: #b89855;
+  background: #bf955c;
 }
 .why-copy h2 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   text-transform: none;
   font-weight: 500;
   font-size: 40px;
@@ -965,39 +958,39 @@ html {
   overflow: hidden;
 }
 .reference-visit {
-  background: #eae0ce;
+  background: #e9e0d5;
 }
 .visit-copy h2 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 31px;
 }
 .visit-copy {
   border-radius: 18px;
-  background: #fefbf5;
+  background: #fdfbf9;
 }
 .visit-photo-column > div {
   border-radius: 6px;
 }
 .social-section {
-  background: #f9f5ee;
+  background: #f9f5f0;
 }
 .social-link {
   border-radius: 12px;
-  background: #efe6d8;
+  background: #eee6dd;
 }
 .faq-section {
-  background: #eae1d5;
+  background: #eae1d7;
 }
 .faq-item {
-  border-color: #d4c5ad;
+  border-color: #d2c5b8;
 }
 
 /* Garekars' blurred background and translucent booking panel. */
 .appointment-backdrop {
   position: relative;
   padding: 85px 0;
-  color: #fff8e8;
-  background: #4d3d29;
+  color: #fbf8f5;
+  background: #503b30;
   overflow: hidden;
   isolation: isolate;
 }
@@ -1017,7 +1010,7 @@ html {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, #352411aa, #4b38145c 45%, #1e191bc7);
+  background: linear-gradient(100deg, #34241baa, #4e36265c 45%, #231812c7);
   z-index: -1;
 }
 .appointment-layout {
@@ -1028,31 +1021,31 @@ html {
   max-width: 1150px;
 }
 .appointment-glass {
-  background: #ad8b4d63;
-  border: 1px solid #f3dfa43a;
+  background: #b4885363;
+  border: 1px solid #eddec33a;
   padding: 35px;
   backdrop-filter: blur(10px);
   border-radius: 3px;
 }
 .appointment-glass .eyebrow,
 .appointment-location .eyebrow {
-  color: #edd4a2;
+  color: #e7d5b4;
 }
 .appointment-glass h2 {
   font:
-    400 35px/1.2 "Gilda Display",
+    400 35px/1.2 "Cormorant Garamond",
     Georgia,
     serif;
-  color: #fff8e8;
+  color: #fbf8f5;
   margin: 0 0 15px;
   letter-spacing: -0.7px;
 }
 .appointment-intro {
-  color: #e7d9c0;
+  color: #e4d9ce;
   font-size: 11px;
   margin-bottom: 26px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #f4e4c166;
+  border-bottom: 1px solid #eee4d666;
 }
 .appointment-fields {
   display: grid;
@@ -1063,13 +1056,13 @@ html {
   display: block;
   font-size: 11px;
   font-weight: 650;
-  color: #fff5e2;
+  color: #f9f5f1;
 }
 .appointment-field > span {
-  color: #ead198;
+  color: #e6d1aa;
 }
 .appointment-field > small {
-  color: #e0cfae;
+  color: #decfbb;
   font-size: 8px;
   font-weight: 400;
 }
@@ -1080,13 +1073,13 @@ html {
   min-width: 0;
   height: 39px;
   border: 0;
-  border-bottom: 1px solid #e9dbbfaa;
-  color: #fff9ea;
+  border-bottom: 1px solid #e6dbceaa;
+  color: #fbf9f6;
   background: transparent;
   border-radius: 0;
   padding: 5px 0;
   font:
-    400 13px "Manrope",
+    400 13px "Lato",
     sans-serif;
   outline-offset: 4px;
   color-scheme: dark;
@@ -1096,12 +1089,12 @@ html {
   padding-right: 13px;
 }
 .appointment-field option {
-  background: #fffaf0;
-  color: #322a1c;
+  background: #fcfaf8;
+  color: #38281f;
 }
 .appointment-field input:focus,
 .appointment-field select:focus {
-  border-bottom-color: #fffaf0;
+  border-bottom-color: #fcfaf8;
 }
 .appointment-field.field-full {
   grid-column: 1/-1;
@@ -1112,33 +1105,33 @@ html {
   padding-inline: 20px;
   font-size: 9px;
   letter-spacing: 1.3px;
-  background: #d7b575;
-  border-color: #d7b575;
-  color: #312517;
+  background: #d6b57e;
+  border-color: #d6b57e;
+  color: #33241c;
 }
 .appointment-form-note {
   font-size: 9px;
   line-height: 1.7;
-  color: #e1d1b5;
+  color: #ded1c2;
   margin: 15px 0 0;
   max-width: 360px;
 }
 .appointment-location h3 {
   font:
-    400 44px/1.15 "Gilda Display",
+    400 44px/1.15 "Cormorant Garamond",
     Georgia,
     serif;
   letter-spacing: -0.8px;
   margin: 0 0 22px;
 }
 .appointment-location h3 em {
-  color: #dec08b;
+  color: #ddc08e;
   font-style: normal;
 }
 .appointment-location > p:not(.eyebrow) {
   font-size: 12px;
   line-height: 1.9;
-  color: #e3d6bd;
+  color: #e1d6ca;
   max-width: 430px;
 }
 .location-panel {
@@ -1146,19 +1139,19 @@ html {
   gap: 17px;
   margin-block: 30px;
   padding-block: 22px;
-  border-block: 1px solid #d6c19866;
+  border-block: 1px solid #d7c09d66;
 }
 .location-panel > svg {
   width: 27px;
   height: 27px;
-  color: #e9c889;
+  color: #e2c99d;
 }
 .location-panel small {
   display: block;
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 1.7px;
-  color: #dec494;
+  color: #ddc49a;
   margin-bottom: 10px;
 }
 .location-panel address {
@@ -1170,7 +1163,7 @@ html {
   display: inline-block;
   margin-top: 12px;
   font-size: 10px;
-  border-bottom: 1px solid #d2b87f;
+  border-bottom: 1px solid #d7b680;
   padding-bottom: 3px;
 }
 .appointment-phone {
@@ -1178,10 +1171,10 @@ html {
   align-items: center;
   gap: 14px;
   font:
-    400 26px/1.5 "Gilda Display",
+    400 26px/1.5 "Cormorant Garamond",
     Georgia,
     serif;
-  color: #ecd2a1;
+  color: #e6d3b1;
 }
 .appointment-phone svg {
   width: 24px;
@@ -1190,9 +1183,9 @@ html {
 .appointment-phone small {
   display: block;
   font:
-    10px "Manrope",
+    10px "Lato",
     sans-serif;
-  color: #e3d6bd;
+  color: #e1d6ca;
   margin-bottom: 6px;
 }
 .appointment-email {
@@ -1201,13 +1194,13 @@ html {
   gap: 35px;
   font-size: 12px;
   margin-top: 22px;
-  color: #fff8e8;
+  color: #fbf8f5;
 }
 .appointment-preparation {
   margin-top: 25px;
   padding: 20px;
-  background: #33291f44;
-  border: 1px solid #b2996866;
+  background: #38271f44;
+  border: 1px solid #be955e66;
 }
 .appointment-preparation strong {
   font-size: 11px;
@@ -1215,7 +1208,7 @@ html {
 }
 .appointment-preparation p {
   font-size: 10px;
-  color: #e3d6bd;
+  color: #e1d6ca;
   line-height: 1.8;
   margin-top: 7px;
 }
@@ -1224,10 +1217,10 @@ html {
   right: 24px;
   bottom: 14px;
   font-size: 8px;
-  color: #e0d4bf;
+  color: #dfd4c8;
 }
 .footer {
-  background: #25231d;
+  background: #2e2018;
 }
 .mobile-care-bar > button {
   border-radius: 999px;
@@ -1286,7 +1279,7 @@ html {
   transform: none;
 }
 .campaign-hero:has(:focus-visible) {
-  outline: 2px solid #b08a39;
+  outline: 2px solid #b48752;
   outline-offset: 4px;
 }
 
@@ -1545,10 +1538,10 @@ html {
   .campaign-slide::after {
     background: linear-gradient(
       180deg,
-      #3e302426 0%,
-      #3e302475 28%,
-      #3e3024f0 48%,
-      #3e3024 100%
+      #30211926 0%,
+      #30211975 28%,
+      #302119f0 48%,
+      #302119 100%
     );
   }
   .campaign-copy .eyebrow {
@@ -1991,15 +1984,15 @@ html {
   position: relative;
   isolation: isolate;
   padding: 65px 0 22px;
-  background: #182330 url("footer-background.jpeg") center top / cover no-repeat;
-  color: #fff9ee;
+  background: #2d1f18 url("footer-background.jpeg") center top / cover no-repeat;
+  color: #fbf9f6;
 }
 .photo-footer::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, #11171916, #11171940 70%, #10171fcc);
+  background: linear-gradient(180deg, #1d140f16, #1d140f40 70%, #1e140fcc);
   pointer-events: none;
 }
 .photo-footer .footer-content {
@@ -2015,18 +2008,18 @@ html {
 }
 .photo-footer h2 {
   font:
-    500 24px/1.25 "Playfair Display",
+    500 24px/1.25 "Cormorant Garamond",
     Georgia,
     serif;
   letter-spacing: -0.3px;
-  color: #fff9ee;
+  color: #fbf9f6;
   margin: 0 0 22px;
 }
 .footer-newsletter > p:not(.footer-email-note) {
   max-width: 355px;
   font-size: 14px;
   line-height: 1.8;
-  color: #f5efe6;
+  color: #f4efe9;
   margin-bottom: 25px;
 }
 .footer-email-pill {
@@ -2039,17 +2032,17 @@ html {
   min-height: 66px;
   border: 1px solid #ffffff0a;
   border-radius: 999px;
-  background: #0b151fe8;
-  box-shadow: 0 8px 24px #00000012;
+  background: #1a120ee8;
+  box-shadow: 0 8px 24px #120c0912;
 }
 .footer-email-pill:focus-within {
-  border-color: #d1a743;
+  border-color: #cda76b;
 }
 .footer-email-pill input {
   display: block;
   width: 100%;
   min-width: 0;
-  color: #fffaf0;
+  color: #fcfaf8;
   background: transparent;
   border: 0;
   padding: 8px 0;
@@ -2057,7 +2050,7 @@ html {
   line-height: 1.5;
 }
 .footer-email-pill input::placeholder {
-  color: #f7f2e9;
+  color: #f6f2ec;
   opacity: 1;
 }
 .footer-email-pill input:focus-visible {
@@ -2070,14 +2063,14 @@ html {
   height: 44px;
   border: 0;
   border-radius: 999px;
-  color: #252019;
-  background: #d1a743;
+  color: #2b1e17;
+  background: #cda76b;
   transition:
     background 0.25s,
     transform 0.25s;
 }
 .footer-email-pill button:hover {
-  background: #e1bf70;
+  background: #dcbf8c;
   transform: translateX(2px);
 }
 .footer-email-pill button svg {
@@ -2085,7 +2078,7 @@ html {
   height: 20px;
 }
 .footer-email-note {
-  color: #c8c4bd;
+  color: #d0c2b5;
   font-size: 9px;
   line-height: 1.7;
   margin-top: 10px;
@@ -2100,16 +2093,16 @@ html {
   height: 44px;
   border: 1px solid #ffffff42;
   border-radius: 50%;
-  color: #fff9ee;
+  color: #fbf9f6;
   transition:
     color 0.25s,
     border-color 0.25s,
     background 0.25s;
 }
 .photo-footer .footer-social a:hover {
-  color: #e4c77f;
-  border-color: #d1a743;
-  background: #d1a74314;
+  color: #e0c799;
+  border-color: #cda76b;
+  background: #cda76b14;
 }
 .photo-footer .footer-social svg {
   width: 19px;
@@ -2132,20 +2125,20 @@ html {
   padding: 0;
   border: 0;
   background: transparent;
-  color: #f5efe6;
+  color: #f4efe9;
   text-align: left;
   font:
-    400 13px/1.65 "Manrope",
+    400 13px/1.65 "Lato",
     sans-serif;
   transition: color 0.25s;
 }
 .footer-link-list a:hover,
 .footer-link-list button:hover,
 .footer-clinic-city:hover {
-  color: #e4c77f;
+  color: #e0c799;
 }
 .footer-clinic address {
-  color: #d6d1c7;
+  color: #dcd0c4;
   font-size: 11px;
   line-height: 1.9;
   font-style: normal;
@@ -2155,14 +2148,14 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  color: #e4c77f;
+  color: #e0c799;
   font-size: 11px;
   margin-top: 15px;
   padding-bottom: 4px;
-  border-bottom: 1px solid #b99a5966;
+  border-bottom: 1px solid #c0975e66;
 }
 .footer-clinic-note {
-  color: #d6d1c7;
+  color: #dcd0c4;
   font-size: 10px;
   line-height: 1.8;
   margin: 22px 0;
@@ -2173,25 +2166,25 @@ html {
   justify-content: space-between;
   gap: 15px;
   background: transparent;
-  border: 1px solid #bda36b77;
+  border: 1px solid #c7a06477;
   border-radius: 999px;
   padding: 12px 15px;
-  color: #e4c77f;
+  color: #e0c799;
   font-size: 10px;
   line-height: 1.5;
   text-align: left;
 }
 .footer-clinic-booking:hover {
-  background: #d1a7431a;
-  border-color: #d1a743;
+  background: #cda76b1a;
+  border-color: #cda76b;
 }
 .footer-contact-band {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 35px;
   align-items: center;
-  background: #0b151feb;
-  border: 1px solid #e4c77f14;
+  background: #1a120eeb;
+  border: 1px solid #e0c79914;
   border-radius: 26px;
   padding: 26px 32px;
 }
@@ -2200,7 +2193,7 @@ html {
   margin-bottom: 7px;
 }
 .footer-contact-band p {
-  color: #c1c2be;
+  color: #cdbfb2;
   font-size: 10px;
   line-height: 1.7;
 }
@@ -2215,21 +2208,21 @@ html {
   place-items: center;
   flex: 0 0 42px;
   height: 42px;
-  background: #c9aa651a;
-  border: 1px solid #c9aa653d;
+  background: #cda86c1a;
+  border: 1px solid #cda86c3d;
   border-radius: 50%;
-  color: #e4c77f;
+  color: #e0c799;
 }
 .footer-contact-band small {
   display: block;
-  color: #d2d0c6;
+  color: #dacec2;
   font-size: 9px;
   margin-bottom: 5px;
 }
 .footer-contact-band strong {
   font-size: 12px;
   font-weight: 500;
-  color: #fff9ee;
+  color: #fbf9f6;
   overflow-wrap: anywhere;
 }
 .photo-footer .footer-bottom {
@@ -2246,19 +2239,19 @@ html {
 }
 .photo-footer .footer-bottom p {
   margin: 0 auto 0 0;
-  color: #e2ded5;
+  color: #e7ddd2;
   font-size: 10px;
   line-height: 1.8;
 }
 .photo-footer .footer-bottom p span {
-  color: #bbbcb7;
+  color: #c8b9ab;
   font-size: 9px;
 }
 .photo-footer .back-top {
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  color: #e4c77f;
+  color: #e0c799;
   white-space: nowrap;
   font-size: 10px;
 }
@@ -2267,13 +2260,13 @@ html {
   place-items: center;
   width: 31px;
   height: 31px;
-  border: 1px solid #bba36977;
+  border: 1px solid #c79f6377;
   border-radius: 50%;
   font-size: 16px;
 }
 .footer-request-email {
-  color: #846328;
-  background: #eee3ce;
+  color: #8d5e3d;
+  background: #ebe3d9;
   padding: 14px 17px;
   border-radius: 9px;
   margin: 22px 0;
@@ -2340,9 +2333,9 @@ html {
   .photo-footer::before {
     background: linear-gradient(
       180deg,
-      #10171f00,
-      #10171f45 500px,
-      #182330 800px
+      #1e140f00,
+      #1e140f45 500px,
+      #2d1f18 800px
     );
   }
   .photo-footer .footer-content {

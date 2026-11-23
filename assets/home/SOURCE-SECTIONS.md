@@ -23,7 +23,7 @@ The six-concern finder remains near the top. The full searchable/filterable 19-s
 
 ## Assets and content
 
-The original `logo.png` is unchanged. Header/footer styling gives its white script sufficient contrast. Playfair Display is copied from the supplied Clinic Dermatech font assets; Gilda Display and Manrope are local. Source treatment assets are copied into `assets/home/`, so the main page does not depend on the ignored reference directory.
+The logo follows the Skinic brand guidelines: `assets/brand/skinic-logo.png` (primary logo, transparent) and `assets/brand/skinic-icon.png` (logomark favicon) were rebuilt from the guidelines PDF artwork. It sits directly on the light header and on an ivory field in the dark footer, as the guidelines require. The old `logo.png` is no longer referenced. Typography and colour follow the Skinic brand guidelines: Cormorant Garamond (headlines) and Lato (body/UI) are self-hosted in `assets/fonts/`, and the palette tokens (Espresso, Champagne Gold, Cocoa, Rose Brown, Sand, Ivory) live in `assets/home/brand.css`, which loads last. Source treatment assets are copied into `assets/home/`, so the main page does not depend on the ignored reference directory.
 
 The clinical assessment and treatment photographs are illustrative. The medical room and consultation photos are the existing Unsplash assets, credited in the homepage. The doctor introduction uses an explicitly labelled, faceless consultation photo instead of the previous illustrated portrait. Clinical credentials, services, and contact information remain specific to Dr. Apurva Aditi; reference-clinic promotions, review counts, locations, and patient results are not presented as Skinic claims.
 

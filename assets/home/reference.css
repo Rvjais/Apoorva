@@ -1,19 +1,12 @@
 /* Section compositions follow the supplied references; clinical content belongs to Apoorva. */
-@font-face {
-  font-family: "Gilda Display";
-  src: url("../fonts/GildaDisplay-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
-  --ink: #24231e;
-  --muted: #706d62;
-  --cream: #fbf9f2;
-  --sage: #eee7d7;
-  --line: #dfd7c5;
-  --accent: #916b1c;
-  --serif: "Gilda Display", Georgia, serif;
+  --ink: #2e2018;
+  --muted: #7f6959;
+  --cream: #fbf9f5;
+  --sage: #eee6dd;
+  --line: #e1d6ca;
+  --accent: #976742;
+  --serif: "Cormorant Garamond", Georgia, serif;
   --width: 1380px;
   --edge: max(30px, calc((100vw - 1380px) / 2));
 }
@@ -37,8 +30,8 @@ h2 {
   margin-bottom: 19px;
 }
 .button {
-  background: #d1a743;
-  border: 1px solid #d1a743;
+  background: #cda76b;
+  border: 1px solid #cda76b;
   border-radius: 0;
   font-size: 11px;
   font-weight: 750;
@@ -49,32 +42,32 @@ h2 {
   gap: 22px;
 }
 .button:hover {
-  background: #b88d2e;
-  border-color: #b88d2e;
+  background: #b78c55;
+  border-color: #b78c55;
   transform: none;
 }
 .button-outline {
   background: transparent;
-  border-color: #c4b9a8;
+  border-color: #c7b8aa;
   color: var(--ink);
 }
 .button-outline:hover {
-  background: #f0eade;
-  border-color: #a8926f;
+  background: #f0eae1;
+  border-color: #ae906e;
   color: var(--ink);
 }
 .text-link {
   color: var(--accent);
-  border-color: #c7b89f;
+  border-color: #c7b7a7;
   font-size: 12px;
 }
 .text-link:hover {
   color: var(--ink);
 }
 .topbar {
-  background: #faf9f5;
-  color: #333;
-  border-bottom: 1px solid #e8e1d7;
+  background: #fbf9f5;
+  color: #412f26;
+  border-bottom: 1px solid #eae1d6;
   font-size: 11px;
 }
 .topbar .container {
@@ -112,21 +105,21 @@ h2 {
   height: 15px;
 }
 .site-header {
-  background: #fffdf9f2;
-  border-bottom: 1px solid #e5ddcf;
+  background: #fefdfcf2;
+  border-bottom: 1px solid #e6dcd1;
 }
 .header-inner {
   height: 99px;
   gap: 30px;
 }
 .brand svg {
-  color: #d7af4a;
+  color: #d2af76;
   width: 38px;
   height: 38px;
 }
 .brand strong {
-  font-family: Manrope, sans-serif;
-  color: #d7af4a;
+  font-family: Lato, sans-serif;
+  color: #d2af76;
   font-size: 26px;
   font-weight: 750;
   letter-spacing: -0.8px;
@@ -135,7 +128,7 @@ h2 {
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.8px;
-  color: #202321;
+  color: #2d1f18;
   margin-top: 9px;
 }
 .desktop-nav {
@@ -157,13 +150,13 @@ h2 {
 }
 .menu-toggle {
   background: transparent;
-  border-color: #d3c8b6;
+  border-color: #d4c7bb;
   border-radius: 0;
 }
 .clinical-hero {
   position: relative;
   isolation: isolate;
-  background: #f9f7f2;
+  background: #faf7f3;
   overflow: hidden;
 }
 .hero-background {
@@ -184,10 +177,10 @@ h2 {
   z-index: -1;
   background: linear-gradient(
     90deg,
-    #faf8f3 0%,
-    #faf8f3f5 34%,
-    #faf8f3b8 56%,
-    #faf8f35c 100%
+    #faf8f4 0%,
+    #faf8f4f5 34%,
+    #faf8f4b8 56%,
+    #faf8f45c 100%
   );
 }
 .hero {
@@ -202,25 +195,25 @@ h2 {
 .hero .eyebrow {
   font-size: 10px;
   letter-spacing: 3px;
-  color: #88651f;
+  color: #90603f;
   font-weight: 800;
   margin-bottom: 19px;
   max-width: 620px;
 }
 .hero h1 {
-  font-family: Manrope, Arial, sans-serif;
+  font-family: Lato, Arial, sans-serif;
   font-weight: 800;
   font-size: 49px;
   line-height: 1.24;
   letter-spacing: -0.025em;
   text-transform: uppercase;
   margin-bottom: 23px;
-  color: #111;
+  color: #160f0b;
   max-width: 750px;
 }
 .hero-copy > p:not(.eyebrow) {
   font-size: 15px;
-  color: #404642;
+  color: #554034;
   line-height: 1.9;
   max-width: 560px;
 }
@@ -235,7 +228,7 @@ h2 {
   display: block;
   font-size: 54px;
   line-height: 1.1;
-  color: #bd9634;
+  color: #be945b;
   font-weight: 800;
   letter-spacing: -1.7px;
 }
@@ -244,7 +237,7 @@ h2 {
 }
 .hero-statistics small {
   display: block;
-  color: #88651f;
+  color: #90603f;
   font-weight: 700;
   font-size: 9px;
   letter-spacing: 1.6px;
@@ -268,22 +261,22 @@ h2 {
   gap: 17px;
   font-size: 11px;
   line-height: 1.9;
-  color: #4d524f;
+  color: #624c3e;
 }
 .hero-doctor-link strong {
   font-weight: 700;
-  color: #292d2a;
+  color: #392820;
 }
 .circle-arrow {
   display: grid;
   place-items: center;
   width: 61px;
   height: 61px;
-  border: 1px solid #d0b485;
+  border: 1px solid #d2b381;
   border-radius: 50%;
-  box-shadow: 0 0 0 8px #faf8f3a6;
-  color: #916b1c;
-  background: #faf8f36b;
+  box-shadow: 0 0 0 8px #faf8f4a6;
+  color: #976742;
+  background: #faf8f46b;
 }
 .circle-arrow svg {
   width: 23px;
@@ -295,7 +288,7 @@ h2 {
   bottom: 74px;
   max-width: 230px;
   font-size: 8px;
-  color: #535a54;
+  color: #6a5445;
   text-align: right;
 }
 .appointment-strip {
@@ -306,9 +299,9 @@ h2 {
   gap: 35px;
   margin-top: -55px;
   padding: 33px 45px 19px;
-  background: #fff;
+  background: #ffffff;
   border: 0;
-  box-shadow: 0 15px 30px #67482306;
+  box-shadow: 0 15px 30px #69472f06;
   border-radius: 0;
 }
 .quick-field input,
@@ -317,17 +310,17 @@ h2 {
   width: 100%;
   height: 55px;
   padding: 16px 19px;
-  border: 1px solid #ededeb;
+  border: 1px solid #f2ece5;
   border-radius: 0;
-  background: #f0f0ef;
-  color: #333b40;
+  background: #f4efe9;
+  color: #49362c;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.6px;
-  font-family: Manrope, sans-serif;
+  font-family: Lato, sans-serif;
 }
 .quick-field input::placeholder {
-  color: #333b40;
+  color: #49362c;
   opacity: 1;
 }
 .quick-field input:focus-visible,
@@ -340,13 +333,13 @@ h2 {
   letter-spacing: 1.5px;
   font-size: 10px;
   padding-inline: 18px;
-  background: #d1a743;
-  border-color: #d1a743;
+  background: #cda76b;
+  border-color: #cda76b;
 }
 .quick-note {
   grid-column: 1/-1;
   font-size: 9px;
-  color: #6d706b;
+  color: #816b5b;
   margin-top: -14px;
 }
 .quick-note a {
@@ -376,7 +369,7 @@ h2 {
   object-fit: cover;
   object-position: center 40%;
   border-radius: 0;
-  background: #e3e9df;
+  background: #eee6dd;
 }
 .doctor-nameplate {
   position: absolute;
@@ -385,7 +378,7 @@ h2 {
   bottom: 50px;
   background: white;
   padding: 25px 30px;
-  box-shadow: 0 10px 30px #00000006;
+  box-shadow: 0 10px 30px #120c0906;
 }
 .doctor-nameplate h3 {
   font-size: 21px;
@@ -398,7 +391,7 @@ h2 {
   font-size: 15px;
   line-height: 1.7;
   font-weight: 600;
-  color: #141b16;
+  color: #221712;
 }
 .doctor-identity figcaption {
   margin-top: 11px;
@@ -406,12 +399,12 @@ h2 {
   color: var(--muted);
 }
 .doctor-copy .eyebrow {
-  color: #9e7b2d;
+  color: #a57749;
   font-size: 10px;
   letter-spacing: 3px;
 }
 .doctor-copy h2 {
-  font-family: Manrope, Arial, sans-serif;
+  font-family: Lato, Arial, sans-serif;
   font-size: 35px;
   line-height: 1.3;
   font-weight: 800;
@@ -422,7 +415,7 @@ h2 {
 .qualification {
   font-size: 14px;
   font-weight: 500;
-  color: #737872;
+  color: #887363;
   margin: 0 0 23px;
   line-height: 1.85;
 }
@@ -459,7 +452,7 @@ h2 {
   display: block;
   width: 32px;
   height: 1px;
-  background: #6b716a;
+  background: #816b5b;
 }
 .doctor-copy .text-link {
   display: none;
@@ -469,8 +462,8 @@ h2 {
 }
 .doctor-background-disclosure {
   margin-top: 46px;
-  border-block: 1px solid #e0d8ca;
-  background: #fffdf9;
+  border-block: 1px solid #e2d7cc;
+  background: #fefdfc;
 }
 .doctor-background-disclosure > summary {
   display: flex;
@@ -513,7 +506,7 @@ h2 {
   color: var(--accent);
 }
 .treatments {
-  background: #e9e1d7;
+  background: #eae1d7;
   padding-bottom: 80px;
 }
 .treatments .section-heading {
@@ -523,12 +516,12 @@ h2 {
 }
 .treatments .section-heading .eyebrow {
   font-size: 10px;
-  color: #7b7466;
+  color: #867161;
   letter-spacing: 2px;
 }
 .treatments h2 {
   font-family: var(--serif);
-  color: #86703a;
+  color: #986843;
   font-size: 39px;
   font-weight: 400;
   letter-spacing: -0.7px;
@@ -538,7 +531,7 @@ h2 {
   margin: 19px auto 0;
   max-width: 760px;
   font-size: 14px;
-  color: #5f665f;
+  color: #76604f;
 }
 .featured-treatments {
   display: grid;
@@ -585,10 +578,10 @@ h2 {
   height: 37px;
   display: grid;
   place-items: center;
-  border: 1px solid #b59a52;
+  border: 1px solid #bf965d;
   border-radius: 50%;
-  background: #fff;
-  color: #9b7b2e;
+  background: #ffffff;
+  color: #a57649;
 }
 .featured-arrow svg {
   width: 17px;
@@ -606,7 +599,7 @@ h2 {
 }
 .featured-treatment p {
   font-size: 12px;
-  color: #58615d;
+  color: #715b4b;
   line-height: 1.8;
   max-width: 280px;
 }
@@ -618,15 +611,15 @@ h2 {
   align-items: center;
   gap: 30px;
   background:
-    linear-gradient(90deg, #141411ed, #25231df5),
+    linear-gradient(90deg, #1a120ded, #2e2018f5),
     url("patient-consult.webp") center 50% / cover;
-  color: #d1b466;
+  color: #d4b27a;
 }
 .consultation-banner p {
   font-size: 12px;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
-  color: #ddd4c4;
+  color: #dfd3c7;
 }
 .consultation-banner h3 {
   font-family: var(--serif);
@@ -636,7 +629,7 @@ h2 {
 }
 .consultation-banner .button {
   border: 0;
-  background: #d1a743;
+  background: #cda76b;
   border-radius: 35px;
   color: white;
   font-size: 11px;
@@ -646,7 +639,7 @@ h2 {
   min-height: 50px;
 }
 .consultation-banner .button:hover {
-  background: #b88d2e;
+  background: #b78c55;
 }
 .directory-heading {
   display: flex;
@@ -659,31 +652,31 @@ h2 {
   font-family: var(--serif);
   font-size: 27px;
   font-weight: 400;
-  color: #86703a;
+  color: #986843;
 }
 .directory-heading p {
   font-size: 11px;
-  color: #677068;
+  color: #7f6a59;
 }
 .treatment-toolbar {
-  border-color: #d3c6b4;
+  border-color: #d3c6b9;
 }
 .filter {
   border-radius: 35px;
-  border: 1px solid #c6c5bb;
+  border: 1px solid #d0c2b5;
   font-size: 11px;
   padding: 9px 18px;
   background: white;
   font-weight: 500;
 }
 .filter[aria-pressed="true"] {
-  background: #2b2922;
-  border-color: #2b2922;
+  background: #36261d;
+  border-color: #36261d;
 }
 .search input {
   border-radius: 30px;
-  border-color: #d0c6b7;
-  background: #f7f3ed;
+  border-color: #d2c5b8;
+  background: #f7f3ee;
 }
 .result-label {
   font-size: 10px;
@@ -694,14 +687,14 @@ h2 {
 .treatment-card {
   background: none;
   border: 0;
-  border-bottom: 1px solid #d1c6b7;
+  border-bottom: 1px solid #d3c5b9;
   border-radius: 0;
   padding: 18px 0;
   min-height: 102px;
 }
 .treatment-card:hover {
-  background: #f4ede3;
-  border-color: #b29b78;
+  background: #f3ede6;
+  border-color: #b69976;
 }
 .treatment-card img {
   filter: grayscale(0.65) sepia(0.4);
@@ -717,7 +710,7 @@ h2 {
   line-height: 1.75;
 }
 .treatment-card > svg {
-  color: #9d8865;
+  color: #a58564;
 }
 .treatment-bottom {
   margin-top: 28px;
@@ -745,22 +738,22 @@ h2 {
   flex-direction: row;
   gap: 20px;
   border: 0;
-  border-bottom: 1px solid #dfd8ce;
+  border-bottom: 1px solid #e2d7cc;
   border-radius: 0;
   padding: 17px 20px 17px 0;
   background: transparent;
   box-shadow: none;
 }
 .concern-option[aria-pressed="true"] {
-  background: #f0e9dc;
+  background: #f0e9e0;
   border: 0;
-  border-bottom: 1px solid #c9b99c;
-  box-shadow: inset 3px 0 #ad8a35;
+  border-bottom: 1px solid #cab8a3;
+  box-shadow: inset 3px 0 #b38651;
   padding-left: 16px;
 }
 .concern-option:hover {
-  background: #f6f1e8;
-  border-color: #c9b99c;
+  background: #f6f1eb;
+  border-color: #cab8a3;
 }
 .concern-option img {
   width: 42px;
@@ -781,8 +774,8 @@ h2 {
   width: 16px;
 }
 .care-panel {
-  background: #f6f0e5;
-  border: 1px solid #e5d9c5;
+  background: #f5f0ea;
+  border: 1px solid #e3d9cd;
   border-radius: 0;
   padding: 34px;
 }
@@ -790,22 +783,22 @@ h2 {
   font-family: var(--serif);
   font-size: 29px;
   font-weight: 400;
-  color: #88651f;
+  color: #90603f;
 }
 .care-plan {
-  border-color: #deceb5;
+  border-color: #dbcec1;
 }
 .care-plan > svg {
-  color: #ad8a35;
+  color: #b38651;
 }
 .care-services {
   gap: 7px;
 }
 .care-service {
   background: white;
-  border-color: #d4c6ad;
+  border-color: #d3c5b8;
   border-radius: 0;
-  color: #333;
+  color: #412f26;
   font-size: 11px;
 }
 .care-service:hover {
@@ -829,15 +822,15 @@ h2 {
   padding-inline: 22px;
 }
 .approach {
-  background: #171714;
-  color: #f7f5f0;
+  background: #1e1510;
+  color: #f8f5f0;
 }
 .approach-grid {
   gap: 95px;
   grid-template-columns: 1fr 1fr;
 }
 .approach .eyebrow {
-  color: #d0ac52;
+  color: #cfab70;
   font-size: 11px;
   letter-spacing: 5px;
 }
@@ -849,30 +842,30 @@ h2 {
   line-height: 1.25;
 }
 .approach-intro > p:not(.eyebrow) {
-  color: #bdbbb5;
+  color: #c8b9ab;
   font-size: 14px;
   line-height: 1.9;
   max-width: 430px;
   margin-top: 27px;
 }
 .principle {
-  border-color: #57504a;
+  border-color: #634d3f;
   padding-block: 23px;
   gap: 25px;
 }
 .principle > span {
-  color: #d0ac52;
+  color: #cfab70;
   font-size: 13px;
 }
 .principle h3 {
   font-family: var(--serif);
   font-size: 25px;
   font-weight: 400;
-  color: #e2c57d;
+  color: #dfc495;
 }
 .principle p {
   font-size: 13px;
-  color: #bebbb6;
+  color: #c8b9ab;
   line-height: 1.85;
 }
 #your-visit .section-heading h2 {
@@ -882,7 +875,7 @@ h2 {
   letter-spacing: -0.3px;
 }
 #your-visit .eyebrow {
-  color: #967324;
+  color: #9e6e46;
 }
 .visit-gallery {
   gap: 55px;
@@ -894,7 +887,7 @@ h2 {
 }
 .visit-gallery figcaption {
   font-size: 9px;
-  color: #8c857b;
+  color: #968274;
 }
 .visit-practical {
   padding: 22px 0;
@@ -910,20 +903,20 @@ h2 {
 .visit-practical ul {
   font-size: 14px;
   line-height: 1.9;
-  color: #67655f;
+  color: #776150;
 }
 .visit-practical .text-link {
-  color: #967324;
+  color: #9e6e46;
 }
 .visit-steps {
   gap: 40px;
 }
 .visit-step {
-  border-color: #d9cbba;
+  border-color: #d8cbbf;
 }
 .step-number {
   font-family: var(--serif);
-  color: #967324;
+  color: #9e6e46;
   font-size: 35px;
   font-weight: 400;
 }
@@ -941,19 +934,19 @@ h2 {
   font-weight: 400;
 }
 .social-link {
-  border: 1px solid #e0d4c3;
+  border: 1px solid #dfd4c8;
   border-radius: 0;
-  background: #f5eee5;
+  background: #f4eee8;
   min-height: 150px;
 }
 .social-link > svg {
-  color: #967324;
+  color: #9e6e46;
 }
 .social-section {
-  border-color: #e3d6c4;
+  border-color: #e1d6cb;
 }
 .faq-section {
-  background: #f5eee5;
+  background: #f4eee8;
 }
 .faq-intro h2 {
   font-family: var(--serif);
@@ -962,10 +955,10 @@ h2 {
 }
 .faq-list details,
 .faq-list details:first-child {
-  border-color: #dcccbb;
+  border-color: #d9cdc0;
 }
 .faq-list summary:after {
-  color: #967324;
+  color: #9e6e46;
 }
 .faq-intro p:not(.eyebrow),
 .faq-list p {
@@ -980,87 +973,87 @@ h2 {
   font-weight: 400;
 }
 .contact-card {
-  background: #f5eee5;
-  border: 1px solid #e2d3bf;
+  background: #f4eee8;
+  border: 1px solid #dfd3c8;
   border-radius: 0;
 }
 .contact-row {
-  border-color: #ddcdb6;
+  border-color: #d9cdc1;
 }
 .contact-row > svg {
-  color: #967324;
+  color: #9e6e46;
 }
 .contact-row .map-link {
-  color: #967324;
+  color: #9e6e46;
 }
 .footer {
-  background: #171714;
-  color: #eeeae3;
+  background: #1e1510;
+  color: #f0eae1;
   padding-top: 45px;
 }
 .footer .brand strong {
-  color: #d3b65e;
+  color: #d5b47d;
 }
 .footer .brand small {
-  color: #bbb9b1;
+  color: #c6b6a8;
 }
 .footer .brand svg {
-  color: #d3b65e;
+  color: #d5b47d;
 }
 .footer-description {
-  color: #bdbbb3;
+  color: #c7b9ab;
   font-size: 12px;
 }
 .footer-nav {
   font-size: 12px;
 }
 .footer-social a {
-  border-color: #7f6a4f;
+  border-color: #856752;
   border-radius: 0;
-  color: #d3b65e;
+  color: #d5b47d;
 }
 .footer-bottom {
-  border-color: #57504a;
-  color: #b8b4ab;
+  border-color: #634d3f;
+  color: #c1b2a4;
   font-size: 10px;
 }
 .back-top {
-  color: #e1ca8a;
+  color: #e1c99c;
 }
 .mobile-care-bar {
-  background: #fffcf7;
-  border-color: #d4c6b3;
+  background: #fdfcfb;
+  border-color: #d3c6b9;
 }
 .mobile-care-bar > a {
-  background: #efe3d1;
+  background: #ece3d9;
 }
 .mobile-care-bar > button {
-  background: #d1a743;
+  background: #cda76b;
 }
 .mobile-care-bar > a,
 .mobile-care-bar > button {
   border-radius: 0;
 }
 dialog {
-  background: #fffcf8;
-  border: 1px solid #d4c3a8;
+  background: #fdfcfb;
+  border: 1px solid #d2c3b2;
   border-radius: 0;
 }
 .dialog-service {
-  background: #f5eddf;
-  border-color: #ae8b55;
+  background: #f3ede6;
+  border-color: #b58953;
 }
 .form-field input,
 .form-field textarea {
-  background: #fff;
-  border-color: #d9c9b2;
+  background: #ffffff;
+  border-color: #d6c9bd;
   border-radius: 0;
 }
 .form-actions a {
-  color: #d1a743;
+  color: #cda76b;
 }
 .service-guidance {
-  border-color: #dfd3bf;
+  border-color: #ded3c7;
 }
 @media (max-width: 1150px) {
   .container {
@@ -1150,10 +1143,10 @@ dialog {
   .clinical-hero:before {
     background: linear-gradient(
       90deg,
-      #faf8f3f7 0%,
-      #faf8f3e8 38%,
-      #faf8f39c 80%,
-      #faf8f361 100%
+      #faf8f4f7 0%,
+      #faf8f4e8 38%,
+      #faf8f49c 80%,
+      #faf8f461 100%
     );
   }
   .hero-statistics {
@@ -1358,9 +1351,9 @@ dialog {
   .clinical-hero:before {
     background: linear-gradient(
       90deg,
-      #faf8f3f5 0%,
-      #faf8f3df 30%,
-      #faf8f3ad 100%
+      #faf8f4f5 0%,
+      #faf8f4df 30%,
+      #faf8f4ad 100%
     );
   }
   .hero .eyebrow {
@@ -1415,7 +1408,7 @@ dialog {
   .circle-arrow {
     width: 46px;
     height: 46px;
-    box-shadow: 0 0 0 5px #faf8f3a6;
+    box-shadow: 0 0 0 5px #faf8f4a6;
   }
   .circle-arrow svg {
     width: 19px;
@@ -1862,8 +1855,8 @@ dialog {
 }
 /* Original white-and-gold logo: crop transparent padding in CSS without editing the PNG. */
 .site-header {
-  background: #171714f7;
-  border-bottom: 1px solid #51462c;
+  background: #1e1510f7;
+  border-bottom: 1px solid #5a4234;
 }
 .header-inner {
   height: 115px;
@@ -1887,17 +1880,17 @@ dialog {
   object-fit: contain;
 }
 .desktop-nav {
-  color: #f6f1e3;
+  color: #f5f0eb;
 }
 .desktop-nav a:first-child,
 .desktop-nav a:hover {
-  color: #e0bd62;
+  color: #dbbd89;
 }
 .button,
 .appointment-strip .button,
 .consultation-banner .button,
 .mobile-care-bar > button {
-  color: #171714;
+  color: #1e1510;
 }
 .button-outline {
   color: var(--ink);
@@ -1908,18 +1901,18 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-  outline-color: #bd9634;
+  outline-color: #be945b;
 }
 .menu-toggle {
-  color: #f6f1e3;
-  border-color: #796336;
+  color: #f5f0eb;
+  border-color: #885c3d;
   background: transparent;
 }
 .mobile-nav {
-  color: #f6f1e3;
+  color: #f5f0eb;
 }
 .mobile-nav a {
-  border-color: #51462c;
+  border-color: #5a4234;
 }
 .footer .brand {
   width: 210px;
