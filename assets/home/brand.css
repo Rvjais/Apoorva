@@ -193,3 +193,123 @@ body {
     width: 64px;
   }
 }
+
+/* ---- Hero legibility -------------------------------------------------- */
+/* The supporting copy was set at 8–12px and did not grow with the screen,
+   so it read as tiny beside the large headline. These sizes scale with the
+   viewport and stay at a comfortable minimum on smaller screens. */
+.campaign-hero {
+  height: clamp(540px, 37.8vw, 730px);
+}
+.campaign-copy .eyebrow {
+  font-size: clamp(11px, 0.72vw, 13px);
+  letter-spacing: 2.4px;
+  margin-bottom: clamp(18px, 1.5vw, 28px);
+}
+.campaign-title {
+  margin-bottom: clamp(18px, 1.4vw, 28px);
+}
+.campaign-description {
+  max-width: 32em;
+  font-size: clamp(15px, 0.95vw, 18px);
+  line-height: 1.7;
+  margin-bottom: clamp(24px, 1.8vw, 34px);
+}
+.campaign-actions {
+  gap: 14px 24px;
+}
+.campaign-actions .button {
+  font-size: clamp(11px, 0.7vw, 13px);
+  letter-spacing: 1.2px;
+  min-height: clamp(48px, 3.1vw, 58px);
+  padding-inline: clamp(22px, 1.6vw, 30px);
+}
+.campaign-secondary {
+  font-size: clamp(13px, 0.8vw, 15px);
+}
+.campaign-doctor {
+  margin-top: clamp(24px, 2vw, 38px);
+  gap: 15px;
+  font-size: clamp(14px, 0.85vw, 16px);
+}
+.campaign-doctor small {
+  font-size: clamp(11px, 0.66vw, 13px);
+  letter-spacing: 0.3px;
+}
+.campaign-seal {
+  width: clamp(44px, 2.8vw, 54px);
+  height: clamp(44px, 2.8vw, 54px);
+  font-size: clamp(15px, 0.95vw, 18px);
+}
+.campaign-credit {
+  font-size: 10px;
+  padding: 4px 9px;
+}
+.campaign-label {
+  font-size: 12px;
+}
+.campaign-arrows button {
+  width: 38px;
+  height: 38px;
+}
+@media (max-width: 950px) {
+  .campaign-hero {
+    height: 560px;
+  }
+  .campaign-description {
+    font-size: 14px;
+  }
+  .campaign-label {
+    font-size: 11px;
+  }
+}
+@media (max-width: 700px) {
+  .campaign-hero {
+    height: 640px;
+  }
+  /* Clear the image-credit tag in the bottom corner. */
+  .campaign-copy {
+    padding-bottom: 44px;
+  }
+  .campaign-copy .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    margin-bottom: 14px;
+  }
+  .campaign-description {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .campaign-actions {
+    gap: 10px 18px;
+  }
+  .campaign-actions .button {
+    font-size: 11px;
+    min-height: 46px;
+    padding-inline: 20px;
+  }
+  .campaign-secondary {
+    font-size: 13px;
+  }
+  .campaign-doctor {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .campaign-doctor small {
+    font-size: 11px;
+  }
+  .campaign-seal {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .campaign-credit {
+    font-size: 9px;
+    padding: 3px 7px;
+  }
+  .campaign-arrows button {
+    width: 36px;
+    height: 36px;
+  }
+}
