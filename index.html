@@ -82,6 +82,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      bottom: 2px;
       width: 100%;
       height: 1px;
       background: #CBA467;
@@ -265,11 +266,11 @@
   <!-- ===================================================================== -->
   <header id="site-header"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gradient-to-b from-espresso-deep/80 via-espresso-deep/45 to-transparent text-ivory">
-    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between gap-4">
+    <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14 h-20 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-4">
       <!-- Left: Book Pill + Primary Links -->
-      <div class="flex items-center gap-5 lg:gap-6 shrink-0">
+      <div class="justify-self-start flex items-center gap-4 xl:gap-6 min-w-0">
         <a href="#booking" id="header-cta"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-gold text-espresso-deep hover:bg-gold-light transition-all shadow-sm whitespace-nowrap shrink-0">
+          class="inline-flex items-center gap-2 px-4 xl:px-5 py-2 xl:py-2.5 rounded-full text-[11px] xl:text-xs font-bold uppercase tracking-[0.12em] bg-gold text-espresso-deep hover:bg-gold-light transition-all shadow-sm whitespace-nowrap shrink-0">
           <span>Book Visit</span>
           <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
@@ -277,11 +278,11 @@
         </a>
 
         <nav aria-label="Primary navigation"
-          class="hidden xl:flex items-center gap-6 text-[13px] tracking-[0.1em] uppercase font-semibold whitespace-nowrap">
-          <a href="#philosophy" class="hover:text-gold transition-colors whitespace-nowrap shrink-0">Approach</a>
+          class="hidden lg:flex items-center gap-4 xl:gap-5 text-[12px] xl:text-[13px] tracking-[0.08em] uppercase font-semibold whitespace-nowrap">
+          <a href="#philosophy" class="inline-flex items-center py-1.5 hover:text-gold transition-colors whitespace-nowrap shrink-0">Approach</a>
           <div id="services-mega-wrap" class="relative shrink-0">
             <button id="services-mega-trigger" type="button" aria-expanded="false" aria-controls="services-mega-panel"
-              class="inline-flex items-center gap-1.5 hover:text-gold transition-colors uppercase tracking-[0.1em] font-semibold whitespace-nowrap py-2">
+              class="inline-flex items-center gap-1 py-1.5 hover:text-gold transition-colors uppercase tracking-[0.08em] font-semibold whitespace-nowrap">
               <span>Services</span>
               <svg id="services-mega-chevron" class="w-3.5 h-3.5 transition-transform duration-300" fill="none"
                 stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
@@ -289,15 +290,15 @@
               </svg>
             </button>
           </div>
-          <a href="#concerns" class="hover:text-gold transition-colors whitespace-nowrap shrink-0">Concerns</a>
+          <a href="#concerns" class="inline-flex items-center py-1.5 hover:text-gold transition-colors whitespace-nowrap shrink-0">Concerns</a>
         </nav>
       </div>
 
-      <!-- Center: SKINIC Brand Emblem -->
+      <!-- Center: SKINIC Brand Emblem (Dead-Center Column) -->
       <a href="#home" aria-label="Skinic by Dr. Apurva home"
-        class="flex flex-col items-center group focus:outline-none shrink-0 whitespace-nowrap">
-        <div class="flex items-center gap-2.5">
-          <svg class="w-6 h-8 flex-shrink-0" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="justify-self-center flex flex-col items-center group focus:outline-none shrink-0 whitespace-nowrap">
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <svg class="w-5 h-7 sm:w-6 sm:h-8 flex-shrink-0" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true">
             <defs>
               <linearGradient id="navLogoGradA" x1="12" y1="2" x2="32" y2="48" gradientUnits="userSpaceOnUse">
@@ -320,153 +321,115 @@
           </svg>
           <div class="flex flex-col leading-none">
             <span
-              class="font-serif text-[22px] sm:text-[26px] tracking-[0.26em] font-medium transition-colors whitespace-nowrap">SKINIC</span>
+              class="font-serif text-[20px] sm:text-[24px] xl:text-[26px] tracking-[0.24em] font-medium transition-colors whitespace-nowrap">SKINIC</span>
             <span
-              class="text-[10px] tracking-[0.2em] uppercase mt-1 flex items-center justify-center gap-1.5 opacity-90 whitespace-nowrap">
-              <span class="w-2.5 h-[1px] bg-gold inline-block"></span>
+              class="text-[9px] sm:text-[10px] tracking-[0.18em] uppercase mt-1 flex items-center justify-center gap-1.5 opacity-90 whitespace-nowrap">
+              <span class="w-2 h-[1px] bg-gold inline-block"></span>
               <span>by Dr Apurva</span>
-              <span class="w-2.5 h-[1px] bg-gold inline-block"></span>
+              <span class="w-2 h-[1px] bg-gold inline-block"></span>
             </span>
           </div>
         </div>
       </a>
 
       <!-- Right: Secondary Links + Direct Phone + Social Icons + Menu Trigger -->
-      <div class="flex items-center gap-4 lg:gap-5 shrink-0">
+      <div class="justify-self-end flex items-center gap-3 xl:gap-5 min-w-0">
         <nav aria-label="Secondary navigation"
-          class="hidden xl:flex items-center gap-5 text-[13px] tracking-[0.1em] uppercase font-semibold whitespace-nowrap">
-          <a href="#founder" class="hover:text-gold transition-colors whitespace-nowrap shrink-0">Dr. Apurva</a>
-          <a href="#your-visit" class="hover:text-gold transition-colors whitespace-nowrap shrink-0">Your Visit</a>
-          <a href="#faqs" class="hover:text-gold transition-colors whitespace-nowrap shrink-0">FAQs</a>
+          class="hidden lg:flex items-center gap-4 xl:gap-5 text-[12px] xl:text-[13px] tracking-[0.08em] uppercase font-semibold whitespace-nowrap">
+          <a href="#founder" class="inline-flex items-center py-1.5 hover:text-gold transition-colors whitespace-nowrap shrink-0">Dr. Apurva</a>
+          <a href="#your-visit" class="inline-flex items-center py-1.5 hover:text-gold transition-colors whitespace-nowrap shrink-0">Your Visit</a>
+          <a href="#faqs" class="inline-flex items-center py-1.5 hover:text-gold transition-colors whitespace-nowrap shrink-0">FAQs</a>
         </nav>
 
-        <a href="tel:+919821614611"
-          class="hidden md:inline-flex items-center gap-1.5 text-[13px] font-semibold tracking-[0.04em] opacity-95 hover:text-gold transition-colors whitespace-nowrap shrink-0">
-          <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="1.8"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-          </svg>
-          <span>+91 98216 14611</span>
-        </a>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="tel:+919821614611" aria-label="Call +91 98216 14611" title="Call +91 98216 14611"
+            class="hidden md:inline-flex items-center justify-center gap-1.5 w-8 h-8 xl:w-auto xl:h-auto rounded-full xl:rounded-none border border-current/25 xl:border-0 text-[12px] xl:text-[13px] font-semibold tracking-[0.03em] opacity-95 hover:border-gold hover:text-gold transition-colors whitespace-nowrap shrink-0">
+            <svg class="w-3.5 h-3.5 xl:w-4 xl:h-4 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            <span class="hidden xl:inline">+91 98216 14611</span>
+          </a>
 
-        <!-- Social Media Quick Icons -->
-        <div class="hidden sm:flex items-center gap-2 shrink-0">
-          <a href="https://www.instagram.com/skinic_md/" target="_blank" rel="noopener noreferrer"
-            aria-label="Skinic on Instagram (@skinic_md)" title="Instagram — @skinic_md"
-            class="w-8 h-8 rounded-full border border-current/25 flex items-center justify-center hover:border-gold hover:text-gold transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          <!-- Social Media Quick Icons -->
+          <div class="hidden sm:flex items-center gap-1.5 shrink-0">
+            <a href="https://www.instagram.com/skinic_md/" target="_blank" rel="noopener noreferrer"
+              aria-label="Skinic on Instagram (@skinic_md)" title="Instagram — @skinic_md"
+              class="w-8 h-8 rounded-full border border-current/25 flex items-center justify-center hover:border-gold hover:text-gold transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/dr-apurva-aditi" target="_blank" rel="noopener noreferrer"
+              aria-label="Dr. Apurva Aditi on LinkedIn" title="LinkedIn — Dr. Apurva Aditi"
+              class="w-8 h-8 rounded-full border border-current/25 flex items-center justify-center hover:border-gold hover:text-gold transition-colors">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
+              </svg>
+            </a>
+          </div>
+
+          <button id="menu-toggle" type="button" aria-label="Open menu"
+            class="w-9 h-9 rounded-full border border-current/35 flex items-center justify-center hover:border-gold hover:text-gold transition-colors lg:hidden shrink-0">
+            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
             </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/dr-apurva-aditi" target="_blank" rel="noopener noreferrer"
-            aria-label="Dr. Apurva Aditi on LinkedIn" title="LinkedIn — Dr. Apurva Aditi"
-            class="w-8 h-8 rounded-full border border-current/25 flex items-center justify-center hover:border-gold hover:text-gold transition-colors">
-            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
+            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
-          </a>
+          </button>
         </div>
-
-        <button id="menu-toggle" type="button" aria-label="Open menu"
-          class="w-10 h-10 rounded-full border border-current/35 flex items-center justify-center hover:border-gold hover:text-gold transition-colors xl:hidden shrink-0">
-          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-          </svg>
-          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.8"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
       </div>
     </div>
 
     <!-- Desktop Services Mega Dropdown -->
     <div id="services-mega-panel" aria-label="Services directory menu"
-      class="hidden xl:block absolute left-0 right-0 top-full pt-2 opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 ease-out">
-      <div class="max-w-[1260px] mx-auto px-6 sm:px-10">
-        <div
-          class="bg-ivory text-espresso rounded-3xl border border-gold/40 shadow-2xl shadow-espresso-deep/35 p-8 grid grid-cols-12 gap-8">
+      class="hidden lg:block absolute left-0 right-0 top-full pt-2 opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 ease-out">
+      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
+        <div class="bg-ivory text-espresso rounded-3xl border border-gold/40 shadow-2xl shadow-espresso-deep/35 p-8 grid grid-cols-12 gap-8">
           <!-- Column 1: Skin & Pigmentation -->
           <div class="col-span-3 space-y-3">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa pb-2 border-b border-espresso/15">Skin
-              &amp; Pigmentation</p>
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa pb-2 border-b border-espresso/15">Skin &amp; Pigmentation</p>
             <ul class="space-y-1 text-[15px] font-medium text-espresso">
-              <li><a href="#booking" data-prefill="Acne treatment"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Acne
-                  Treatment</a></li>
-              <li><a href="#booking" data-prefill="Pigmentation treatment"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Pigmentation
-                  &amp; Melasma</a></li>
-              <li><a href="#booking" data-prefill="Scars & open pores"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Scars
-                  &amp; Open Pores</a></li>
-              <li><a href="#booking" data-prefill="Pigmentation treatment"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Chemical
-                  Peels &amp; Dermafrac</a></li>
-              <li><a href="#booking" data-prefill="Pigmentation treatment"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Skin
-                  Rejuvenation</a></li>
-              <li><a href="#booking" data-prefill="General dermatology consultation"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Personalised
-                  Skincare Routines</a></li>
+              <li><a href="#booking" data-prefill="Acne treatment" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Acne Treatment</a></li>
+              <li><a href="#booking" data-prefill="Pigmentation treatment" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Pigmentation &amp; Melasma</a></li>
+              <li><a href="#booking" data-prefill="Scars & open pores" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Scars &amp; Open Pores</a></li>
+              <li><a href="#booking" data-prefill="Pigmentation treatment" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Chemical Peels &amp; Dermafrac</a></li>
+              <li><a href="#booking" data-prefill="Pigmentation treatment" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Skin Rejuvenation</a></li>
+              <li><a href="#booking" data-prefill="General dermatology consultation" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Personalised Skincare Routines</a></li>
             </ul>
           </div>
 
           <!-- Column 2: Hair & Scalp Science -->
           <div class="col-span-3 space-y-3">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa pb-2 border-b border-espresso/15">Hair
-              &amp; Scalp Care</p>
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa pb-2 border-b border-espresso/15">Hair &amp; Scalp Care</p>
             <ul class="space-y-1 text-[15px] font-medium text-espresso">
-              <li><a href="#booking" data-prefill="Hair fall & hair loss"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Hair
-                  Fall &amp; Hair Loss</a></li>
-              <li><a href="#booking" data-prefill="Hair fall & hair loss"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Dandruff
-                  &amp; Scalp Care</a></li>
-              <li><a href="#booking" data-prefill="Hair fall & hair loss"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Mesotherapy
-                  &amp; Exosomes</a></li>
+              <li><a href="#booking" data-prefill="Hair fall & hair loss" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Hair Fall &amp; Hair Loss</a></li>
+              <li><a href="#booking" data-prefill="Hair fall & hair loss" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Dandruff &amp; Scalp Care</a></li>
+              <li><a href="#booking" data-prefill="Hair fall & hair loss" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Mesotherapy &amp; Exosomes</a></li>
               <li class="pt-3 mt-2 border-t border-espresso/15 space-y-1">
-                <a href="#services"
-                  class="mega-link block px-2.5 -mx-2.5 py-1.5 rounded-lg text-sm font-bold text-cocoa hover:bg-sand hover:text-espresso transition-colors">Explore
-                  Featured Mosaic →</a>
-                <a href="#treatments"
-                  class="mega-link block px-2.5 -mx-2.5 py-1.5 rounded-lg text-sm font-bold text-cocoa hover:bg-sand hover:text-espresso transition-colors">Signature
-                  Treatments →</a>
-                <a href="#care-directory"
-                  class="mega-link block px-2.5 -mx-2.5 py-1.5 rounded-lg text-sm font-bold text-cocoa hover:bg-sand hover:text-espresso transition-colors">All
-                  19 Services Directory →</a>
+                <a href="#services" class="mega-link block px-2.5 -mx-2.5 py-1.5 rounded-lg text-sm font-bold text-cocoa hover:bg-sand hover:text-espresso transition-colors">Explore Featured Mosaic →</a>
+                <a href="#treatments" class="mega-link block px-2.5 -mx-2.5 py-1.5 rounded-lg text-sm font-bold text-cocoa hover:bg-sand hover:text-espresso transition-colors">Signature Treatments →</a>
+                <a href="#care-directory" class="mega-link block px-2.5 -mx-2.5 py-1.5 rounded-lg text-sm font-bold text-cocoa hover:bg-sand hover:text-espresso transition-colors">All 19 Services Directory →</a>
               </li>
             </ul>
           </div>
 
           <!-- Column 3: Aesthetics & Procedures -->
           <div class="col-span-3 space-y-3">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa pb-2 border-b border-espresso/15">
-              Aesthetics &amp; Lasers</p>
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa pb-2 border-b border-espresso/15">Aesthetics &amp; Lasers</p>
             <ul class="space-y-1 text-[15px] font-medium text-espresso">
-              <li><a href="#booking" data-prefill="Wrinkle treatments"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Wrinkle
-                  Treatments</a></li>
-              <li><a href="#booking" data-prefill="Skin sagging treatments"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Skin
-                  Firming (HIFU &amp; Thermage)</a></li>
-              <li><a href="#booking" data-prefill="Wrinkle treatments"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Dark
-                  Circle Reduction</a></li>
-              <li><a href="#booking" data-prefill="General dermatology consultation"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Laser
-                  Hair Reduction</a></li>
-              <li><a href="#booking" data-prefill="Acne treatment"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Lasers
-                  &amp; Resurfacing</a></li>
-              <li><a href="#booking" data-prefill="General dermatology consultation"
-                  class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Facials,
-                  IV Drips &amp; Tag Removal</a></li>
+              <li><a href="#booking" data-prefill="Wrinkle treatments" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Wrinkle Treatments</a></li>
+              <li><a href="#booking" data-prefill="Skin sagging treatments" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Skin Firming (HIFU &amp; Thermage)</a></li>
+              <li><a href="#booking" data-prefill="Wrinkle treatments" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Dark Circle Reduction</a></li>
+              <li><a href="#booking" data-prefill="General dermatology consultation" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Laser Hair Reduction</a></li>
+              <li><a href="#booking" data-prefill="Acne treatment" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Lasers &amp; Resurfacing</a></li>
+              <li><a href="#booking" data-prefill="General dermatology consultation" class="mega-link prefill-trigger block px-2.5 -mx-2.5 py-1.5 rounded-lg hover:bg-sand hover:text-cocoa transition-colors">Facials, IV Drips &amp; Tag Removal</a></li>
             </ul>
           </div>
 
@@ -474,21 +437,15 @@
           <div class="col-span-3 bg-sand rounded-2xl p-4 border border-espresso/15 flex flex-col justify-between">
             <div>
               <div class="rounded-xl overflow-hidden aspect-[16/10] mb-3 bg-parchment">
-                <img src="assets/home/featured-1.webp" alt="Skinic clinical and aesthetic care"
-                  class="w-full h-full object-cover" />
+                <img src="assets/home/featured-1.webp" alt="Skinic clinical and aesthetic care" class="w-full h-full object-cover" />
               </div>
               <p class="text-xs font-bold uppercase tracking-[0.16em] text-cocoa">Green Park, New Delhi</p>
               <h4 class="font-serif text-xl font-semibold text-espresso mt-1">19 Doctor-Led Treatments</h4>
-              <p class="text-sm text-espresso-soft mt-1 leading-snug">Not sure where to start? Discuss suitability
-                1-on-1 with Dr. Apurva.</p>
+              <p class="text-sm text-espresso-soft mt-1 leading-snug">Not sure where to start? Discuss suitability 1-on-1 with Dr. Apurva.</p>
             </div>
             <div class="mt-4 pt-3 border-t border-espresso/15 flex flex-col gap-2">
-              <a href="#booking"
-                class="mega-link w-full text-center bg-espresso hover:bg-cocoa text-ivory text-xs font-bold uppercase tracking-[0.14em] py-2.5 rounded-full transition-colors whitespace-nowrap">Book
-                Consultation</a>
-              <a href="#clinic"
-                class="mega-link text-center text-xs font-bold uppercase tracking-[0.12em] text-cocoa hover:text-espresso py-1 whitespace-nowrap">Clinic
-                &amp; Directions ↗</a>
+              <a href="#booking" class="mega-link w-full text-center bg-espresso hover:bg-cocoa text-ivory text-xs font-bold uppercase tracking-[0.14em] py-2.5 rounded-full transition-colors whitespace-nowrap">Book Consultation</a>
+              <a href="#clinic" class="mega-link text-center text-xs font-bold uppercase tracking-[0.12em] text-cocoa hover:text-espresso py-1 whitespace-nowrap">Clinic &amp; Directions ↗</a>
             </div>
           </div>
         </div>
@@ -497,13 +454,11 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-drawer"
-      class="hidden xl:hidden bg-espresso-deep text-ivory border-t border-gold/25 px-6 py-7 max-h-[80vh] overflow-y-auto shadow-2xl">
+      class="hidden lg:hidden bg-espresso-deep text-ivory border-t border-gold/25 px-6 py-7 max-h-[80vh] overflow-y-auto shadow-2xl">
       <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-4">
-        <a href="#philosophy"
-          class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Our Approach</a>
+        <a href="#philosophy" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Our Approach</a>
         <details class="w-full">
-          <summary
-            class="cursor-pointer font-serif text-2xl tracking-wide hover:text-gold transition-colors inline-flex items-center gap-2">
+          <summary class="cursor-pointer font-serif text-2xl tracking-wide hover:text-gold transition-colors inline-flex items-center gap-2">
             <span>Services</span><span class="text-base text-gold">▾</span>
           </summary>
           <div class="mt-3 space-y-2 text-sm text-ivory/85 bg-espresso/60 rounded-2xl p-4">
@@ -513,21 +468,13 @@
             <a href="#concerns" class="mobile-nav-link block py-1 hover:text-gold">Concern Finder</a>
           </div>
         </details>
-        <a href="#concerns"
-          class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Concerns</a>
-        <a href="#founder"
-          class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Dr. Apurva
-          Aditi</a>
-        <a href="#your-visit"
-          class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Your First
-          Visit</a>
-        <a href="#faqs"
-          class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Patient FAQs</a>
-        <a href="#clinic"
-          class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">The Clinic</a>
+        <a href="#concerns" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Concerns</a>
+        <a href="#founder" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Dr. Apurva Aditi</a>
+        <a href="#your-visit" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Your First Visit</a>
+        <a href="#faqs" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Patient FAQs</a>
+        <a href="#clinic" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">The Clinic</a>
         <div class="pt-4 w-full border-t border-ivory/15 flex flex-col gap-3">
-          <a href="#booking"
-            class="mobile-nav-link w-full bg-gold text-espresso-deep font-bold text-xs uppercase tracking-[0.18em] py-3.5 rounded-full">
+          <a href="#booking" class="mobile-nav-link w-full bg-gold text-espresso-deep font-bold text-xs uppercase tracking-[0.18em] py-3.5 rounded-full">
             Request Consultation
           </a>
           <div class="flex items-center justify-center gap-3 pt-1">
@@ -548,8 +495,7 @@
               <span>LinkedIn</span>
             </a>
           </div>
-          <a href="tel:+919821614611" class="text-sm font-medium text-ivory/80 py-1">+91 98216 14611 · Green Park, New
-            Delhi</a>
+          <a href="tel:+919821614611" class="text-sm font-medium text-ivory/80 py-1">+91 98216 14611 · Green Park, New Delhi</a>
         </div>
       </div>
     </div>
@@ -650,7 +596,8 @@
         <a href="https://www.instagram.com/skinic_md/" target="_blank" rel="noopener noreferrer"
           aria-label="Follow @skinic_md on Instagram" title="Instagram — @skinic_md"
           class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold hover:bg-ivory/15 hover:text-gold-light transition-colors">
-          <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+            aria-hidden="true">
             <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
             <circle cx="12" cy="12" r="4" />
             <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -662,15 +609,16 @@
           aria-label="Dr. Apurva Aditi on LinkedIn" title="LinkedIn — Dr. Apurva Aditi"
           class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold hover:bg-ivory/15 hover:text-gold-light transition-colors">
           <svg class="w-3.5 h-3.5 text-gold-light" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
+            <path
+              d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
           </svg>
           <span>LinkedIn</span>
         </a>
         <span class="text-ivory/30" aria-hidden="true">·</span>
-        <a href="mailto:apurva.mini@gmail.com"
-          aria-label="Email Skinic" title="Email — apurva.mini@gmail.com"
+        <a href="mailto:apurva.mini@gmail.com" aria-label="Email Skinic" title="Email — apurva.mini@gmail.com"
           class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold hover:bg-ivory/15 hover:text-gold-light transition-colors">
-          <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+          <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+            aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2" />
             <path stroke-linecap="round" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5" />
           </svg>
@@ -1775,7 +1723,8 @@
             </div>
             <a href="https://www.instagram.com/skinic_md/" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center gap-2.5 bg-espresso hover:bg-cocoa text-ivory px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] transition-colors">
-              <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+              <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8"
+                viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -1790,8 +1739,10 @@
               class="group bg-ivory rounded-2xl p-6 border border-espresso/10 hover:border-cocoa transition-all flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cocoa">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <span
+                    class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cocoa">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                      aria-hidden="true">
                       <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -1809,8 +1760,10 @@
               class="group bg-ivory rounded-2xl p-6 border border-espresso/10 hover:border-cocoa transition-all flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cocoa">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <span
+                    class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cocoa">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                      aria-hidden="true">
                       <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -1828,8 +1781,10 @@
               class="group bg-ivory rounded-2xl p-6 border border-espresso/10 hover:border-cocoa transition-all flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cocoa">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <span
+                    class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-cocoa">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                      aria-hidden="true">
                       <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -1984,7 +1939,8 @@
               <div class="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-espresso/10">
                 <a href="https://www.instagram.com/skinic_md/" target="_blank" rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sand text-xs font-bold text-espresso hover:bg-espresso hover:text-ivory transition-colors">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                    aria-hidden="true">
                     <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
                     <circle cx="12" cy="12" r="4" />
                     <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -1994,7 +1950,8 @@
                 <a href="https://www.linkedin.com/in/dr-apurva-aditi" target="_blank" rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sand text-xs font-bold text-espresso hover:bg-espresso hover:text-ivory transition-colors">
                   <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
+                    <path
+                      d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
                   </svg>
                   <span>LinkedIn</span>
                 </a>
@@ -2112,7 +2069,8 @@
             <a href="https://www.instagram.com/skinic_md/" target="_blank" rel="noopener noreferrer"
               aria-label="Skinic on Instagram"
               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-ivory/25 bg-espresso/60 text-ivory hover:border-gold hover:text-gold-light transition-colors">
-              <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+              <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8"
+                viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -2123,14 +2081,15 @@
               aria-label="Dr. Apurva Aditi on LinkedIn"
               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-ivory/25 bg-espresso/60 text-ivory hover:border-gold hover:text-gold-light transition-colors">
               <svg class="w-3.5 h-3.5 text-gold-light" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
+                <path
+                  d="M4.98 3.5a2.48 2.48 0 1 1 0 4.96 2.48 2.48 0 0 1 0-4.96ZM3 9h3.96v12H3V9Zm6.72 0h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94V21H9.72V9Z" />
               </svg>
               <span>LinkedIn</span>
             </a>
-            <a href="mailto:apurva.mini@gmail.com"
-              aria-label="Email Skinic"
+            <a href="mailto:apurva.mini@gmail.com" aria-label="Email Skinic"
               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-ivory/25 bg-espresso/60 text-ivory hover:border-gold hover:text-gold-light transition-colors">
-              <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+              <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="1.8"
+                viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5" />
               </svg>
