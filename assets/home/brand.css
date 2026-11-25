@@ -17,6 +17,7 @@
   font-display: swap;
   size-adjust: 112%;
 }
+
 @font-face {
   font-family: "Cormorant Garamond";
   src: url("../fonts/CormorantGaramond-Variable-Italic.woff2") format("woff2");
@@ -25,6 +26,7 @@
   font-display: swap;
   size-adjust: 112%;
 }
+
 @font-face {
   font-family: Lato;
   src: url("../fonts/Lato-300.woff2") format("woff2");
@@ -32,6 +34,7 @@
   font-weight: 300;
   font-display: swap;
 }
+
 @font-face {
   font-family: Lato;
   src: url("../fonts/Lato-400.woff2") format("woff2");
@@ -39,6 +42,7 @@
   font-weight: 400 500;
   font-display: swap;
 }
+
 @font-face {
   font-family: Lato;
   src: url("../fonts/Lato-400-Italic.woff2") format("woff2");
@@ -46,6 +50,7 @@
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
   font-family: Lato;
   src: url("../fonts/Lato-700.woff2") format("woff2");
@@ -86,6 +91,7 @@ body {
   background: var(--espresso);
   color: var(--ivory);
 }
+
 .topbar p span {
   color: var(--sand);
 }
@@ -95,30 +101,37 @@ body {
 .reference-why {
   background: var(--espresso);
 }
+
 /* Text colour stays on the copy side so the photo's light labels keep dark text. */
 .why-copy {
   background: var(--espresso);
   color: var(--ivory);
 }
+
 .why-copy::before,
 .why-copy::after {
   border-color: #cba46740;
 }
+
 .why-copy .eyebrow {
   color: var(--champagne);
 }
+
 .why-copy h2,
 .reference-why .wdt-content-title h3 {
   color: var(--ivory);
 }
+
 .why-intro {
   color: #dbcfc3;
 }
+
 .reference-why .wdt-content-icon {
   border-color: #cba46780;
   background: #cba46714;
   color: var(--champagne);
 }
+
 .reference-why .wdt-content-description {
   color: #c7b8aa;
 }
@@ -134,6 +147,7 @@ body {
   background-color: var(--espresso);
   background-blend-mode: luminosity;
 }
+
 .photo-footer::before {
   background: linear-gradient(180deg, #30211966, #302119a6 70%, #1f1510e0);
 }
@@ -153,20 +167,23 @@ body {
   aspect-ratio: auto;
   overflow: visible;
 }
-.brand > img,
-.site-header .brand > img {
+
+.brand>img,
+.site-header .brand>img {
   position: static;
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
 }
+
 /* The header is light (sand), so the logo sits directly on it. */
 .site-header .brand {
   width: 95px;
   background: none;
   border-radius: 0;
 }
+
 /* On dark surfaces the guidelines place the logo on an ivory field. */
 .photo-footer .footer-bottom .brand {
   width: 150px;
@@ -174,142 +191,571 @@ body {
   background: var(--ivory);
   border-radius: 12px;
 }
+
 @media (max-width: 950px) {
   .site-header .brand {
     width: 86px;
   }
 }
+
 @media (max-width: 700px) {
   .site-header .brand {
     width: 72px;
   }
+
   .photo-footer .footer-bottom .brand {
     width: 128px;
     padding: 12px 18px;
   }
 }
+
 @media (max-width: 360px) {
   .site-header .brand {
     width: 64px;
   }
 }
 
-/* ---- Hero legibility -------------------------------------------------- */
-/* The supporting copy was set at 8–12px and did not grow with the screen,
-   so it read as tiny beside the large headline. These sizes scale with the
-   viewport and stay at a comfortable minimum on smaller screens. */
+/* ---- Redesigned Hero Section (Matching Image) --------------------------- */
+.campaign-shell {
+  position: relative;
+  padding: 14px 36px 0 96px;
+  background: #F7EFE4;
+}
+
+.social-rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  height: auto;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: none !important;
+  border-right: 1px solid #D8CABE !important;
+  border-radius: 0 !important;
+  padding: 30px 10px;
+  background: transparent;
+  z-index: 10;
+}
+
+.social-rail a {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: Lato, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: #6C5B52;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-rail a:hover {
+  color: #2F1C15;
+  transform: rotate(180deg) translateY(-2px);
+}
+
+.social-rail .rail-talk {
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Header button refinement */
+.header-book-btn {
+  background: #CAA078 !important;
+  border-color: #CAA078 !important;
+  color: #26160F !important;
+  font-family: Lato, system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  border-radius: 999px !important;
+  padding: 10px 22px !important;
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-transform: none !important;
+  transition: background 0.2s, transform 0.2s !important;
+}
+
+.header-book-btn:hover {
+  background: #D8B088 !important;
+  transform: translateY(-1px);
+}
+
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #2F1C15;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-phone svg {
+  width: 15px;
+  height: 15px;
+  stroke: #2F1C15;
+}
+
+/* Hero container */
 .campaign-hero {
-  height: clamp(540px, 37.8vw, 730px);
+  position: relative;
+  display: flex;
+  height: auto;
+  min-height: 550px;
+  border-radius: 32px;
+  background: #F7EFE4;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(48, 30, 20, 0.08);
+  border: 1px solid rgba(215, 190, 160, 0.4);
+  isolation: isolate;
 }
-.campaign-copy .eyebrow {
-  font-size: clamp(11px, 0.72vw, 13px);
-  letter-spacing: 2.4px;
-  margin-bottom: clamp(18px, 1.5vw, 28px);
+
+/* Left copy column */
+.campaign-hero .campaign-copy {
+  position: relative;
+  z-index: 3;
+  width: 53%;
+  flex: 0 0 53%;
+  height: auto;
+  min-height: 100%;
+  padding: clamp(38px, 4vw, 56px) clamp(30px, 3.5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #FAF6F2;
+  background: #301E14;
+  border-top-right-radius: 120px;
 }
-.campaign-title {
-  margin-bottom: clamp(18px, 1.4vw, 28px);
+
+/* Eyebrow Pill */
+.campaign-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(220, 190, 150, 0.3);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: Lato, system-ui, sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #E6D2B8;
+  margin-bottom: 22px;
 }
-.campaign-description {
-  max-width: 32em;
-  font-size: clamp(15px, 0.95vw, 18px);
-  line-height: 1.7;
-  margin-bottom: clamp(24px, 1.8vw, 34px);
+
+.eyebrow-sparkle {
+  color: #D4A373;
+  font-size: 11px;
 }
-.campaign-actions {
-  gap: 14px 24px;
+
+/* Headline */
+.campaign-hero .campaign-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 4vw, 66px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+  color: #FAF6F2;
+  margin: 0 0 18px;
 }
-.campaign-actions .button {
-  font-size: clamp(11px, 0.7vw, 13px);
-  letter-spacing: 1.2px;
-  min-height: clamp(48px, 3.1vw, 58px);
-  padding-inline: clamp(22px, 1.6vw, 30px);
+
+.hero-italic-gold,
+.campaign-hero .campaign-title em {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-style: italic !important;
+  font-size: inherit !important;
+  font-weight: 400 !important;
+  color: #D4A373 !important;
+  letter-spacing: inherit !important;
 }
-.campaign-secondary {
-  font-size: clamp(13px, 0.8vw, 15px);
+
+/* Description */
+.campaign-hero .campaign-description {
+  max-width: 430px;
+  font-family: Lato, system-ui, sans-serif;
+  font-size: clamp(13px, 0.9vw, 15px);
+  line-height: 1.68;
+  color: #CBBDB0;
+  margin: 0 0 28px;
 }
-.campaign-doctor {
-  margin-top: clamp(24px, 2vw, 38px);
-  gap: 15px;
-  font-size: clamp(14px, 0.85vw, 16px);
+
+/* Actions Row */
+.campaign-hero .campaign-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
 }
-.campaign-doctor small {
-  font-size: clamp(11px, 0.66vw, 13px);
-  letter-spacing: 0.3px;
+
+.hero-btn-primary {
+  background: #CAA078;
+  color: #26160F;
+  font-family: Lato, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 13px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(202, 160, 120, 0.22);
+  transition: background 0.2s, transform 0.2s;
 }
-.campaign-seal {
-  width: clamp(44px, 2.8vw, 54px);
-  height: clamp(44px, 2.8vw, 54px);
-  font-size: clamp(15px, 0.95vw, 18px);
+
+.hero-btn-primary:hover {
+  background: #D8B088;
+  transform: translateY(-1px);
 }
-.campaign-credit {
-  font-size: 10px;
-  padding: 4px 9px;
-}
-.campaign-label {
+
+.hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: #F8F4EE;
+  font-family: Lato, system-ui, sans-serif;
   font-size: 12px;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 12px 20px;
+  border: 1px solid rgba(220, 190, 150, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
-.campaign-arrows button {
-  width: 38px;
-  height: 38px;
+
+.hero-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(220, 190, 150, 0.6);
+  transform: translateY(-1px);
 }
-@media (max-width: 950px) {
+
+.arrow-up-diag {
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Doctor Glassmorphism Card */
+.campaign-doctor-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #352319;
+  border: 1px solid rgba(220, 190, 150, 0.22);
+  border-radius: 18px;
+  padding: 12px 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+.doctor-avatar-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid #CAA078;
+  flex-shrink: 0;
+  background: #23150E;
+}
+
+.doctor-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.doctor-badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-badge-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FAF6F2;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+
+.doctor-badge-meta {
+  font-family: Lato, system-ui, sans-serif;
+  font-size: 9.5px;
+  color: #C5B5A5;
+  margin: 3px 0 6px;
+  letter-spacing: 0.2px;
+}
+
+.doctor-badge-tags {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.badge-tag {
+  font-family: Lato, system-ui, sans-serif;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #DFC7A5;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2.5px 7.5px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(220, 190, 150, 0.15);
+}
+
+.tag-star {
+  color: #D4A373;
+}
+
+.tag-shield-icon {
+  stroke: #DFC7A5;
+}
+
+/* Right Visual Column - Arch Window on Cream */
+.hero-visual-portal {
+  position: relative;
+  flex: 1;
+  min-height: 550px;
+  background: #F7EFE4;
+  overflow: visible;
+}
+
+/* Outer concentric gold arch contour */
+.hero-arch-ring-outer {
+  position: absolute;
+  top: 24px;
+  left: -12px;
+  right: 0;
+  bottom: 46px;
+  border-top: 1.2px solid rgba(196, 154, 102, 0.45);
+  border-left: 1.2px solid rgba(196, 154, 102, 0.45);
+  border-top-left-radius: 135px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Image window clipped by the arch */
+.hero-arch-image-wrap {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  bottom: 46px;
+  border-top-left-radius: 120px;
+  overflow: hidden;
+  border: 1.5px solid #C49A66;
+  z-index: 1;
+  background: #25160E;
+  box-shadow: -4px 6px 18px rgba(48, 30, 20, 0.12);
+}
+
+.hero-arch-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+}
+
+/* Floating Concern Pills at bottom right */
+.hero-floating-pills {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.floating-pill {
+  font-family: Lato, system-ui, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  background: #ECE6DA;
+  color: #3A261D;
+  border: 1px solid rgba(190, 170, 150, 0.35);
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.floating-pill:hover {
+  transform: translateY(-1px);
+  background: #F3EEE4;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.floating-pill.pill-active {
+  background: #5D493E;
+  color: #FAF6F0;
+  border-color: #5D493E;
+}
+
+.floating-pill.pill-active:hover {
+  background: #6D574B;
+}
+
+.pill-spark {
+  color: #CAA078;
+  font-size: 9px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .campaign-shell {
+    padding: 12px 20px 0 20px;
+  }
+
+  .social-rail {
+    display: none;
+  }
+
   .campaign-hero {
-    height: 560px;
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
-  .campaign-description {
-    font-size: 14px;
+
+  .hero-visual-portal {
+    min-height: 400px;
+    order: -1;
   }
-  .campaign-label {
-    font-size: 11px;
+
+  .hero-arch-ring-outer,
+  .hero-arch-ring-inner {
+    display: none;
+  }
+
+  .hero-arch-image-wrap {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 0;
+  }
+
+  .hero-floating-pills {
+    bottom: 14px;
+    right: 14px;
+    left: 14px;
+    justify-content: flex-start;
+  }
+
+  .campaign-hero .campaign-copy {
+    padding: 36px 24px;
   }
 }
-@media (max-width: 700px) {
-  .campaign-hero {
-    height: 640px;
+
+/* ---- Moving horizontal feature strap below hero --------------------- */
+.hero-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--espresso);
+  color: var(--ivory);
+  border-top: 1px solid rgba(203, 164, 103, 0.3);
+  border-bottom: 1px solid rgba(203, 164, 103, 0.3);
+  padding: 13px 0;
+}
+
+.hero-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: heroMarqueeScroll 36s linear infinite;
+}
+
+.hero-marquee:hover .hero-marquee-track,
+.hero-marquee:focus-within .hero-marquee-track {
+  animation-play-state: paused;
+}
+
+.hero-marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hero-marquee-item {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 22px;
+  color: var(--ivory);
+}
+
+.hero-marquee-sep {
+  color: var(--champagne);
+  font-size: 10px;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+@keyframes heroMarqueeScroll {
+  0% {
+    transform: translateX(0);
   }
-  /* Clear the image-credit tag in the bottom corner. */
-  .campaign-copy {
-    padding-bottom: 44px;
+  100% {
+    transform: translateX(-50%);
   }
-  .campaign-copy .eyebrow {
-    font-size: 10px;
-    letter-spacing: 1.6px;
-    margin-bottom: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee-track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
   }
-  .campaign-description {
-    font-size: 14px;
-    line-height: 1.65;
-    margin-bottom: 20px;
+
+  .hero-marquee-group[aria-hidden="true"] {
+    display: none;
   }
-  .campaign-actions {
-    gap: 10px 18px;
+
+  .hero-marquee-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
   }
-  .campaign-actions .button {
-    font-size: 11px;
-    min-height: 46px;
-    padding-inline: 20px;
+}
+
+@media (max-width: 640px) {
+  .hero-marquee {
+    padding: 11px 0;
   }
-  .campaign-secondary {
-    font-size: 13px;
-  }
-  .campaign-doctor {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  .campaign-doctor small {
-    font-size: 11px;
-  }
-  .campaign-seal {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-  }
-  .campaign-credit {
-    font-size: 9px;
-    padding: 3px 7px;
-  }
-  .campaign-arrows button {
-    width: 36px;
-    height: 36px;
+
+  .hero-marquee-item {
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    padding: 0 16px;
   }
 }

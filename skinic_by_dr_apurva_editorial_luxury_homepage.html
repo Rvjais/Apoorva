@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKINIC by Dr Apurva — Dermatology, Aesthetics &amp; Longevity</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Primary), Lato (Secondary), Alex Brush (Founder Signature) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- SKINIC Brandbook Design Tokens & Keyframes -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: '#302119',
+            'espresso-deep': '#1E140F',
+            'espresso-soft': '#4A362B',
+            gold: '#CBA467',
+            'gold-light': '#E2C593',
+            cocoa: '#956441',
+            rosebrown: '#A67B70',
+            ivory: '#FAF6F0',
+            sand: '#F2E9DD',
+            parchment: '#E8DDD0',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Lato"', 'system-ui', 'sans-serif'],
+            signature: ['"Alex Brush"', 'cursive'],
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            kenburns: {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.07)' },
+            },
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(14px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            marquee: 'marquee 36s linear infinite',
+            kenburns: 'kenburns 14s ease-out infinite alternate',
+            fadeUp: 'fadeUp 0.7s ease-out forwards',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-ivory text-espresso font-sans antialiased selection:bg-gold/30 selection:text-espresso overflow-x-hidden">
+
+  <!-- ===================================================================== -->
+  <!-- 1. FLOATING TRANSPARENT-TO-IVORY LUXURY HEADER                        -->
+  <!--    Inspired by D'Zen Derma's centered emblem & serene navigation      -->
+  <!-- ===================================================================== -->
+  <header
+    id="site-header"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gradient-to-b from-espresso-deep/75 via-espresso-deep/35 to-transparent text-ivory"
+  >
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 h-20 lg:h-24 flex items-center justify-between">
+      <!-- Left: Book Pill + Primary Links -->
+      <div class="flex items-center gap-7">
+        <a
+          href="#booking"
+          id="header-cta"
+          class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.18em] bg-gold text-espresso-deep hover:bg-gold-light transition-all shadow-sm"
+        >
+          <span>Book Visit</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </a>
+
+        <nav class="hidden xl:flex items-center gap-7 text-[11px] tracking-[0.18em] uppercase font-normal">
+          <a href="#philosophy" class="nav-link hover:text-gold transition-colors">Philosophy</a>
+          <a href="#treatments" class="nav-link hover:text-gold transition-colors">Treatments</a>
+          <a href="#concerns" class="nav-link hover:text-gold transition-colors">Concerns</a>
+        </nav>
+      </div>
+
+      <!-- Center: SKINIC Primary Brand Emblem -->
+      <a href="#" class="flex flex-col items-center group focus:outline-none">
+        <div class="flex items-center gap-2.5">
+          <!-- Approved Champagne-Gold S Logomark -->
+          <svg class="w-6 h-8 flex-shrink-0" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="navLogoGradA" x1="12" y1="2" x2="32" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#E5C896" />
+                <stop offset="50%" stop-color="#CBA467" />
+                <stop offset="100%" stop-color="#956441" />
+              </linearGradient>
+              <linearGradient id="navLogoGradB" x1="8" y1="18" x2="26" y2="50" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#B0894D" />
+                <stop offset="55%" stop-color="#CBA467" />
+                <stop offset="100%" stop-color="#8C5D3C" />
+              </linearGradient>
+            </defs>
+            <path d="M24.5 3C16.5 7 13 13.5 18 20.5C22.5 26.8 31.5 31 28.5 40.5C26.7 46.2 21.5 49 17.5 50C24 47.5 34 42.5 33.5 33C33 24.5 23 20.8 19.5 14.5C17 10 19.5 6 24.5 3Z" fill="url(#navLogoGradA)" />
+            <path d="M11 19.5C9.5 26 14 31 19 35.5C22.5 38.7 23.5 43.5 19.5 48.5C24.5 45 27.5 39.5 24 33.5C20.8 28 13.5 25.5 11 19.5Z" fill="url(#navLogoGradB)" />
+          </svg>
+          <div class="flex flex-col leading-none">
+            <span id="logo-wordmark" class="font-serif text-[22px] sm:text-[26px] tracking-[0.28em] font-normal transition-colors">SKINIC</span>
+            <span id="logo-submark" class="text-[8px] sm:text-[9px] tracking-[0.22em] uppercase mt-1 flex items-center justify-center gap-1.5 opacity-85 transition-colors">
+              <span class="w-2.5 h-[1px] bg-gold inline-block"></span>
+              <span>by Dr Apurva</span>
+              <span class="w-2.5 h-[1px] bg-gold inline-block"></span>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Right: Secondary Links + Direct Phone + Menu Trigger -->
+      <div class="flex items-center gap-7">
+        <nav class="hidden xl:flex items-center gap-7 text-[11px] tracking-[0.18em] uppercase font-normal">
+          <a href="#founder" class="nav-link hover:text-gold transition-colors">Dr. Apurva</a>
+          <a href="#results" class="nav-link hover:text-gold transition-colors">Results</a>
+          <a href="#clinic" class="nav-link hover:text-gold transition-colors">The Clinic</a>
+        </nav>
+
+        <a
+          href="tel:+919871941444"
+          class="hidden md:inline-flex items-center gap-2 text-[11px] tracking-[0.14em] opacity-90 hover:text-gold transition-colors"
+        >
+          <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          <span>+91 98719 41444</span>
+        </a>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          class="w-10 h-10 rounded-full border border-current/30 flex items-center justify-center hover:border-gold hover:text-gold transition-colors xl:hidden"
+        >
+          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Full-Width Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="hidden xl:hidden bg-espresso-deep/98 backdrop-blur-xl text-ivory border-t border-gold/20 px-6 py-8">
+      <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-5">
+        <a href="#philosophy" class="mobile-nav-link font-serif text-2xl tracking-wider hover:text-gold transition-colors">Philosophy</a>
+        <a href="#treatments" class="mobile-nav-link font-serif text-2xl tracking-wider hover:text-gold transition-colors">Signature Treatments</a>
+        <a href="#concerns" class="mobile-nav-link font-serif text-2xl tracking-wider hover:text-gold transition-colors">Concern Finder</a>
+        <a href="#founder" class="mobile-nav-link font-serif text-2xl tracking-wider hover:text-gold transition-colors">Dr. Apurva Aditi</a>
+        <a href="#results" class="mobile-nav-link font-serif text-2xl tracking-wider hover:text-gold transition-colors">Patient Results</a>
+        <a href="#clinic" class="mobile-nav-link font-serif text-2xl tracking-wider hover:text-gold transition-colors">The Clinic</a>
+        <div class="pt-4 w-full border-t border-ivory/10 flex flex-col gap-3">
+          <a href="#booking" class="mobile-nav-link w-full bg-gold text-espresso-deep font-bold text-xs uppercase tracking-[0.2em] py-3.5 rounded-full">
+            Request Consultation
+          </a>
+          <a href="tel:+919871941444" class="text-xs tracking-[0.16em] text-ivory/70 py-1">+91 98719 41444 · Safdarjung Enclave, New Delhi</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================== -->
+    <!-- 2. CINEMATIC FULL-SCREEN EDITORIAL HERO CAROUSEL                      -->
+    <!--    Blending D'Zen Derma's atmospheric luxury + Estique's poise        -->
+    <!-- ===================================================================== -->
+    <section class="relative w-full h-[92vh] min-h-[640px] max-h-[960px] bg-espresso-deep overflow-hidden">
+
+      <!-- Slide Backgrounds (Crossfade) -->
+      <div id="hero-slides" class="absolute inset-0">
+        <!-- Slide 1: Serene Architectural Luxury Sanctuary -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100" data-slide="0">
+          <img
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=85"
+            alt="SKINIC by Dr Apurva Luxury Dermatology Sanctuary"
+            class="w-full h-full object-cover object-center animate-kenburns"
+            onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/302119/CBA467?text=SKINIC+Sanctuary';"
+          />
+        </div>
+        <!-- Slide 2: Sunlit Radiant Natural Skin Portrait -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 pointer-events-none" data-slide="1">
+          <img
+            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1920&q=85"
+            alt="Natural radiant skin aesthetics at SKINIC"
+            class="w-full h-full object-cover object-center animate-kenburns"
+            onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/302119/CBA467?text=Natural+Aesthetics';"
+          />
+        </div>
+        <!-- Slide 3: Clinical Dermatology Precision -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 pointer-events-none" data-slide="2">
+          <img
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=85"
+            alt="Evidence-led dermatology care by Dr Apurva Aditi"
+            class="w-full h-full object-cover object-center animate-kenburns"
+            onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/302119/CBA467?text=Clinical+Dermatology';"
+          />
+        </div>
+      </div>
+
+      <!-- Warm Espresso-Cocoa Cinema Vignette Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-espresso-deep/70 via-espresso/45 to-espresso-deep/85 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(48,33,25,0.18)_0%,rgba(30,20,15,0.72)_100%)] pointer-events-none"></div>
+
+      <!-- Subtle SKINIC Brand Pattern Accent (Top-Right Ambient Curve) -->
+      <svg class="absolute -right-24 top-1/2 -translate-y-1/2 w-[480px] h-[620px] opacity-[0.06] pointer-events-none hidden lg:block" viewBox="0 0 40 52" fill="none">
+        <path d="M24.5 3C16.5 7 13 13.5 18 20.5C22.5 26.8 31.5 31 28.5 40.5C26.7 46.2 21.5 49 17.5 50C24 47.5 34 42.5 33.5 33C33 24.5 23 20.8 19.5 14.5C17 10 19.5 6 24.5 3Z" fill="#CBA467" />
+        <path d="M11 19.5C9.5 26 14 31 19 35.5C22.5 38.7 23.5 43.5 19.5 48.5C24.5 45 27.5 39.5 24 33.5C20.8 28 13.5 25.5 11 19.5Z" fill="#CBA467" />
+      </svg>
+
+      <!-- Centered Monumental Editorial Content -->
+      <div class="relative z-10 h-full max-w-[1200px] mx-auto px-5 sm:px-8 flex flex-col items-center justify-center text-center pt-16 pb-20">
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-3.5 mb-6 animate-fadeUp">
+          <span class="w-8 sm:w-12 h-[1px] bg-gold/70"></span>
+          <span id="hero-eyebrow" class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.3em] text-gold-light">
+            Clinical Dermatology · Aesthetics · Longevity
+          </span>
+          <span class="w-8 sm:w-12 h-[1px] bg-gold/70"></span>
+        </div>
+
+        <!-- Dynamic Editorial Headline -->
+        <h1
+          id="hero-headline"
+          class="font-serif text-[44px] sm:text-[64px] lg:text-[82px] font-light text-ivory leading-[1.04] tracking-[-0.01em] max-w-4xl transition-all duration-500"
+        >
+          True Beauty Defined by<br />
+          <em class="italic font-normal text-gold-light">&lsquo;Individual Care&rsquo;</em>
+        </h1>
+
+        <!-- Refined Concise Subtitle -->
+        <p
+          id="hero-subcopy"
+          class="mt-6 text-[14px] sm:text-[16px] lg:text-[17px] text-ivory/85 font-light leading-[1.8] max-w-2xl transition-all duration-500"
+        >
+          Founded by <strong class="font-normal text-ivory">Dr. Apurva Aditi</strong>, SKINIC unites AIIMS-trained clinical dermatology with international longevity aesthetics for natural, ethical results.
+        </p>
+
+        <!-- Clean Balanced CTAs -->
+        <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="#booking"
+            class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-espresso-deep text-[11px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all shadow-lg shadow-espresso-deep/30"
+          >
+            <span>Book Private Consultation</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+
+          <a
+            href="#treatments"
+            class="inline-flex items-center gap-2.5 bg-ivory/10 hover:bg-ivory/20 backdrop-blur-sm text-ivory border border-ivory/35 text-[11px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all"
+          >
+            <span>Explore Treatments</span>
+          </a>
+        </div>
+
+        <!-- Subtle Inline Trust Credentials (Zero Boxes, Zero Clutter) -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] tracking-[0.14em] text-ivory/75">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <strong class="text-ivory font-normal">4.9</strong> Google Rated (3,500+ Reviews)
+          </span>
+          <span class="hidden sm:inline text-gold/50">·</span>
+          <span>AIIMS Trained MD Dermatologist</span>
+          <span class="hidden sm:inline text-gold/50">·</span>
+          <span>US-FDA Approved Suites</span>
+        </div>
+      </div>
+
+      <!-- Bottom-Center Carousel Pill Indicators (Inspired by D'Zen Derma) -->
+      <div class="absolute bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5 bg-espresso-deep/55 backdrop-blur-md px-4 py-2.5 rounded-full border border-ivory/15">
+        <button type="button" data-goto="0" aria-label="Slide 1" class="hero-dot h-1.5 w-9 rounded-full bg-gold transition-all duration-300"></button>
+        <button type="button" data-goto="1" aria-label="Slide 2" class="hero-dot h-1.5 w-5 rounded-full bg-ivory/35 hover:bg-ivory/65 transition-all duration-300"></button>
+        <button type="button" data-goto="2" aria-label="Slide 3" class="hero-dot h-1.5 w-5 rounded-full bg-ivory/35 hover:bg-ivory/65 transition-all duration-300"></button>
+      </div>
+
+      <!-- Subtle Prev/Next Arrows on Desktop -->
+      <button
+        id="hero-prev"
+        type="button"
+        aria-label="Previous slide"
+        class="hidden lg:flex absolute left-7 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-ivory/25 bg-espresso-deep/30 hover:bg-espresso-deep/70 hover:border-gold text-ivory items-center justify-center transition-all"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button
+        id="hero-next"
+        type="button"
+        aria-label="Next slide"
+        class="hidden lg:flex absolute right-7 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full border border-ivory/25 bg-espresso-deep/30 hover:bg-espresso-deep/70 hover:border-gold text-ivory items-center justify-center transition-all"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. UNOBSTRUCTED ANIMATED MARQUEE RIBBON (Zero Overlapping Elements)   -->
+    <!-- ===================================================================== -->
+    <div class="bg-espresso text-ivory/90 py-4 overflow-hidden border-y border-gold/25">
+      <div class="flex w-max animate-marquee hover:[animation-play-state:paused] whitespace-nowrap text-[11px] tracking-[0.28em] uppercase cursor-default">
+        <div class="flex items-center gap-10 px-5">
+          <span>Clinical Dermatology</span><span class="text-gold">•</span>
+          <span>Prejuvenation &amp; Longevity</span><span class="text-gold">•</span>
+          <span>Ethical Medical Aesthetics</span><span class="text-gold">•</span>
+          <span>Hair &amp; Scalp Science</span><span class="text-gold">•</span>
+          <span>US-FDA Approved Lasers</span><span class="text-gold">•</span>
+          <span class="text-gold-light font-bold">SKIN · SCIENCE · CARE · YOU</span><span class="text-gold">•</span>
+        </div>
+        <div class="flex items-center gap-10 px-5" aria-hidden="true">
+          <span>Clinical Dermatology</span><span class="text-gold">•</span>
+          <span>Prejuvenation &amp; Longevity</span><span class="text-gold">•</span>
+          <span>Ethical Medical Aesthetics</span><span class="text-gold">•</span>
+          <span>Hair &amp; Scalp Science</span><span class="text-gold">•</span>
+          <span>US-FDA Approved Lasers</span><span class="text-gold">•</span>
+          <span class="text-gold-light font-bold">SKIN · SCIENCE · CARE · YOU</span><span class="text-gold">•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 4. BRAND MANIFESTO ON WARM IVORY + INTERACTIVE ESPRESSO BAND          -->
+    <!--    Directly inspired by D'Zen Derma's signature two-part rhythm       -->
+    <!-- ===================================================================== -->
+    <section id="philosophy" class="relative bg-ivory py-20 lg:py-28 overflow-hidden">
+      <!-- Subtle Decorative Brand S-Curve Watermark -->
+      <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[480px] opacity-[0.045] pointer-events-none" viewBox="0 0 40 52" fill="none">
+        <path d="M24.5 3C16.5 7 13 13.5 18 20.5C22.5 26.8 31.5 31 28.5 40.5C26.7 46.2 21.5 49 17.5 50C24 47.5 34 42.5 33.5 33C33 24.5 23 20.8 19.5 14.5C17 10 19.5 6 24.5 3Z" fill="#956441" />
+        <path d="M11 19.5C9.5 26 14 31 19 35.5C22.5 38.7 23.5 43.5 19.5 48.5C24.5 45 27.5 39.5 24 33.5C20.8 28 13.5 25.5 11 19.5Z" fill="#CBA467" />
+      </svg>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-cocoa mb-5">The SKINIC Philosophy</p>
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-[56px] font-light text-espresso leading-[1.15]">
+          Every skin is uniquely beautiful. Our purpose is not to change who you are, but to <em class="italic text-cocoa">enhance and preserve it.</em>
+        </h2>
+        <p class="mt-6 text-[15px] sm:text-base text-espresso-soft leading-[1.85] font-light max-w-2xl mx-auto">
+          From clinical dermatology to prejuvenation and longevity-led aesthetics, SKINIC by Dr Apurva makes every patient feel heard, informed, and confident through thoughtful, individualised treatment plans.
+        </p>
+
+        <!-- Clean Editorial Pillar Tabs Band (Deep Espresso-to-Cocoa Signature Container) -->
+        <div class="mt-14 bg-gradient-to-br from-espresso via-[#3A271E] to-cocoa rounded-3xl p-7 sm:p-11 lg:p-14 text-left text-ivory shadow-2xl shadow-espresso/15 border border-gold/20">
+          <!-- Interactive Pillar Switcher -->
+          <div class="flex flex-wrap items-center justify-center gap-3 pb-9 border-b border-ivory/15">
+            <button
+              type="button"
+              data-pillar="clinical"
+              class="pillar-tab px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.18em] bg-ivory text-espresso transition-all"
+            >
+              01 · Clinical Dermatology
+            </button>
+            <button
+              type="button"
+              data-pillar="longevity"
+              class="pillar-tab px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.18em] bg-ivory/10 text-ivory/85 hover:bg-ivory/20 transition-all"
+            >
+              02 · Prejuvenation &amp; Longevity
+            </button>
+            <button
+              type="button"
+              data-pillar="ethical"
+              class="pillar-tab px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.18em] bg-ivory/10 text-ivory/85 hover:bg-ivory/20 transition-all"
+            >
+              03 · Ethical Aesthetics
+            </button>
+          </div>
+
+          <!-- Dual-Card Parchment Comparison Grid (Inspired by D'Zen Derma) -->
+          <div id="pillar-content" class="mt-9 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <div class="bg-ivory text-espresso rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+              <div>
+                <p id="pillar-left-tag" class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa mb-2">Root-Cause Medical Science</p>
+                <h3 id="pillar-left-title" class="font-serif text-2xl sm:text-3xl font-medium text-espresso mb-3">Precision Diagnosis First</h3>
+                <p id="pillar-left-desc" class="text-sm text-espresso-soft leading-[1.75] font-light">
+                  We go beyond surface symptoms using digital dermoscopy and trichoscopy to uncover hormonal, barrier, and inflammatory triggers behind acne, melasma, pigmentation, and hair loss.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-espresso/10 flex items-center justify-between text-xs text-cocoa font-bold tracking-wider uppercase">
+                <span id="pillar-left-foot">Evidence-Led Protocols</span>
+                <span class="text-gold">01</span>
+              </div>
+            </div>
+
+            <div class="bg-ivory/95 text-espresso rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+              <div>
+                <p id="pillar-right-tag" class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa mb-2">Individualised Care Plan</p>
+                <h3 id="pillar-right-title" class="font-serif text-2xl sm:text-3xl font-medium text-espresso mb-3">Tailored to Your Skin &amp; Lifestyle</h3>
+                <p id="pillar-right-desc" class="text-sm text-espresso-soft leading-[1.75] font-light">
+                  Every prescription, medical peel, and US-FDA approved laser setting is calibrated specifically for Indian skin phototypes—maximising clarity while protecting your skin barrier.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-espresso/10 flex items-center justify-between text-xs text-cocoa font-bold tracking-wider uppercase">
+                <span id="pillar-right-foot">Zero One-Size-Fits-All</span>
+                <span class="text-gold">02</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. SIGNATURE TREATMENTS — ARCHED EDITORIAL GALLERY                    -->
+    <!--    Inspired by D'Zen Derma's iconic arched portraits + Skinfinity     -->
+    <!-- ===================================================================== -->
+    <section id="treatments" class="py-20 lg:py-28 bg-sand border-y border-espresso/10">
+      <div class="max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12">
+        <!-- Section Header + Filter Pills -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+          <div class="max-w-xl">
+            <p class="text-[11px] font-bold uppercase tracking-[0.26em] text-cocoa mb-3">SKIN · SCIENCE · CARE · YOU</p>
+            <h2 class="font-serif text-4xl sm:text-5xl font-light text-espresso leading-[1.1]">
+              Signature <em class="italic text-cocoa">Treatments</em> &amp; Clinical Specialties
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap gap-2.5">
+            <button type="button" data-filter="all" class="treat-filter px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.16em] bg-espresso text-ivory transition-all">All Specialties</button>
+            <button type="button" data-filter="skin" class="treat-filter px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.16em] bg-ivory text-espresso hover:bg-parchment transition-all border border-espresso/10">Skin &amp; Glow</button>
+            <button type="button" data-filter="hair" class="treat-filter px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.16em] bg-ivory text-espresso hover:bg-parchment transition-all border border-espresso/10">Hair &amp; Scalp</button>
+            <button type="button" data-filter="longevity" class="treat-filter px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.16em] bg-ivory text-espresso hover:bg-parchment transition-all border border-espresso/10">Longevity</button>
+            <button type="button" data-filter="acne" class="treat-filter px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.16em] bg-ivory text-espresso hover:bg-parchment transition-all border border-espresso/10">Acne &amp; Scars</button>
+          </div>
+        </div>
+
+        <!-- 4 Sculpted Arched Treatment Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 lg:gap-8">
+          <!-- Card 1 -->
+          <article data-category="skin" class="treat-card group bg-ivory rounded-t-[170px] rounded-b-2xl p-4 pb-7 border border-espresso/10 hover:border-gold/70 hover:shadow-xl hover:shadow-espresso/5 transition-all duration-500 flex flex-col">
+            <div class="aspect-[4/4.6] rounded-t-[155px] rounded-b-xl overflow-hidden bg-parchment mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=85"
+                alt="Skin Rejuvenation & Pigmentation Care"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x700/E8DDD0/302119?text=Skin+Rejuvenation';"
+              />
+            </div>
+            <div class="px-3 flex-1 flex flex-col text-center">
+              <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa">Clarity &amp; Luminosity</span>
+              <h3 class="font-serif text-[26px] font-normal text-espresso leading-tight mt-1.5 mb-3">Skin Rejuvenation &amp; Pigmentation</h3>
+              <p class="text-xs text-espresso-soft leading-relaxed font-light mb-5 flex-1">
+                Q-Switch laser toning, custom chemical peels, and medical melasma protocols for luminous, even-toned skin.
+              </p>
+              <a
+                href="#booking"
+                data-prefill="Clinical Dermatology"
+                class="prefill-trigger inline-flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-espresso group-hover:text-cocoa pt-4 border-t border-espresso/10 transition-colors"
+              >
+                <span>Consult on This</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article data-category="hair" class="treat-card group bg-ivory rounded-t-[170px] rounded-b-2xl p-4 pb-7 border border-espresso/10 hover:border-gold/70 hover:shadow-xl hover:shadow-espresso/5 transition-all duration-500 flex flex-col">
+            <div class="aspect-[4/4.6] rounded-t-[155px] rounded-b-xl overflow-hidden bg-parchment mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=85"
+                alt="Hair & Scalp Restoration"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x700/E8DDD0/302119?text=Hair+%26+Scalp';"
+              />
+            </div>
+            <div class="px-3 flex-1 flex flex-col text-center">
+              <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa">Density &amp; Follicle Health</span>
+              <h3 class="font-serif text-[26px] font-normal text-espresso leading-tight mt-1.5 mb-3">Hair &amp; Scalp Restoration</h3>
+              <p class="text-xs text-espresso-soft leading-relaxed font-light mb-5 flex-1">
+                Advanced GFC therapy, PRP, exosome scalp renewal, and trichoscopy-guided regrowth plans for men and women.
+              </p>
+              <a
+                href="#booking"
+                data-prefill="Hair & Scalp"
+                class="prefill-trigger inline-flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-espresso group-hover:text-cocoa pt-4 border-t border-espresso/10 transition-colors"
+              >
+                <span>Consult on This</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article data-category="longevity" class="treat-card group bg-ivory rounded-t-[170px] rounded-b-2xl p-4 pb-7 border border-espresso/10 hover:border-gold/70 hover:shadow-xl hover:shadow-espresso/5 transition-all duration-500 flex flex-col">
+            <div class="aspect-[4/4.6] rounded-t-[155px] rounded-b-xl overflow-hidden bg-parchment mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=85"
+                alt="Longevity & Prejuvenation"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x700/E8DDD0/302119?text=Longevity';"
+              />
+            </div>
+            <div class="px-3 flex-1 flex flex-col text-center">
+              <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa">Graceful Aging</span>
+              <h3 class="font-serif text-[26px] font-normal text-espresso leading-tight mt-1.5 mb-3">Longevity &amp; Prejuvenation</h3>
+              <p class="text-xs text-espresso-soft leading-relaxed font-light mb-5 flex-1">
+                Collagen biostimulators, skin boosters, and ultra-subtle injectables designed to keep you looking naturally rested.
+              </p>
+              <a
+                href="#booking"
+                data-prefill="Longevity"
+                class="prefill-trigger inline-flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-espresso group-hover:text-cocoa pt-4 border-t border-espresso/10 transition-colors"
+              >
+                <span>Consult on This</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article data-category="acne" class="treat-card group bg-ivory rounded-t-[170px] rounded-b-2xl p-4 pb-7 border border-espresso/10 hover:border-gold/70 hover:shadow-xl hover:shadow-espresso/5 transition-all duration-500 flex flex-col">
+            <div class="aspect-[4/4.6] rounded-t-[155px] rounded-b-xl overflow-hidden bg-parchment mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=85"
+                alt="Acne & Scar Revision"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x700/E8DDD0/302119?text=Acne+%26+Scars';"
+              />
+            </div>
+            <div class="px-3 flex-1 flex flex-col text-center">
+              <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa">Texture &amp; Renewal</span>
+              <h3 class="font-serif text-[26px] font-normal text-espresso leading-tight mt-1.5 mb-3">Acne &amp; Scar Revision</h3>
+              <p class="text-xs text-espresso-soft leading-relaxed font-light mb-5 flex-1">
+                Microneedling RF (MNRF), fractional laser resurfacing, and clinical acne control to smooth scars and calm breakouts.
+              </p>
+              <a
+                href="#booking"
+                data-prefill="Aesthetics"
+                class="prefill-trigger inline-flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-espresso group-hover:text-cocoa pt-4 border-t border-espresso/10 transition-colors"
+              >
+                <span>Consult on This</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. INTERACTIVE CONCERN PROTOCOL FINDER (Inspired by Twacha Clinic)    -->
+    <!-- ===================================================================== -->
+    <section id="concerns" class="py-20 lg:py-24 bg-ivory border-b border-espresso/10">
+      <div class="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-[11px] font-bold uppercase tracking-[0.26em] text-cocoa mb-2">Guided Diagnosis</p>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-espresso">
+            What Brings You to <em class="italic text-cocoa">SKINIC?</em>
+          </h2>
+          <p class="text-sm text-espresso-soft font-light mt-3">
+            Select your primary skin or hair concern to preview Dr. Apurva&rsquo;s evidence-led clinical protocol.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Left: Interactive Concern List -->
+          <div class="lg:col-span-5 flex flex-col gap-2.5">
+            <button type="button" data-concern-key="melasma" class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-espresso text-ivory border-espresso shadow-md">
+              <span class="font-serif text-xl">Pigmentation &amp; Melasma</span>
+              <span class="text-gold text-sm">→</span>
+            </button>
+            <button type="button" data-concern-key="acne" class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-sand/60 text-espresso border-espresso/10 hover:border-gold">
+              <span class="font-serif text-xl">Active Acne &amp; Acne Scars</span>
+              <span class="text-cocoa text-sm">→</span>
+            </button>
+            <button type="button" data-concern-key="hairfall" class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-sand/60 text-espresso border-espresso/10 hover:border-gold">
+              <span class="font-serif text-xl">Hair Fall &amp; Crown Thinning</span>
+              <span class="text-cocoa text-sm">→</span>
+            </button>
+            <button type="button" data-concern-key="aging" class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-sand/60 text-espresso border-espresso/10 hover:border-gold">
+              <span class="font-serif text-xl">Early Fine Lines &amp; Skin Laxity</span>
+              <span class="text-cocoa text-sm">→</span>
+            </button>
+            <button type="button" data-concern-key="bridal" class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-sand/60 text-espresso border-espresso/10 hover:border-gold">
+              <span class="font-serif text-xl">Bridal Glow &amp; Barrier Repair</span>
+              <span class="text-cocoa text-sm">→</span>
+            </button>
+          </div>
+
+          <!-- Right: Dynamic Clinical Protocol Sheet -->
+          <div class="lg:col-span-7 bg-sand/80 rounded-2xl p-8 sm:p-10 border border-espresso/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 pb-5 border-b border-espresso/10">
+                <div>
+                  <span id="proto-category" class="text-[10px] font-bold uppercase tracking-[0.22em] text-cocoa">Clinical Dermatology Protocol</span>
+                  <h3 id="proto-title" class="font-serif text-3xl sm:text-4xl text-espresso mt-1">Pigmentation &amp; Melasma</h3>
+                </div>
+                <span class="hidden sm:inline-flex items-center px-3.5 py-1.5 rounded-full bg-ivory text-[10px] font-bold uppercase tracking-[0.16em] text-cocoa border border-gold/40">
+                  Doctor-Led
+                </span>
+              </div>
+
+              <p id="proto-desc" class="mt-6 text-sm sm:text-[15px] text-espresso-soft leading-[1.8] font-light">
+                Melasma and stubborn sun spots require calm, pigment-safe precision—never aggressive bleaching. We combine Q-Switch laser toning, gentle tranexamic or mandelic peels, and barrier-strengthening prescriptions.
+              </p>
+
+              <!-- Key Clinical Specs -->
+              <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-ivory rounded-xl p-4 border border-espresso/5">
+                  <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-cocoa">Recommended</p>
+                  <p id="proto-treatments" class="text-xs font-bold text-espresso mt-1.5">Q-Switch Laser + Medical Peel</p>
+                </div>
+                <div class="bg-ivory rounded-xl p-4 border border-espresso/5">
+                  <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-cocoa">Typical Plan</p>
+                  <p id="proto-sessions" class="text-xs font-bold text-espresso mt-1.5">4 – 6 Sessions</p>
+                </div>
+                <div class="bg-ivory rounded-xl p-4 border border-espresso/5">
+                  <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-cocoa">Downtime</p>
+                  <p id="proto-downtime" class="text-xs font-bold text-espresso mt-1.5">Minimal / Lunch-Hour</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-espresso/10 flex flex-wrap items-center justify-between gap-4">
+              <p class="text-xs text-espresso-soft italic font-serif text-base">
+                &ldquo;Every plan begins with a 1-on-1 clinical evaluation with Dr. Apurva.&rdquo;
+              </p>
+              <a
+                id="proto-cta"
+                href="#booking"
+                data-prefill="Clinical Dermatology"
+                class="prefill-trigger inline-flex items-center gap-2.5 bg-espresso hover:bg-cocoa text-ivory text-[11px] font-bold uppercase tracking-[0.18em] px-6 py-3.5 rounded-full transition-colors"
+              >
+                <span>Book Evaluation</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. MEET FOUNDER DR. APURVA ADITI + CLINICAL CREDENTIALS               -->
+    <!-- ===================================================================== -->
+    <section id="founder" class="py-20 lg:py-28 bg-espresso-deep text-ivory relative overflow-hidden">
+      <!-- Warm Ambient Radial Glow -->
+      <div class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-cocoa/20 blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[1340px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Left: Sculpted Arched Portrait with Subtle Gold Hairline Frame -->
+          <div class="lg:col-span-5 relative max-w-md mx-auto lg:max-w-none w-full">
+            <div class="relative p-3 border border-gold/30 rounded-t-[220px] rounded-b-2xl">
+              <div class="aspect-[4/4.9] rounded-t-[208px] rounded-b-xl overflow-hidden bg-espresso">
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85"
+                  alt="Dr. Apurva Aditi — Founder & Chief Dermatologist at SKINIC"
+                  class="w-full h-full object-cover object-top"
+                  onerror="this.onerror=null;this.src='https://placehold.co/720x880/302119/CBA467?text=Dr.+Apurva+Aditi';"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Editorial Biography & Clinical Numbers -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-[1px] bg-gold"></span>
+              <span class="text-[11px] font-bold uppercase tracking-[0.26em] text-gold-light">Meet Founder &amp; Lead Dermatologist</span>
+            </div>
+
+            <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-ivory leading-[1.08]">
+              Dr. Apurva Aditi
+              <span class="block font-serif italic text-2xl sm:text-3xl text-gold-light font-light mt-2">
+                MD Dermatology · Aesthetic &amp; Longevity Specialist
+              </span>
+            </h2>
+
+            <p class="text-[15px] text-ivory/80 leading-[1.85] font-light max-w-2xl">
+              Trained at AIIMS with international aesthetic fellowships, Dr. Apurva Aditi founded SKINIC around a rare promise in modern aesthetics: honest, unhurried, science-first medicine. Rather than chasing fleeting trends, she helps patients understand their skin and age with enduring health and quiet self-assurance.
+            </p>
+
+            <!-- Relocated Clinical Metrics Strip (Integrated Cleanly Here — Never Covering Marquee!) -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-7 border-y border-ivory/15">
+              <div>
+                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-normal">15+</p>
+                <p class="text-[10px] uppercase tracking-[0.16em] text-ivory/65 mt-1">Years Experience</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-normal">25,000+</p>
+                <p class="text-[10px] uppercase tracking-[0.16em] text-ivory/65 mt-1">Patients Treated</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-normal">4.9 ★</p>
+                <p class="text-[10px] uppercase tracking-[0.16em] text-ivory/65 mt-1">3,500+ Reviews</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-normal">100%</p>
+                <p class="text-[10px] uppercase tracking-[0.16em] text-ivory/65 mt-1">US-FDA Tech</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-6 pt-2">
+              <p class="font-signature text-4xl sm:text-5xl text-gold-light">Dr. Apurva Aditi</p>
+              <a
+                href="#booking"
+                class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-espresso-deep text-[11px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-colors"
+              >
+                <span>Consult With Dr. Apurva</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. BEFORE & AFTER TRANSFORMATIONS + VERIFIED PATIENT STORIES          -->
+    <!-- ===================================================================== -->
+    <section id="results" class="py-20 lg:py-28 bg-ivory border-b border-espresso/10">
+      <div class="max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.26em] text-cocoa mb-2">Evidence-Led Outcomes</p>
+            <h2 class="font-serif text-4xl sm:text-5xl font-light text-espresso">
+              Real Results. <em class="italic text-cocoa">Natural Confidence.</em>
+            </h2>
+          </div>
+          <p class="text-xs text-espresso-soft max-w-xs leading-relaxed">
+            Slide across each image to compare baseline and post-treatment clinical clarity.
+          </p>
+        </div>
+
+        <!-- 3 Draggable Before/After Sliders -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Slider 1 -->
+          <div class="bg-sand/60 rounded-2xl p-4 border border-espresso/10">
+            <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.4] bg-parchment select-none">
+              <img
+                src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=80"
+                alt="After Acne & Scar Refinement"
+                class="w-full h-full object-cover brightness-105"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x520/FAF6F0/302119?text=After';"
+              />
+              <div class="ba-before absolute inset-0 overflow-hidden" style="width: 50%;">
+                <img
+                  src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=80"
+                  alt="Before Acne & Scar Refinement"
+                  class="w-full h-full object-cover max-w-none brightness-85 contrast-125 saturate-75"
+                  onerror="this.onerror=null;this.src='https://placehold.co/600x520/E8DDD0/302119?text=Before';"
+                />
+              </div>
+              <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-ivory pointer-events-none" style="left: 50%;">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-espresso text-gold border-2 border-ivory shadow flex items-center justify-center text-xs">
+                  ↔
+                </div>
+              </div>
+              <span class="absolute bottom-3 left-3 bg-espresso/85 text-ivory text-[9px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full pointer-events-none">Before</span>
+              <span class="absolute bottom-3 right-3 bg-ivory/95 text-espresso text-[9px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full pointer-events-none">After 4 Sessions</span>
+              <input type="range" min="10" max="90" value="50" aria-label="Before and after acne scar slider" class="ba-slider absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10" />
+            </div>
+            <div class="pt-4 px-1 flex items-center justify-between">
+              <h3 class="font-serif text-xl text-espresso">Acne &amp; Scar Refinement</h3>
+              <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-cocoa">MNRF + Peel</span>
+            </div>
+          </div>
+
+          <!-- Slider 2 -->
+          <div class="bg-sand/60 rounded-2xl p-4 border border-espresso/10">
+            <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.4] bg-parchment select-none">
+              <img
+                src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=700&q=80"
+                alt="After Hair Restoration"
+                class="w-full h-full object-cover brightness-105"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x520/FAF6F0/302119?text=After';"
+              />
+              <div class="ba-before absolute inset-0 overflow-hidden" style="width: 50%;">
+                <img
+                  src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=700&q=80"
+                  alt="Before Hair Restoration"
+                  class="w-full h-full object-cover max-w-none brightness-85 contrast-125 saturate-75"
+                  onerror="this.onerror=null;this.src='https://placehold.co/600x520/E8DDD0/302119?text=Before';"
+                />
+              </div>
+              <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-ivory pointer-events-none" style="left: 50%;">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-espresso text-gold border-2 border-ivory shadow flex items-center justify-center text-xs">
+                  ↔
+                </div>
+              </div>
+              <span class="absolute bottom-3 left-3 bg-espresso/85 text-ivory text-[9px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full pointer-events-none">Before</span>
+              <span class="absolute bottom-3 right-3 bg-ivory/95 text-espresso text-[9px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full pointer-events-none">After 4 Months</span>
+              <input type="range" min="10" max="90" value="50" aria-label="Before and after hair restoration slider" class="ba-slider absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10" />
+            </div>
+            <div class="pt-4 px-1 flex items-center justify-between">
+              <h3 class="font-serif text-xl text-espresso">Hair Density &amp; Volume</h3>
+              <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-cocoa">GFC Therapy</span>
+            </div>
+          </div>
+
+          <!-- Slider 3 -->
+          <div class="bg-sand/60 rounded-2xl p-4 border border-espresso/10">
+            <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.4] bg-parchment select-none">
+              <img
+                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80"
+                alt="After Pigmentation Clarity"
+                class="w-full h-full object-cover brightness-105"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x520/FAF6F0/302119?text=After';"
+              />
+              <div class="ba-before absolute inset-0 overflow-hidden" style="width: 50%;">
+                <img
+                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80"
+                  alt="Before Pigmentation Clarity"
+                  class="w-full h-full object-cover max-w-none brightness-85 contrast-125 saturate-75"
+                  onerror="this.onerror=null;this.src='https://placehold.co/600x520/E8DDD0/302119?text=Before';"
+                />
+              </div>
+              <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-ivory pointer-events-none" style="left: 50%;">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-espresso text-gold border-2 border-ivory shadow flex items-center justify-center text-xs">
+                  ↔
+                </div>
+              </div>
+              <span class="absolute bottom-3 left-3 bg-espresso/85 text-ivory text-[9px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full pointer-events-none">Before</span>
+              <span class="absolute bottom-3 right-3 bg-ivory/95 text-espresso text-[9px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full pointer-events-none">After 3 Sessions</span>
+              <input type="range" min="10" max="90" value="50" aria-label="Before and after pigmentation slider" class="ba-slider absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10" />
+            </div>
+            <div class="pt-4 px-1 flex items-center justify-between">
+              <h3 class="font-serif text-xl text-espresso">Pigmentation &amp; Clarity</h3>
+              <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-cocoa">Laser Toning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Google Reviews Strip -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-sand/50 rounded-2xl p-7 border border-espresso/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-gold text-sm tracking-widest">★★★★★</span>
+                <span class="text-[10px] uppercase tracking-[0.15em] text-cocoa font-bold">Verified Patient</span>
+              </div>
+              <p class="font-serif text-xl italic text-espresso leading-relaxed">
+                &ldquo;Dr. Apurva never pushes unnecessary procedures. She diagnosed my melasma calmly and built a realistic plan that gave me my bare-skin confidence back.&rdquo;
+              </p>
+            </div>
+            <p class="mt-5 pt-4 border-t border-espresso/10 text-xs font-bold text-espresso">
+              Meera Kapoor <span class="font-light text-espresso-soft">· Pigmentation Protocol</span>
+            </p>
+          </div>
+
+          <div class="bg-sand/50 rounded-2xl p-7 border border-espresso/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-gold text-sm tracking-widest">★★★★★</span>
+                <span class="text-[10px] uppercase tracking-[0.15em] text-cocoa font-bold">Verified Patient</span>
+              </div>
+              <p class="font-serif text-xl italic text-espresso leading-relaxed">
+                &ldquo;The clinic feels like a quiet luxury sanctuary yet operates with rigorous clinical standards. My GFC hair restoration results after 4 months are remarkable.&rdquo;
+              </p>
+            </div>
+            <p class="mt-5 pt-4 border-t border-espresso/10 text-xs font-bold text-espresso">
+              Rohan Malhotra <span class="font-light text-espresso-soft">· Hair &amp; Scalp Science</span>
+            </p>
+          </div>
+
+          <div class="bg-sand/50 rounded-2xl p-7 border border-espresso/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-gold text-sm tracking-widest">★★★★★</span>
+                <span class="text-[10px] uppercase tracking-[0.15em] text-cocoa font-bold">Verified Patient</span>
+              </div>
+              <p class="font-serif text-xl italic text-espresso leading-relaxed">
+                &ldquo;I wanted prejuvenation that still looked completely like me. Everyone tells me I look refreshed and radiant—nobody can ever tell I had a treatment.&rdquo;
+              </p>
+            </div>
+            <p class="mt-5 pt-4 border-t border-espresso/10 text-xs font-bold text-espresso">
+              Ananya Sharma <span class="font-light text-espresso-soft">· Longevity Aesthetics</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 9. THE SKINIC CLINIC SANCTUARY & PRIVATE CONSULTATION BOOKING         -->
+    <!-- ===================================================================== -->
+    <section id="clinic" class="py-20 lg:py-28 bg-sand">
+      <div class="max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+        <!-- Left: Asymmetric Luxury Clinic Bento Gallery -->
+        <div class="lg:col-span-6 flex flex-col justify-between gap-6">
+          <div>
+            <p class="text-[11px] font-bold uppercase tracking-[0.26em] text-cocoa mb-2">The SKINIC Experience</p>
+            <h2 class="font-serif text-4xl sm:text-5xl font-light text-espresso leading-[1.1]">
+              A Private Sanctuary in <em class="italic text-cocoa">New Delhi</em>
+            </h2>
+            <p class="text-sm text-espresso-soft font-light leading-relaxed mt-3 max-w-lg">
+              Warm travertine textures, calm acoustics, and US-FDA approved laser &amp; diagnostic suites designed to make every appointment deeply restorative.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-12 gap-4 flex-1">
+            <div class="col-span-7 rounded-2xl overflow-hidden bg-parchment min-h-[260px]">
+              <img
+                src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=900&q=85"
+                alt="SKINIC Clinic Reception Lounge"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x600/E8DDD0/302119?text=SKINIC+Lounge';"
+              />
+            </div>
+            <div class="col-span-5 grid grid-rows-2 gap-4">
+              <div class="rounded-2xl overflow-hidden bg-parchment">
+                <img
+                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80"
+                  alt="SKINIC Consultation Suite"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null;this.src='https://placehold.co/500x360/E8DDD0/302119?text=Consultation+Suite';"
+                />
+              </div>
+              <div class="rounded-2xl overflow-hidden bg-parchment">
+                <img
+                  src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+                  alt="SKINIC Laser & Treatment Room"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null;this.src='https://placehold.co/500x360/E8DDD0/302119?text=Laser+Suite';"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-espresso-soft">
+            <div class="bg-ivory rounded-xl p-4 border border-espresso/10">
+              <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-cocoa mb-1">Location</p>
+              <p class="font-bold text-espresso">Safdarjung Enclave, New Delhi</p>
+              <p class="mt-0.5">Private Valet &amp; Appointment-Only Entry</p>
+            </div>
+            <div class="bg-ivory rounded-xl p-4 border border-espresso/10">
+              <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-cocoa mb-1">Clinic Hours</p>
+              <p class="font-bold text-espresso">Mon – Sat: 10:00 AM – 7:00 PM</p>
+              <p class="mt-0.5">+91 98719 41444 · appointments@skinic.in</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Spacious Appointment Concierge Card -->
+        <div id="booking" class="lg:col-span-6 bg-ivory rounded-3xl p-8 sm:p-11 border border-gold/35 shadow-xl shadow-espresso/5 scroll-mt-28 flex flex-col justify-center">
+          <p class="text-[11px] font-bold uppercase tracking-[0.26em] text-cocoa mb-2">Private Concierge</p>
+          <h3 class="font-serif text-3xl sm:text-4xl font-normal text-espresso leading-tight">
+            Begin Your Personalised Journey
+          </h3>
+          <p class="text-xs sm:text-sm text-espresso-soft font-light mt-2 mb-8">
+            Request your 1-on-1 evaluation with Dr. Apurva Aditi. Our team will confirm your preferred slot promptly.
+          </p>
+
+          <form id="booking-form" class="space-y-6" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="input-name" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-espresso-soft mb-2">Full Name *</label>
+                <input
+                  id="input-name"
+                  type="text"
+                  required
+                  placeholder="Enter your name"
+                  class="w-full rounded-xl bg-sand/50 border border-espresso/15 focus:border-cocoa focus:bg-ivory px-4 py-3 text-sm text-espresso placeholder:text-espresso/35 focus:outline-none transition-all"
+                />
+              </div>
+              <div>
+                <label for="input-phone" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-espresso-soft mb-2">Phone / WhatsApp *</label>
+                <input
+                  id="input-phone"
+                  type="tel"
+                  required
+                  placeholder="+91 98XXX XXXXX"
+                  class="w-full rounded-xl bg-sand/50 border border-espresso/15 focus:border-cocoa focus:bg-ivory px-4 py-3 text-sm text-espresso placeholder:text-espresso/35 focus:outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Interactive Concern Chips -->
+            <div>
+              <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-espresso-soft mb-2.5">Primary Focus</span>
+              <div class="flex flex-wrap gap-2" id="concern-chip-group">
+                <button type="button" data-value="Clinical Dermatology" class="concern-chip px-4 py-2 rounded-full text-xs font-medium bg-espresso text-ivory border border-espresso transition-all">Clinical Dermatology</button>
+                <button type="button" data-value="Hair & Scalp" class="concern-chip px-4 py-2 rounded-full text-xs font-medium bg-sand/70 text-espresso border border-espresso/15 hover:border-gold transition-all">Hair &amp; Scalp</button>
+                <button type="button" data-value="Longevity" class="concern-chip px-4 py-2 rounded-full text-xs font-medium bg-sand/70 text-espresso border border-espresso/15 hover:border-gold transition-all">Longevity &amp; Anti-Aging</button>
+                <button type="button" data-value="Aesthetics" class="concern-chip px-4 py-2 rounded-full text-xs font-medium bg-sand/70 text-espresso border border-espresso/15 hover:border-gold transition-all">Acne &amp; Aesthetics</button>
+              </div>
+              <input type="hidden" id="selected-concern" value="Clinical Dermatology" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="input-date" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-espresso-soft mb-2">Preferred Date</label>
+                <input
+                  id="input-date"
+                  type="date"
+                  class="w-full rounded-xl bg-sand/50 border border-espresso/15 focus:border-cocoa focus:bg-ivory px-4 py-3 text-sm text-espresso focus:outline-none transition-all"
+                />
+              </div>
+              <div>
+                <label for="input-slot" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-espresso-soft mb-2">Preferred Window</label>
+                <select
+                  id="input-slot"
+                  class="w-full rounded-xl bg-sand/50 border border-espresso/15 focus:border-cocoa focus:bg-ivory px-4 py-3 text-sm text-espresso focus:outline-none transition-all"
+                >
+                  <option value="Morning (10:00 AM – 1:00 PM)">Morning (10:00 AM – 1:00 PM)</option>
+                  <option value="Afternoon (1:00 PM – 4:00 PM)">Afternoon (1:00 PM – 4:00 PM)</option>
+                  <option value="Evening (4:00 PM – 7:00 PM)">Evening (4:00 PM – 7:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <p id="booking-error" class="hidden text-xs text-red-800 bg-red-50 border border-red-200 rounded-xl px-4 py-2.5"></p>
+
+            <button
+              type="submit"
+              class="w-full bg-espresso hover:bg-cocoa text-ivory text-[11px] font-bold uppercase tracking-[0.22em] py-4 rounded-full transition-all shadow-lg shadow-espresso/15"
+            >
+              Book Appointment With Dr. Apurva
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 10. LUXURY FOOTER WITH OVERSIZED SKINIC WORDMARK                      -->
+  <!--     Brandbook Page 6 Rule: Original Logo on Ivory Field on Dark Bg    -->
+  <!-- ===================================================================== -->
+  <footer class="bg-espresso-deep text-ivory/75 pt-16 pb-6 border-t border-gold/20 overflow-hidden">
+    <div class="max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-ivory/10">
+        <!-- Brand Column with Approved Ivory Logo Plate -->
+        <div class="lg:col-span-4 space-y-5">
+          <div class="inline-flex items-center gap-3 bg-ivory px-5 py-3 rounded-xl">
+            <svg class="w-6 h-8 flex-shrink-0" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24.5 3C16.5 7 13 13.5 18 20.5C22.5 26.8 31.5 31 28.5 40.5C26.7 46.2 21.5 49 17.5 50C24 47.5 34 42.5 33.5 33C33 24.5 23 20.8 19.5 14.5C17 10 19.5 6 24.5 3Z" fill="#CBA467" />
+              <path d="M11 19.5C9.5 26 14 31 19 35.5C22.5 38.7 23.5 43.5 19.5 48.5C24.5 45 27.5 39.5 24 33.5C20.8 28 13.5 25.5 11 19.5Z" fill="#956441" />
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="font-serif text-lg tracking-[0.26em] text-espresso">SKINIC</span>
+              <span class="text-[8px] tracking-[0.18em] text-cocoa uppercase mt-0.5">— by Dr Apurva —</span>
+            </div>
+          </div>
+          <p class="text-xs text-ivory/65 leading-relaxed max-w-xs font-light">
+            Clinical dermatology, prejuvenation, and longevity-led aesthetics crafted around the belief that every skin is uniquely beautiful.
+          </p>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-light mb-4">Specialties</h4>
+          <ul class="space-y-2.5 text-xs font-light">
+            <li><a href="#treatments" class="hover:text-gold-light transition-colors">Skin Rejuvenation</a></li>
+            <li><a href="#treatments" class="hover:text-gold-light transition-colors">Hair &amp; Scalp Science</a></li>
+            <li><a href="#treatments" class="hover:text-gold-light transition-colors">Longevity Aesthetics</a></li>
+            <li><a href="#treatments" class="hover:text-gold-light transition-colors">Acne &amp; Scar Revision</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-light mb-4">Explore</h4>
+          <ul class="space-y-2.5 text-xs font-light">
+            <li><a href="#philosophy" class="hover:text-gold-light transition-colors">Brand Philosophy</a></li>
+            <li><a href="#concerns" class="hover:text-gold-light transition-colors">Concern Finder</a></li>
+            <li><a href="#founder" class="hover:text-gold-light transition-colors">Dr. Apurva Aditi</a></li>
+            <li><a href="#results" class="hover:text-gold-light transition-colors">Real Patient Results</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold-light mb-4">Visit Us</h4>
+          <ul class="space-y-2.5 text-xs font-light">
+            <li>Safdarjung Enclave, New Delhi</li>
+            <li><a href="tel:+919871941444" class="hover:text-gold-light transition-colors">+91 98719 41444</a></li>
+            <li><a href="mailto:appointments@skinic.in" class="hover:text-gold-light transition-colors">appointments@skinic.in</a></li>
+            <li class="text-ivory/45">Mon – Sat · 10:00 AM – 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright Strip -->
+      <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-ivory/45 tracking-wider">
+        <p>&copy; 2026 SKINIC by Dr Apurva. All rights reserved.</p>
+        <p class="uppercase tracking-[0.32em] text-gold/65 text-[10px]">SKIN · SCIENCE · CARE · YOU</p>
+      </div>
+    </div>
+
+    <!-- Monumental D'Zen-Inspired Footer Brand Watermark -->
+    <div class="mt-8 text-center select-none pointer-events-none">
+      <p class="font-serif text-[17vw] sm:text-[13vw] leading-[0.82] tracking-[0.18em] text-gold/[0.08] font-normal">
+        SKINIC
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- APPOINTMENT CONFIRMATION MODAL (No alert() used)                      -->
+  <!-- ===================================================================== -->
+  <div
+    id="confirm-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-espresso-deep/80 backdrop-blur-sm p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="confirm-title"
+  >
+    <div class="bg-ivory max-w-md w-full rounded-3xl p-9 text-center border border-gold/40 shadow-2xl">
+      <div class="w-12 h-12 rounded-full bg-sand text-cocoa mx-auto flex items-center justify-center mb-4">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+        </svg>
+      </div>
+      <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-cocoa mb-1">SKINIC Concierge</p>
+      <h3 id="confirm-title" class="font-serif text-3xl text-espresso mb-3">Appointment Requested</h3>
+      <p id="confirm-body" class="text-sm text-espresso-soft font-light leading-relaxed mb-7"></p>
+      <button
+        id="confirm-close"
+        type="button"
+        class="w-full bg-espresso hover:bg-cocoa text-ivory text-[11px] font-bold uppercase tracking-[0.2em] py-3.5 rounded-full transition-colors"
+      >
+        Done
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- INTERACTIVE EXPERIENCE LOGIC                                          -->
+  <!-- ===================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ------------------------------------------------------------------
+      // 1. Transparent-to-Ivory Sticky Header on Scroll
+      // ------------------------------------------------------------------
+      const header = document.getElementById('site-header');
+      const headerCta = document.getElementById('header-cta');
+
+      const handleHeaderScroll = () => {
+        const scrolled = window.scrollY > 56;
+        if (scrolled) {
+          header.classList.remove('bg-gradient-to-b', 'from-espresso-deep/75', 'via-espresso-deep/35', 'to-transparent', 'text-ivory');
+          header.classList.add('bg-ivory/95', 'backdrop-blur-md', 'text-espresso', 'border-b', 'border-espresso/10', 'shadow-sm');
+          headerCta.classList.remove('bg-gold', 'text-espresso-deep', 'hover:bg-gold-light');
+          headerCta.classList.add('bg-espresso', 'text-ivory', 'hover:bg-cocoa');
+        } else {
+          header.classList.add('bg-gradient-to-b', 'from-espresso-deep/75', 'via-espresso-deep/35', 'to-transparent', 'text-ivory');
+          header.classList.remove('bg-ivory/95', 'backdrop-blur-md', 'text-espresso', 'border-b', 'border-espresso/10', 'shadow-sm');
+          headerCta.classList.add('bg-gold', 'text-espresso-deep', 'hover:bg-gold-light');
+          headerCta.classList.remove('bg-espresso', 'text-ivory', 'hover:bg-cocoa');
+        }
+      };
+
+      handleHeaderScroll();
+      window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+
+      // Mobile Menu Drawer
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+
+      const setMenuState = (open) => {
+        mobileDrawer.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      };
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => setMenuState(mobileDrawer.classList.contains('hidden')));
+      }
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', () => setMenuState(false));
+      });
+
+      // ------------------------------------------------------------------
+      // 2. Cinematic 3-Slide Hero Carousel
+      // ------------------------------------------------------------------
+      const heroContent = [
+        {
+          eyebrow: 'Clinical Dermatology · Aesthetics · Longevity',
+          headline: 'True Beauty Defined by<br /><em class="italic font-normal text-gold-light">&lsquo;Individual Care&rsquo;</em>',
+          subcopy: 'Founded by <strong class="font-normal text-ivory">Dr. Apurva Aditi</strong>, SKINIC unites AIIMS-trained clinical dermatology with international longevity aesthetics for natural, ethical results.',
+        },
+        {
+          eyebrow: 'Prejuvenation & Graceful Aging',
+          headline: 'Enhancing Your Natural<br /><em class="italic font-normal text-gold-light">&lsquo;Uniqueness&rsquo;</em>',
+          subcopy: 'Subtle, barrier-first aesthetic protocols designed to preserve youthful collagen and natural facial harmony—never overdone.',
+        },
+        {
+          eyebrow: 'Evidence-Led Skin & Hair Science',
+          headline: 'Clarity in Every<br /><em class="italic font-normal text-gold-light">&lsquo;Clinical Detail&rsquo;</em>',
+          subcopy: 'From stubborn pigmentation and acne scars to advanced GFC hair restoration, experience personalised US-FDA approved care in New Delhi.',
+        },
+      ];
+
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      const heroEyebrow = document.getElementById('hero-eyebrow');
+      const heroHeadline = document.getElementById('hero-headline');
+      const heroSubcopy = document.getElementById('hero-subcopy');
+      let currentSlide = 0;
+      let slideTimer = null;
+
+      const showSlide = (idx) => {
+        currentSlide = (idx + slides.length) % slides.length;
+        slides.forEach((el, i) => {
+          el.classList.toggle('opacity-100', i === currentSlide);
+          el.classList.toggle('opacity-0', i !== currentSlide);
+          el.classList.toggle('pointer-events-none', i !== currentSlide);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('w-9', i === currentSlide);
+          dot.classList.toggle('bg-gold', i === currentSlide);
+          dot.classList.toggle('w-5', i !== currentSlide);
+          dot.classList.toggle('bg-ivory/35', i !== currentSlide);
+        });
+        const data = heroContent[currentSlide];
+        heroEyebrow.textContent = data.eyebrow;
+        heroHeadline.innerHTML = data.headline;
+        heroSubcopy.innerHTML = data.subcopy;
+      };
+
+      const startAutoplay = () => {
+        clearInterval(slideTimer);
+        slideTimer = setInterval(() => showSlide(currentSlide + 1), 6500);
+      };
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          showSlide(Number(dot.getAttribute('data-goto')));
+          startAutoplay();
+        });
+      });
+
+      const prevBtn = document.getElementById('hero-prev');
+      const nextBtn = document.getElementById('hero-next');
+      if (prevBtn) prevBtn.addEventListener('click', () => { showSlide(currentSlide - 1); startAutoplay(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { showSlide(currentSlide + 1); startAutoplay(); });
+      startAutoplay();
+
+      // ------------------------------------------------------------------
+      // 3. Interactive Philosophy Pillars (Espresso Band)
+      // ------------------------------------------------------------------
+      const pillarData = {
+        clinical: {
+          lTag: 'Root-Cause Medical Science',
+          lTitle: 'Precision Diagnosis First',
+          lDesc: 'We go beyond surface symptoms using digital dermoscopy and trichoscopy to uncover hormonal, barrier, and inflammatory triggers behind acne, melasma, pigmentation, and hair loss.',
+          lFoot: 'Evidence-Led Protocols',
+          rTag: 'Individualised Care Plan',
+          rTitle: 'Tailored to Your Skin & Lifestyle',
+          rDesc: 'Every prescription, medical peel, and US-FDA approved laser setting is calibrated specifically for Indian skin phototypes—maximising clarity while protecting your skin barrier.',
+          rFoot: 'Zero One-Size-Fits-All',
+        },
+        longevity: {
+          lTag: 'Proactive Cellular Care',
+          lTitle: 'Collagen Banking & Prejuvenation',
+          lDesc: 'Instead of waiting for deep structural aging, our longevity protocols nourish elastin, hydration, and dermal resilience early so your skin stays firm and luminous over decades.',
+          lFoot: 'Long-Term Skin Health',
+          rTag: 'Regenerative Aesthetics',
+          rTitle: 'Biostimulators & Barrier Renewal',
+          rDesc: 'From polynucleotides and hyaluronic skin boosters to exosome recovery, we activate your skin’s own regenerative intelligence for graceful, sustainable radiance.',
+          rFoot: 'Age With Self-Assurance',
+        },
+        ethical: {
+          lTag: 'Honest Medical Counsel',
+          lTitle: 'Zero Pressure, Full Clarity',
+          lDesc: 'We believe aesthetic medicine should never feel sales-driven. Dr. Apurva walks you through what will genuinely help, what you can skip, and realistic timelines from day one.',
+          lFoot: 'Transparent Guidance',
+          rTag: 'Natural Proportions',
+          rTitle: 'Undetectable Refinements',
+          rDesc: 'Our goal is for you to look well-rested, healthy, and unmistakably yourself—preserving the distinct expressions and natural contours that make your face uniquely yours.',
+          rFoot: 'Refined, Never Overdone',
+        },
+      };
+
+      const pillarTabs = document.querySelectorAll('.pillar-tab');
+      pillarTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const key = tab.getAttribute('data-pillar');
+          const d = pillarData[key];
+          if (!d) return;
+
+          pillarTabs.forEach((t) => {
+            t.classList.remove('bg-ivory', 'text-espresso');
+            t.classList.add('bg-ivory/10', 'text-ivory/85');
+          });
+          tab.classList.add('bg-ivory', 'text-espresso');
+          tab.classList.remove('bg-ivory/10', 'text-ivory/85');
+
+          document.getElementById('pillar-left-tag').textContent = d.lTag;
+          document.getElementById('pillar-left-title').textContent = d.lTitle;
+          document.getElementById('pillar-left-desc').textContent = d.lDesc;
+          document.getElementById('pillar-left-foot').textContent = d.lFoot;
+          document.getElementById('pillar-right-tag').textContent = d.rTag;
+          document.getElementById('pillar-right-title').textContent = d.rTitle;
+          document.getElementById('pillar-right-desc').textContent = d.rDesc;
+          document.getElementById('pillar-right-foot').textContent = d.rFoot;
+        });
+      });
+
+      // ------------------------------------------------------------------
+      // 4. Arched Treatment Category Filter
+      // ------------------------------------------------------------------
+      const treatFilters = document.querySelectorAll('.treat-filter');
+      const treatCards = document.querySelectorAll('.treat-card');
+
+      treatFilters.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          treatFilters.forEach((b) => {
+            b.classList.remove('bg-espresso', 'text-ivory');
+            b.classList.add('bg-ivory', 'text-espresso');
+          });
+          btn.classList.add('bg-espresso', 'text-ivory');
+          btn.classList.remove('bg-ivory', 'text-espresso');
+
+          treatCards.forEach((card) => {
+            const cat = card.getAttribute('data-category');
+            card.classList.toggle('hidden', filter !== 'all' && cat !== filter);
+          });
+        });
+      });
+
+      // ------------------------------------------------------------------
+      // 5. Interactive Concern Protocol Finder
+      // ------------------------------------------------------------------
+      const concernProtocols = {
+        melasma: {
+          cat: 'Clinical Dermatology Protocol',
+          title: 'Pigmentation & Melasma',
+          desc: 'Melasma and stubborn sun spots require calm, pigment-safe precision—never aggressive bleaching. We combine Q-Switch laser toning, gentle tranexamic or mandelic peels, and barrier-strengthening prescriptions.',
+          treatments: 'Q-Switch Laser + Medical Peel',
+          sessions: '4 – 6 Sessions',
+          downtime: 'Minimal / Lunch-Hour',
+          prefill: 'Clinical Dermatology',
+        },
+        acne: {
+          cat: 'Clinical & Texture Protocol',
+          title: 'Active Acne & Acne Scars',
+          desc: 'We first calm active inflammation and sebum imbalance medically, then remodel rolling, boxcar, or ice-pick scars with targeted Microneedling RF (MNRF), subcision, and fractional resurfacing.',
+          treatments: 'MNRF + Subcision + Acne Care',
+          sessions: '4 – 6 Sessions',
+          downtime: '24 – 48 Hours Mild Redness',
+          prefill: 'Aesthetics',
+        },
+        hairfall: {
+          cat: 'Hair & Scalp Science',
+          title: 'Hair Fall & Crown Thinning',
+          desc: 'Using digital trichoscopy, Dr. Apurva maps follicle miniaturisation and nutritional factors before pairing autologous GFC growth factor therapy or exosomes with a gentle home regimen.',
+          treatments: 'GFC Therapy + Trichoscopy',
+          sessions: '4 Sessions (Monthly)',
+          downtime: 'Zero Downtime',
+          prefill: 'Hair & Scalp',
+        },
+        aging: {
+          cat: 'Prejuvenation & Longevity',
+          title: 'Early Fine Lines & Skin Laxity',
+          desc: 'Designed for natural lift and dermal density without changing your facial expressions. We layer collagen biostimulators, skin boosters, and precision micro-dosed neuromodulators.',
+          treatments: 'Skin Boosters + Biostimulators',
+          sessions: '2 – 3 Sessions / Year',
+          downtime: 'Minimal / Same-Day Return',
+          prefill: 'Longevity',
+        },
+        bridal: {
+          cat: 'Signature Luminosity Care',
+          title: 'Bridal Glow & Barrier Repair',
+          desc: 'A curated 6-to-12 week countdown combining hydra-infusion medi-facials, gentle laser polish, and lipid barrier restoration so your skin looks luminous and camera-ready.',
+          treatments: 'Medi-Facial + Laser Polish',
+          sessions: '3 – 4 Sessions',
+          downtime: 'Zero Downtime',
+          prefill: 'Clinical Dermatology',
+        },
+      };
+
+      const concernItems = document.querySelectorAll('.concern-item');
+      concernItems.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-concern-key');
+          const p = concernProtocols[key];
+          if (!p) return;
+
+          concernItems.forEach((b) => {
+            b.classList.remove('bg-espresso', 'text-ivory', 'border-espresso', 'shadow-md');
+            b.classList.add('bg-sand/60', 'text-espresso', 'border-espresso/10');
+          });
+          btn.classList.add('bg-espresso', 'text-ivory', 'border-espresso', 'shadow-md');
+          btn.classList.remove('bg-sand/60', 'text-espresso', 'border-espresso/10');
+
+          document.getElementById('proto-category').textContent = p.cat;
+          document.getElementById('proto-title').textContent = p.title;
+          document.getElementById('proto-desc').textContent = p.desc;
+          document.getElementById('proto-treatments').textContent = p.treatments;
+          document.getElementById('proto-sessions').textContent = p.sessions;
+          document.getElementById('proto-downtime').textContent = p.downtime;
+          document.getElementById('proto-cta').setAttribute('data-prefill', p.prefill);
+        });
+      });
+
+      // ------------------------------------------------------------------
+      // 6. Interactive Before / After Sliders
+      // ------------------------------------------------------------------
+      document.querySelectorAll('.ba-box').forEach((box) => {
+        const slider = box.querySelector('.ba-slider');
+        const beforeEl = box.querySelector('.ba-before');
+        const beforeImg = beforeEl.querySelector('img');
+        const line = box.querySelector('.ba-line');
+
+        const syncImageWidth = () => {
+          beforeImg.style.width = `${box.offsetWidth}px`;
+        };
+        syncImageWidth();
+        window.addEventListener('resize', syncImageWidth);
+
+        slider.addEventListener('input', (e) => {
+          const pct = `${e.target.value}%`;
+          beforeEl.style.width = pct;
+          line.style.left = pct;
+        });
+      });
+
+      // ------------------------------------------------------------------
+      // 7. Booking Form Concern Chips + Prefill + Validation Modal
+      // ------------------------------------------------------------------
+      const chipBtns = document.querySelectorAll('.concern-chip');
+      const hiddenConcern = document.getElementById('selected-concern');
+
+      const activateChip = (value) => {
+        if (hiddenConcern) hiddenConcern.value = value;
+        chipBtns.forEach((chip) => {
+          const match = chip.getAttribute('data-value') === value;
+          chip.classList.toggle('bg-espresso', match);
+          chip.classList.toggle('text-ivory', match);
+          chip.classList.toggle('border-espresso', match);
+          chip.classList.toggle('bg-sand/70', !match);
+          chip.classList.toggle('text-espresso', !match);
+          chip.classList.toggle('border-espresso/15', !match);
+        });
+      };
+
+      chipBtns.forEach((chip) => {
+        chip.addEventListener('click', () => activateChip(chip.getAttribute('data-value')));
+      });
+
+      document.querySelectorAll('.prefill-trigger').forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          const val = trigger.getAttribute('data-prefill');
+          if (val) activateChip(val);
+        });
+      });
+
+      const dateInput = document.getElementById('input-date');
+      if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+      const bookingForm = document.getElementById('booking-form');
+      const bookingError = document.getElementById('booking-error');
+      const confirmModal = document.getElementById('confirm-modal');
+      const confirmBody = document.getElementById('confirm-body');
+      const confirmClose = document.getElementById('confirm-close');
+
+      const closeConfirm = () => {
+        confirmModal.classList.add('hidden');
+        confirmModal.classList.remove('flex');
+      };
+
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          try {
+            const name = document.getElementById('input-name').value.trim();
+            const phone = document.getElementById('input-phone').value.trim();
+            const concern = hiddenConcern.value;
+            const date = dateInput.value;
+            const slot = document.getElementById('input-slot').value;
+
+            if (!name || !phone) {
+              bookingError.textContent = 'Please provide your name and phone number so our concierge can confirm your visit.';
+              bookingError.classList.remove('hidden');
+              return;
+            }
+
+            bookingError.classList.add('hidden');
+            const dateText = date ? ` on <strong class="text-espresso font-bold">${date}</strong> (${slot})` : ` (${slot})`;
+            confirmBody.innerHTML = `Thank you, <strong class="text-espresso font-bold">${name}</strong>. Your <strong class="text-espresso font-bold">${concern}</strong> consultation with <strong class="text-espresso font-bold">Dr. Apurva Aditi</strong>${dateText} has been requested. Our team will call you shortly.`;
+            confirmModal.classList.remove('hidden');
+            confirmModal.classList.add('flex');
+            bookingForm.reset();
+            activateChip('Clinical Dermatology');
+          } catch (err) {
+            bookingError.textContent = 'Something went wrong. Please call us directly at +91 98719 41444.';
+            bookingError.classList.remove('hidden');
+          }
+        });
+      }
+
+      if (confirmClose) confirmClose.addEventListener('click', closeConfirm);
+      if (confirmModal) {
+        confirmModal.addEventListener('click', (e) => {
+          if (e.target === confirmModal) closeConfirm();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

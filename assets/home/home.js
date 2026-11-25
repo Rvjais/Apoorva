@@ -447,6 +447,7 @@ let heroVisible = true;
 function scheduleHero() {
   clearTimeout(heroTimer);
   if (
+    heroSlides.length <= 1 ||
     userPausedHero ||
     motionPreference.matches ||
     hoveringHero ||
