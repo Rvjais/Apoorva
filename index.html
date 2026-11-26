@@ -190,6 +190,102 @@
       transform: translateY(-4px);
     }
 
+    @keyframes treatSlideRight {
+      0% {
+        transform: translate3d(-50%, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(0%, 0, 0);
+      }
+    }
+
+    @keyframes treatSlideLeft {
+      0% {
+        transform: translate3d(0%, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .treat-marquee-row {
+      overflow: hidden;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    }
+
+    .treat-marquee-track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .treat-track-right {
+      animation: treatSlideRight 36s linear infinite;
+    }
+
+    .treat-track-left {
+      animation: treatSlideLeft 36s linear infinite;
+    }
+
+    .treat-marquee-row:hover .treat-marquee-track,
+    .treat-marquee-row:focus-within .treat-marquee-track {
+      animation-play-state: paused;
+    }
+
+    .treat-marquee-group {
+      display: flex;
+      flex-shrink: 0;
+      align-items: stretch;
+      gap: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .treat-marquee-card {
+      width: 260px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .treat-marquee-card {
+        width: 285px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .treat-marquee-card {
+        width: 300px;
+      }
+    }
+
+    #treatments-grid:not(.hidden) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    #treatments-grid>.treat-card {
+      width: 100%;
+    }
+
+    @media (min-width: 640px) {
+      #treatments-grid>.treat-card {
+        width: calc(50% - 0.75rem);
+        max-width: 310px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #treatments-grid>.treat-card {
+        width: 295px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
 
       *,
@@ -199,6 +295,21 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+      }
+
+      .treat-marquee-track {
+        animation: none !important;
+        transform: none !important;
+      }
+
+      .treat-marquee-row {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .treat-marquee-group[aria-hidden="true"] {
+        display: none;
       }
 
       .reveal-ready .reveal-item {
@@ -437,7 +548,7 @@
           <div class="col-span-3 bg-sand rounded-2xl p-4 border border-espresso/15 flex flex-col justify-between">
             <div>
               <div class="rounded-xl overflow-hidden aspect-[16/10] mb-3 bg-parchment">
-                <img src="assets/home/featured-1.webp" alt="Skinic clinical and aesthetic care" class="w-full h-full object-cover" />
+                <img src="assets/home/stock-clinic-spotlight.jpg" alt="Sunlit dermatology clinic counter with clinical serums" class="w-full h-full object-cover" />
               </div>
               <p class="text-xs font-bold uppercase tracking-[0.16em] text-cocoa">Green Park, New Delhi</p>
               <h4 class="font-serif text-xl font-semibold text-espresso mt-1">19 Doctor-Led Treatments</h4>
@@ -512,13 +623,13 @@
         </div>
         <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 pointer-events-none"
           data-slide="1">
-          <img src="assets/home/featured-7.webp" alt="Personalised skin and laser rejuvenation at Skinic"
+          <img src="assets/home/stock-laser-facial-hero.jpg" alt="Personalised skin and facial rejuvenation at Skinic"
             class="w-full h-full object-cover object-center animate-kenburns" />
         </div>
         <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 pointer-events-none"
           data-slide="2">
-          <img src="assets/home/featured-6.webp" alt="Hair and scalp restoration care at Skinic"
-            class="w-full h-full object-cover object-center animate-kenburns" />
+          <img src="assets/home/stock-hair-clinic-hero.jpg" alt="Hair and scalp restoration care at Skinic"
+            class="w-full h-full object-cover object-[50%_25%] animate-kenburns" />
         </div>
       </div>
 
@@ -925,8 +1036,18 @@
           </div>
         </div>
 
-        <!-- 8 Sculpted Arched Treatment Cards (2 Balanced Rows of 4) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dual Sliding Marquee for All Specialties (Top: L->R, Bottom: R->L) -->
+        <div id="treatments-marquee" class="space-y-6" aria-label="Featured treatments showcase">
+          <div class="treat-marquee-row">
+            <div id="treatments-marquee-top" class="treat-marquee-track treat-track-right"></div>
+          </div>
+          <div class="treat-marquee-row">
+            <div id="treatments-marquee-bottom" class="treat-marquee-track treat-track-left"></div>
+          </div>
+        </div>
+
+        <!-- Static Filtered Cards Container (Revealed on Category Tabs) -->
+        <div id="treatments-grid" class="hidden">
           <article data-category="skin"
             class="treat-card group bg-sand/65 rounded-t-[170px] rounded-b-2xl p-4 pb-6 border border-espresso/10 hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col">
             <div class="aspect-[4/4.3] rounded-t-[155px] rounded-b-xl overflow-hidden bg-parchment mb-5">
@@ -1242,13 +1363,13 @@
           <div class="lg:col-span-5 relative max-w-md mx-auto lg:max-w-none w-full">
             <div class="relative p-3 border border-gold/35 rounded-t-[220px] rounded-b-2xl">
               <div class="aspect-[4/4.6] rounded-t-[208px] rounded-b-xl overflow-hidden bg-espresso">
-                <img src="assets/home/patient-consult.webp"
-                  alt="Illustrative medical consultation; not a portrait of Dr. Apurva Aditi" loading="lazy"
-                  class="w-full h-full object-cover object-center" />
+                <img src="assets/doctor/doctor-female-placeholder.jpg"
+                  alt="Placeholder female dermatologist portrait for Dr. Apurva Aditi" loading="lazy"
+                  class="w-full h-full object-cover object-top" />
               </div>
             </div>
             <p class="text-xs tracking-[0.08em] text-ivory/60 text-center mt-3">
-              Illustrative consultation photo · Nappy / Unsplash
+              Placeholder female dermatologist portrait · Skinic MD
             </p>
           </div>
 
@@ -1476,10 +1597,10 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-sand/60 rounded-2xl p-4 border border-espresso/10">
               <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.2] bg-parchment select-none">
-                <img src="assets/home/peel-treatment.webp" alt="Illustrative acne and skin texture renewal"
+                <img src="assets/home/stock-acne-refinement.jpg" alt="Illustrative acne and skin texture renewal"
                   loading="lazy" class="w-full h-full object-cover brightness-105" />
                 <div class="ba-before absolute inset-0 overflow-hidden" style="width: 50%;">
-                  <img src="assets/home/peel-treatment.webp" alt="Baseline view" loading="lazy"
+                  <img src="assets/home/stock-acne-refinement.jpg" alt="Baseline view" loading="lazy"
                     class="w-full h-full object-cover max-w-none brightness-85 contrast-125 saturate-75" />
                 </div>
                 <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-ivory pointer-events-none" style="left: 50%;">
@@ -1502,10 +1623,10 @@
 
             <div class="bg-sand/60 rounded-2xl p-4 border border-espresso/10">
               <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.2] bg-parchment select-none">
-                <img src="assets/home/hair-treatment.webp" alt="Illustrative hair and scalp care" loading="lazy"
+                <img src="assets/home/stock-hair-density.jpg" alt="Illustrative hair and scalp care" loading="lazy"
                   class="w-full h-full object-cover brightness-105" />
                 <div class="ba-before absolute inset-0 overflow-hidden" style="width: 50%;">
-                  <img src="assets/home/hair-treatment.webp" alt="Baseline view" loading="lazy"
+                  <img src="assets/home/stock-hair-density.jpg" alt="Baseline view" loading="lazy"
                     class="w-full h-full object-cover max-w-none brightness-85 contrast-125 saturate-75" />
                 </div>
                 <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-ivory pointer-events-none" style="left: 50%;">
@@ -1528,10 +1649,10 @@
 
             <div class="bg-sand/60 rounded-2xl p-4 border border-espresso/10">
               <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.2] bg-parchment select-none">
-                <img src="assets/home/pigmentation-care.webp" alt="Illustrative pigmentation care" loading="lazy"
+                <img src="assets/home/stock-pigmentation-clarity.jpg" alt="Illustrative pigmentation care" loading="lazy"
                   class="w-full h-full object-cover brightness-105" />
                 <div class="ba-before absolute inset-0 overflow-hidden" style="width: 50%;">
-                  <img src="assets/home/pigmentation-care.webp" alt="Baseline view" loading="lazy"
+                  <img src="assets/home/stock-pigmentation-clarity.jpg" alt="Baseline view" loading="lazy"
                     class="w-full h-full object-cover max-w-none brightness-85 contrast-125 saturate-75" />
                 </div>
                 <div class="ba-line absolute top-0 bottom-0 w-0.5 bg-ivory pointer-events-none" style="left: 50%;">
@@ -1612,18 +1733,18 @@
                 class="w-full h-full object-cover" />
             </div>
             <div class="rounded-2xl overflow-hidden aspect-[4/3.6] bg-parchment">
-              <img src="assets/home/medical-room.webp" alt="Clinical examination room" loading="lazy"
+              <img src="assets/home/stock-exam-room.jpg" alt="Clinical examination room" loading="lazy"
                 class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="space-y-4 pt-6">
             <div class="rounded-2xl overflow-hidden aspect-[4/3.6] bg-parchment">
-              <img src="assets/home/peel-treatment.webp" alt="Practitioner applying a skin peel" loading="lazy"
+              <img src="assets/home/stock-peel-application.jpg" alt="Practitioner applying a skin peel" loading="lazy"
                 class="w-full h-full object-cover" />
             </div>
             <div class="rounded-2xl overflow-hidden aspect-[4/4.6] bg-parchment">
-              <img src="assets/home/hair-treatment.webp" alt="Scalp care procedure" loading="lazy"
-                class="w-full h-full object-cover" />
+              <img src="assets/home/stock-scalp-procedure.jpg" alt="Scalp care procedure" loading="lazy"
+                class="w-full h-full object-cover object-top" />
             </div>
           </div>
         </div>
@@ -2330,24 +2451,70 @@
 
       // 4. Treatment Category Filter & Directory Search
       const treatFilters = document.querySelectorAll('.treat-filter');
-      const treatCards = document.querySelectorAll('.treat-card');
+      const treatMarquee = document.getElementById('treatments-marquee');
+      const treatMarqueeTop = document.getElementById('treatments-marquee-top');
+      const treatMarqueeBottom = document.getElementById('treatments-marquee-bottom');
+      const treatGrid = document.getElementById('treatments-grid');
+      const treatCards = treatGrid ? Array.from(treatGrid.querySelectorAll('.treat-card')) : [];
+
+      const populateMarqueeTrack = (track, cards) => {
+        if (!track || !cards.length) return;
+        track.innerHTML = '';
+        for (let copy = 0; copy < 2; copy += 1) {
+          const group = document.createElement('div');
+          group.className = 'treat-marquee-group';
+          if (copy === 1) group.setAttribute('aria-hidden', 'true');
+          cards.forEach((sourceCard) => {
+            const clone = sourceCard.cloneNode(true);
+            clone.classList.remove('hidden', 'reveal-item', 'is-visible', 'panel-fade');
+            clone.classList.add('treat-marquee-card');
+            clone.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+              img.setAttribute('loading', 'eager');
+            });
+            if (copy === 1) {
+              clone.querySelectorAll('a, button').forEach((el) => el.setAttribute('tabindex', '-1'));
+            }
+            group.appendChild(clone);
+          });
+          track.appendChild(group);
+        }
+      };
+
+      const splitIndex = Math.ceil(treatCards.length / 2);
+      populateMarqueeTrack(treatMarqueeTop, treatCards.slice(0, splitIndex));
+      populateMarqueeTrack(treatMarqueeBottom, treatCards.slice(splitIndex));
 
       treatFilters.forEach((btn) => {
         btn.addEventListener('click', () => {
           const filter = btn.getAttribute('data-filter');
           treatFilters.forEach((b) => {
             b.classList.remove('bg-espresso', 'text-ivory');
-            b.classList.add('bg-sand', 'text-espresso');
+            b.classList.add('bg-sand', 'text-espresso', 'border', 'border-espresso/15');
           });
           btn.classList.add('bg-espresso', 'text-ivory');
-          btn.classList.remove('bg-sand', 'text-espresso');
+          btn.classList.remove('bg-sand', 'text-espresso', 'border', 'border-espresso/15');
 
-          treatCards.forEach((card) => {
-            const cat = card.getAttribute('data-category');
-            const show = filter === 'all' || cat === filter;
-            card.classList.toggle('hidden', !show);
-            if (show) reanimate(card, 'panel-fade');
-          });
+          const isAll = filter === 'all';
+          if (treatMarquee) {
+            treatMarquee.classList.toggle('hidden', !isAll);
+            if (isAll) {
+              if (treatMarquee.classList.contains('reveal-item')) {
+                treatMarquee.classList.add('is-visible');
+              }
+              reanimate(treatMarquee, 'panel-fade');
+            }
+          }
+          if (treatGrid) {
+            treatGrid.classList.toggle('hidden', isAll);
+          }
+
+          if (!isAll) {
+            treatCards.forEach((card) => {
+              const match = card.getAttribute('data-category') === filter;
+              card.classList.toggle('hidden', !match);
+              if (match) reanimate(card, 'panel-fade');
+            });
+          }
         });
       });
 
@@ -2573,7 +2740,7 @@
         const revealSelectors = [
           '#philosophy .grid > div',
           '#services .prefill-trigger',
-          '#treatments .treat-card',
+          '#treatments-marquee',
           '#care-directory',
           '#concerns .concern-item',
           '#proto-card',
