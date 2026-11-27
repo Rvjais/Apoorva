@@ -404,6 +404,202 @@
       }
     }
 
+    /* Mobile Horizontal Card Sliders & Responsive Sizing */
+    @media (max-width: 767px) {
+      .atelier-frame::after,
+      .atelier-arch-frame::after {
+        inset: 5px;
+      }
+
+      .mobile-slider-md:not(.hidden) {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.875rem !important;
+        padding-bottom: 0.35rem;
+        scrollbar-width: none;
+      }
+
+      .mobile-slider-md.mobile-slider-bleed:not(.hidden) {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .mobile-slider-md::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-slider-md > * {
+        flex: 0 0 76vw !important;
+        max-width: 300px;
+        scroll-snap-align: start;
+      }
+
+      .mobile-slider-md.mobile-slider-compact > * {
+        flex: 0 0 56vw !important;
+        max-width: 220px;
+      }
+
+      .mobile-slider-md.mobile-slider-wide > * {
+        flex: 0 0 84vw !important;
+        max-width: 340px;
+      }
+
+      .mobile-tabs-rail {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.5rem !important;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none;
+      }
+
+      .mobile-tabs-rail::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-tabs-rail > * {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+
+      .reveal-ready .mobile-slider-md > .reveal-item,
+      .reveal-ready .mobile-tabs-rail > .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .mobile-slider-lg:not(.hidden) {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.875rem !important;
+        padding-bottom: 0.35rem;
+        scrollbar-width: none;
+      }
+
+      .mobile-slider-lg.mobile-slider-bleed:not(.hidden) {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .mobile-slider-lg::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-slider-lg > * {
+        flex: 0 0 76vw !important;
+        max-width: 320px;
+        scroll-snap-align: start;
+      }
+
+      .mobile-slider-lg.mobile-slider-compact > * {
+        flex: 0 0 54vw !important;
+        max-width: 225px;
+      }
+
+      #services .mobile-slider-lg > a {
+        height: 240px !important;
+      }
+
+      .reveal-ready .mobile-slider-lg > .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .mobile-slider-lg.mobile-slider-bleed:not(.hidden),
+      .mobile-slider-md.mobile-slider-bleed:not(.hidden) {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .mobile-slider-lg > * {
+        flex: 0 0 44vw !important;
+        max-width: 340px;
+      }
+
+      .mobile-slider-lg.mobile-slider-compact > * {
+        flex: 0 0 34vw !important;
+        max-width: 250px;
+      }
+
+      #services .mobile-slider-lg > a {
+        height: 270px !important;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .treat-marquee-card {
+        width: 215px !important;
+      }
+
+      .treat-marquee-card,
+      #treatments-grid .treat-card {
+        padding: 0.75rem 0.75rem 1rem !important;
+      }
+
+      .treat-marquee-card h3,
+      #treatments-grid .treat-card h3 {
+        font-size: 1.125rem !important;
+        line-height: 1.3 !important;
+        margin-top: 0.35rem !important;
+        margin-bottom: 0.85rem !important;
+      }
+
+      .treat-marquee-group {
+        gap: 0.875rem;
+        padding-right: 0.875rem;
+      }
+
+      .treat-marquee-card .aspect-\[4\/4\.3\],
+      #treatments-grid .aspect-\[4\/4\.3\] {
+        aspect-ratio: 4 / 3.75;
+        margin-bottom: 0.75rem !important;
+      }
+
+      #treatments-grid:not(.hidden) {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.875rem !important;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.35rem;
+        scrollbar-width: none;
+      }
+
+      #treatments-grid:not(.hidden)::-webkit-scrollbar {
+        display: none;
+      }
+
+      #treatments-grid:not(.hidden) > .treat-card:not(.hidden) {
+        flex: 0 0 66vw !important;
+        max-width: 245px;
+        width: auto;
+        scroll-snap-align: start;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
 
       *,
@@ -498,13 +694,13 @@
 
   <header id="site-header"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gradient-to-b from-espresso-deep/80 via-espresso-deep/45 to-transparent text-ivory">
-    <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14 h-20 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-4">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14 h-16 sm:h-20 grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-4">
       <!-- Left: Book Pill + Primary Links -->
       <div class="justify-self-start flex items-center gap-4 xl:gap-6 min-w-0">
         <a href="#booking" id="header-cta"
-          class="inline-flex items-center gap-2 px-4 xl:px-5 py-2 xl:py-2.5 rounded-full text-[11px] xl:text-xs font-bold uppercase tracking-[0.12em] btn-royal-gold transition-all whitespace-nowrap shrink-0">
+          class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 xl:px-5 py-1.5 sm:py-2 xl:py-2.5 rounded-full text-[10px] sm:text-[11px] xl:text-xs font-bold uppercase tracking-[0.1em] sm:tracking-[0.12em] btn-royal-gold transition-all whitespace-nowrap shrink-0">
           <span>Book Visit</span>
-          <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
         </a>
@@ -529,8 +725,8 @@
       <!-- Center: SKINIC Brand Emblem (Dead-Center Column) -->
       <a href="#home" aria-label="Skinic by Dr. Apurva home"
         class="justify-self-center flex flex-col items-center group focus:outline-none shrink-0 whitespace-nowrap">
-        <div class="flex items-center gap-2 sm:gap-2.5">
-          <svg class="w-5 h-7 sm:w-6 sm:h-8 flex-shrink-0" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <div class="flex items-center gap-1.5 sm:gap-2.5">
+          <svg class="w-4 h-6 sm:w-6 sm:h-8 flex-shrink-0" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true">
             <defs>
               <linearGradient id="navLogoGradA" x1="12" y1="2" x2="32" y2="48" gradientUnits="userSpaceOnUse">
@@ -553,9 +749,9 @@
           </svg>
           <div class="flex flex-col leading-none">
             <span
-              class="font-serif text-[20px] sm:text-[24px] xl:text-[26px] tracking-[0.24em] font-medium transition-colors whitespace-nowrap">SKINIC</span>
+              class="font-serif text-[17px] sm:text-[24px] xl:text-[26px] tracking-[0.18em] sm:tracking-[0.24em] font-medium transition-colors whitespace-nowrap">SKINIC</span>
             <span
-              class="text-[9px] sm:text-[10px] tracking-[0.18em] uppercase mt-1 flex items-center justify-center gap-1.5 opacity-90 whitespace-nowrap">
+              class="text-[8px] sm:text-[10px] tracking-[0.14em] sm:tracking-[0.18em] uppercase mt-0.5 sm:mt-1 flex items-center justify-center gap-1 sm:gap-1.5 opacity-90 whitespace-nowrap">
               <span class="w-2 h-[1px] bg-gold inline-block"></span>
               <span>by Dr Apurva</span>
               <span class="w-2 h-[1px] bg-gold inline-block"></span>
@@ -605,7 +801,7 @@
           </div>
 
           <button id="menu-toggle" type="button" aria-label="Open menu"
-            class="w-9 h-9 rounded-full border border-current/35 flex items-center justify-center hover:border-gold hover:text-gold transition-colors lg:hidden shrink-0">
+            class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-current/35 flex items-center justify-center hover:border-gold hover:text-gold transition-colors lg:hidden shrink-0">
             <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"
               viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
@@ -622,7 +818,7 @@
     <!-- Desktop Services Mega Dropdown -->
     <div id="services-mega-panel" aria-label="Services directory menu"
       class="hidden lg:block absolute left-0 right-0 top-full pt-2 opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 ease-out">
-      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
         <div class="bg-ivory text-espresso rounded-3xl border border-gold/40 shadow-2xl shadow-espresso-deep/35 p-8 grid grid-cols-12 gap-8">
           <!-- Column 1: Skin & Pigmentation -->
           <div class="col-span-3 space-y-3">
@@ -685,25 +881,25 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-drawer"
-      class="hidden lg:hidden bg-espresso-deep text-ivory border-t border-gold/25 px-6 py-7 max-h-[80vh] overflow-y-auto shadow-2xl">
-      <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-4">
-        <a href="#philosophy" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Our Approach</a>
+      class="hidden lg:hidden bg-espresso-deep text-ivory border-t border-gold/25 px-5 py-5 max-h-[80vh] overflow-y-auto shadow-2xl">
+      <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-3">
+        <a href="#philosophy" class="mobile-nav-link font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors">Our Approach</a>
         <details class="w-full">
-          <summary class="cursor-pointer font-serif text-2xl tracking-wide hover:text-gold transition-colors inline-flex items-center gap-2">
+          <summary class="cursor-pointer font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors inline-flex items-center gap-2">
             <span>Services</span><span class="text-base text-gold">▾</span>
           </summary>
-          <div class="mt-3 space-y-2 text-sm text-ivory/85 bg-espresso/60 rounded-2xl p-4">
-            <a href="#services" class="mobile-nav-link block py-1 hover:text-gold">Featured Services Mosaic</a>
+          <div class="mt-2.5 space-y-1.5 text-sm text-ivory/85 bg-espresso/60 rounded-2xl p-3.5">
+            <a href="#services" class="mobile-nav-link block py-1 hover:text-gold">Care Areas</a>
             <a href="#treatments" class="mobile-nav-link block py-1 hover:text-gold">Signature Treatments</a>
-            <a href="#care-directory" class="mobile-nav-link block py-1 hover:text-gold">All 19 Treatments Directory</a>
+            <a href="#care-directory" class="mobile-nav-link block py-1 hover:text-gold">All 19 Treatments</a>
             <a href="#concerns" class="mobile-nav-link block py-1 hover:text-gold">Concern Finder</a>
           </div>
         </details>
-        <a href="#concerns" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Concerns</a>
-        <a href="#founder" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Dr. Apurva Aditi</a>
-        <a href="#your-visit" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Your First Visit</a>
-        <a href="#faqs" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">Patient FAQs</a>
-        <a href="#clinic" class="mobile-nav-link font-serif text-2xl tracking-wide hover:text-gold transition-colors">The Clinic</a>
+        <a href="#concerns" class="mobile-nav-link font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors">Concerns</a>
+        <a href="#founder" class="mobile-nav-link font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors">Dr. Apurva Aditi</a>
+        <a href="#your-visit" class="mobile-nav-link font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors">First Visit</a>
+        <a href="#faqs" class="mobile-nav-link font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors">FAQs</a>
+        <a href="#clinic" class="mobile-nav-link font-serif text-xl sm:text-2xl tracking-wide hover:text-gold transition-colors">Clinic &amp; Booking</a>
         <div class="pt-4 w-full border-t border-ivory/15 flex flex-col gap-3">
           <a href="#booking" class="mobile-nav-link w-full bg-gold text-espresso-deep font-bold text-xs uppercase tracking-[0.18em] py-3.5 rounded-full">
             Request Consultation
@@ -736,7 +932,7 @@
     <!-- ===================================================================== -->
     <!-- 2. CINEMATIC FULL-SCREEN EDITORIAL HERO CAROUSEL                      -->
     <!-- ===================================================================== -->
-    <section class="relative w-full h-[84vh] min-h-[600px] max-h-[840px] bg-espresso-deep overflow-hidden">
+    <section class="relative w-full h-[72vh] sm:h-[82vh] lg:h-[84vh] min-h-[450px] sm:min-h-[580px] max-h-[840px] bg-espresso-deep overflow-hidden">
       <div id="hero-slides" class="absolute inset-0">
         <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100" data-slide="0">
           <img src="assets/home/hero-doctor-patient.jpg" alt="Skinic by Dr. Apurva clinical consultation"
@@ -764,16 +960,16 @@
 
       <!-- Centered Minimalist Heading + CTA -->
       <div
-        class="relative z-10 h-full max-w-[1000px] mx-auto px-6 sm:px-10 flex flex-col items-center justify-center text-center pt-16 pb-16">
+        class="relative z-10 h-full max-w-[1000px] mx-auto px-4 sm:px-10 flex flex-col items-center justify-center text-center pt-14 sm:pt-16 pb-12 sm:pb-16">
         <h1 id="hero-headline"
-          class="font-serif text-4xl sm:text-6xl lg:text-[74px] font-medium text-ivory leading-[1.08] tracking-[-0.01em] max-w-4xl transition-all duration-500">
+          class="font-serif text-[34px] sm:text-6xl lg:text-[74px] font-medium text-ivory leading-[1.1] sm:leading-[1.08] tracking-[-0.01em] max-w-4xl transition-all duration-500">
           Your Skin &amp; Hair in<br />
           <span class="font-editorial-italic text-gold-light">&lsquo;Expert Hands&rsquo;</span>
         </h1>
 
-        <div class="mt-9">
+        <div class="mt-6 sm:mt-9">
           <a href="#booking"
-            class="btn-royal-gold inline-flex items-center gap-3 text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] px-8 py-4 rounded-full">
+            class="btn-royal-gold inline-flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full">
             <span>Book Private Consultation</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -810,9 +1006,9 @@
     <!-- 3. MOVING HORIZONTAL FEATURE STRAP (MARQUEE)                          -->
     <!-- ===================================================================== -->
     <section aria-label="Clinic highlights"
-      class="bg-espresso-deep text-ivory py-3.5 overflow-hidden border-y border-gold/40">
+      class="bg-espresso-deep text-ivory py-2.5 sm:py-3.5 overflow-hidden border-y border-gold/40">
       <div
-        class="flex w-max animate-marquee hover:[animation-play-state:paused] whitespace-nowrap text-[13px] font-semibold tracking-[0.2em] uppercase cursor-default">
+        class="flex w-max animate-marquee hover:[animation-play-state:paused] whitespace-nowrap text-[11px] sm:text-[13px] font-semibold tracking-[0.18em] sm:tracking-[0.2em] uppercase cursor-default">
         <div class="flex items-center gap-9 px-5">
           <span>Dr. Apurva Aditi, M.D.</span><span class="text-gold/90">✧</span>
           <span>6+ Years Dermatology</span><span class="text-gold/90">✧</span>
@@ -836,60 +1032,60 @@
     <!-- 4. THE SKINIC APPROACH + CREDENTIALS BAR + INTERACTIVE PILLARS        -->
     <!--    Full-width aligned 1360px container — zero cramped margins         -->
     <!-- ===================================================================== -->
-    <section id="philosophy" class="relative bg-ivory py-14 lg:py-20 overflow-hidden">
-      <div class="relative z-10 max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
+    <section id="philosophy" class="relative bg-ivory py-10 sm:py-14 lg:py-20 overflow-hidden">
+      <div class="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
         <!-- Aligned Editorial Header Split -->
         <div class="mb-10 max-w-3xl">
           <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">Our Approach</p>
-          <h2 class="font-serif text-4xl sm:text-5xl lg:text-[52px] font-medium text-espresso leading-[1.12]">
+          <h2 class="font-serif text-[30px] sm:text-5xl lg:text-[52px] font-medium text-espresso leading-[1.12]">
             Medical Care, <span class="font-editorial-italic text-cocoa">Personally Considered.</span>
           </h2>
         </div>
 
         <!-- 4-Column Clinic Advantage Strip -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 pt-2">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10 pt-2 mobile-slider-lg mobile-slider-compact mobile-slider-bleed">
           <div class="royal-card-elev bg-gradient-to-b from-sand/90 to-ivory rounded-2xl p-6 border border-gold/25 hover:border-gold/60 transition-all">
-            <p class="font-serif text-4xl font-semibold text-espresso" data-count="6" data-suffix="+">6+</p>
+            <p class="font-serif text-3xl sm:text-4xl font-semibold text-espresso" data-count="6" data-suffix="+">6+</p>
             <p class="text-sm font-bold text-espresso mt-1.5">Years in Dermatology</p>
           </div>
           <div class="royal-card-elev bg-gradient-to-b from-sand/90 to-ivory rounded-2xl p-6 border border-gold/25 hover:border-gold/60 transition-all">
-            <p class="font-serif text-4xl font-semibold text-espresso" data-count="19" data-suffix="">19</p>
+            <p class="font-serif text-3xl sm:text-4xl font-semibold text-espresso" data-count="19" data-suffix="">19</p>
             <p class="text-sm font-bold text-espresso mt-1.5">Treatments &amp; Services</p>
           </div>
           <div class="royal-card-elev bg-gradient-to-b from-sand/90 to-ivory rounded-2xl p-6 border border-gold/25 hover:border-gold/60 transition-all">
-            <p class="font-serif text-4xl font-semibold text-espresso">M.D.</p>
+            <p class="font-serif text-3xl sm:text-4xl font-semibold text-espresso">M.D.</p>
             <p class="text-sm font-bold text-espresso mt-1.5">Board-Certified Care</p>
           </div>
           <div class="royal-card-elev bg-gradient-to-b from-sand/90 to-ivory rounded-2xl p-6 border border-gold/25 hover:border-gold/60 transition-all">
-            <p class="font-serif text-4xl font-semibold text-espresso">Delhi</p>
+            <p class="font-serif text-3xl sm:text-4xl font-semibold text-espresso">Delhi</p>
             <p class="text-sm font-bold text-espresso mt-1.5">Green Park Main</p>
           </div>
         </div>
 
         <!-- Full-Width Espresso Interactive Pillar Band (Single-Row Desktop Tabs) -->
         <div
-          class="atelier-frame bg-gradient-to-br from-espresso-deep via-[#322119] to-[#4E3528] rounded-3xl p-7 sm:p-11 lg:p-12 text-ivory shadow-[0_24px_56px_-26px_rgba(30,20,15,0.45)] border border-gold/35">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pb-7 border-b border-ivory/15">
+          class="atelier-frame bg-gradient-to-br from-espresso-deep via-[#322119] to-[#4E3528] rounded-2xl sm:rounded-3xl p-5 sm:p-11 lg:p-12 text-ivory shadow-[0_24px_56px_-26px_rgba(30,20,15,0.45)] border border-gold/35">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pb-5 sm:pb-7 border-b border-ivory/15 mobile-tabs-rail">
             <button type="button" data-pillar="clinical"
-              class="pillar-tab px-6 py-3.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-[0.14em] bg-ivory text-espresso transition-all text-center whitespace-nowrap">
+              class="pillar-tab px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.14em] bg-ivory text-espresso transition-all text-center whitespace-nowrap">
               01 · Clinical Dermatology
             </button>
             <button type="button" data-pillar="hair"
-              class="pillar-tab px-6 py-3.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-[0.14em] bg-ivory/10 text-ivory hover:bg-ivory/20 transition-all text-center whitespace-nowrap">
+              class="pillar-tab px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.14em] bg-ivory/10 text-ivory hover:bg-ivory/20 transition-all text-center whitespace-nowrap">
               02 · Hair &amp; Scalp Care
             </button>
             <button type="button" data-pillar="aesthetic"
-              class="pillar-tab px-6 py-3.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-[0.14em] bg-ivory/10 text-ivory hover:bg-ivory/20 transition-all text-center whitespace-nowrap">
+              class="pillar-tab px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.14em] bg-ivory/10 text-ivory hover:bg-ivory/20 transition-all text-center whitespace-nowrap">
               03 · Aesthetic Medicine
             </button>
           </div>
 
-          <div id="pillar-content" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-            <div class="bg-ivory text-espresso rounded-2xl p-7 sm:p-9 flex flex-col justify-between">
+          <div id="pillar-content" class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mobile-slider-md">
+            <div class="bg-ivory text-espresso rounded-2xl p-5 sm:p-9 flex flex-col justify-between">
               <div>
                 <p id="pillar-left-tag" class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa mb-2">Root-Cause
                   Medical Science</p>
-                <h3 id="pillar-left-title" class="font-serif text-2xl sm:text-3xl font-semibold text-espresso mb-3">
+                <h3 id="pillar-left-title" class="font-serif text-xl sm:text-3xl font-semibold text-espresso mb-2 sm:mb-3">
                   Thorough Clinical Evaluation</h3>
                 <p id="pillar-left-desc" class="text-[15px] sm:text-base text-espresso-soft leading-[1.7] font-normal">
                   Root-cause assessment for acne, pigmentation, and sensitivity.
@@ -902,11 +1098,11 @@
               </div>
             </div>
 
-            <div class="bg-ivory/95 text-espresso rounded-2xl p-7 sm:p-9 flex flex-col justify-between">
+            <div class="bg-ivory/95 text-espresso rounded-2xl p-5 sm:p-9 flex flex-col justify-between">
               <div>
                 <p id="pillar-right-tag" class="text-xs font-bold uppercase tracking-[0.18em] text-cocoa mb-2">
                   Care Plan</p>
-                <h3 id="pillar-right-title" class="font-serif text-2xl sm:text-3xl font-semibold text-espresso mb-3">
+                <h3 id="pillar-right-title" class="font-serif text-xl sm:text-3xl font-semibold text-espresso mb-2 sm:mb-3">
                   Tailored to Your Routine</h3>
                 <p id="pillar-right-desc" class="text-[15px] sm:text-base text-espresso-soft leading-[1.7] font-normal">
                   Medical skincare, peels, and lasers with clear aftercare.
@@ -926,17 +1122,17 @@
     <!-- ===================================================================== -->
     <!-- 5. FEATURED CARE MOSAIC (All 7 Featured Local Assets)                 -->
     <!-- ===================================================================== -->
-    <section id="services" class="py-14 lg:py-20 bg-sand border-t border-espresso/10">
-      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
+    <section id="services" class="py-10 sm:py-14 lg:py-20 bg-sand border-t border-espresso/10">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
         <div class="mb-10 max-w-2xl">
           <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">Skin · Hair · Aesthetics</p>
-          <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+          <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
             Explore <span class="font-editorial-italic text-cocoa">Care Areas</span>
           </h2>
         </div>
 
         <!-- 2-Wide / 3-Narrow / 2-Wide Balanced Mosaic Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5 mobile-slider-lg mobile-slider-bleed">
           <!-- Row 1: 2 Wide -->
           <a href="#booking" data-prefill="Skin sagging treatments"
             class="prefill-trigger group relative lg:col-span-3 h-72 sm:h-80 rounded-2xl overflow-hidden bg-espresso border border-gold/25 hover:border-gold/70 shadow-[0_20px_42px_-24px_rgba(30,20,15,0.45)] transition-all duration-500">
@@ -944,9 +1140,9 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/35 to-transparent">
             </div>
-            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-ivory">
+            <div class="absolute bottom-0 inset-x-0 p-5 sm:p-7 text-ivory">
               <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold-light">Skinic by Dr. Apurva</p>
-              <h3 class="font-serif text-3xl font-medium mt-1">Skin Firming &amp; Laxity</h3>
+              <h3 class="font-serif text-2xl sm:text-3xl font-medium mt-1">Skin Firming &amp; Laxity</h3>
               <span
                 class="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-ivory/90 group-hover:text-gold-light mt-3 transition-colors">Explore Care <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg></span>
             </div>
@@ -958,9 +1154,9 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/35 to-transparent">
             </div>
-            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-ivory">
+            <div class="absolute bottom-0 inset-x-0 p-5 sm:p-7 text-ivory">
               <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold-light">Skinic by Dr. Apurva</p>
-              <h3 class="font-serif text-3xl font-medium mt-1">Scars &amp; Skin Texture</h3>
+              <h3 class="font-serif text-2xl sm:text-3xl font-medium mt-1">Scars &amp; Skin Texture</h3>
               <span
                 class="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-ivory/90 group-hover:text-gold-light mt-3 transition-colors">Explore Care <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg></span>
             </div>
@@ -1016,9 +1212,9 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/35 to-transparent">
             </div>
-            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-ivory">
+            <div class="absolute bottom-0 inset-x-0 p-5 sm:p-7 text-ivory">
               <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold-light">Follicle &amp; Scalp Science</p>
-              <h3 class="font-serif text-3xl font-medium mt-1">Hair &amp; Scalp Care</h3>
+              <h3 class="font-serif text-2xl sm:text-3xl font-medium mt-1">Hair &amp; Scalp Care</h3>
               <span
                 class="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-ivory/90 group-hover:text-gold-light mt-3 transition-colors">Explore Care <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg></span>
             </div>
@@ -1030,9 +1226,9 @@
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-espresso-deep/90 via-espresso-deep/35 to-transparent">
             </div>
-            <div class="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-ivory">
+            <div class="absolute bottom-0 inset-x-0 p-5 sm:p-7 text-ivory">
               <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold-light">Procedural Dermatology</p>
-              <h3 class="font-serif text-3xl font-medium mt-1">Lasers &amp; Resurfacing</h3>
+              <h3 class="font-serif text-2xl sm:text-3xl font-medium mt-1">Lasers &amp; Resurfacing</h3>
               <span
                 class="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-ivory/90 group-hover:text-gold-light mt-3 transition-colors">Explore Care <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg></span>
             </div>
@@ -1044,36 +1240,36 @@
     <!-- ===================================================================== -->
     <!-- 6. SIGNATURE TREATMENTS — ARCHED GALLERY + SEARCHABLE DIRECTORY       -->
     <!-- ===================================================================== -->
-    <section id="treatments" class="py-14 lg:py-20 bg-ivory border-y border-espresso/10">
-      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+    <section id="treatments" class="py-10 sm:py-14 lg:py-20 bg-ivory border-y border-espresso/10">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-10">
           <div class="max-w-xl">
             <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">19 Treatments &amp; Services</p>
-            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+            <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
               Signature <span class="font-editorial-italic text-cocoa">Treatments</span>
             </h2>
           </div>
 
-          <div class="flex flex-wrap gap-2.5">
+          <div class="flex flex-wrap gap-2.5 mobile-tabs-rail">
             <button type="button" data-filter="all"
-              class="treat-filter px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-espresso text-ivory transition-all">All
+              class="treat-filter px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] bg-espresso text-ivory transition-all">All
               Specialties</button>
             <button type="button" data-filter="skin"
-              class="treat-filter px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Skin
+              class="treat-filter px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Skin
               &amp; Peels</button>
             <button type="button" data-filter="hair"
-              class="treat-filter px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Hair
+              class="treat-filter px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Hair
               &amp; Scalp</button>
             <button type="button" data-filter="aesthetics"
-              class="treat-filter px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Aesthetics</button>
+              class="treat-filter px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Aesthetics</button>
             <button type="button" data-filter="acne"
-              class="treat-filter px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Acne
+              class="treat-filter px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-[0.14em] bg-sand text-espresso hover:bg-parchment transition-all border border-espresso/15">Acne
               &amp; Lasers</button>
           </div>
         </div>
 
         <!-- Dual Sliding Marquee for All Specialties (Top: L->R, Bottom: R->L) -->
-        <div id="treatments-marquee" class="space-y-6" aria-label="Featured treatments showcase">
+        <div id="treatments-marquee" class="space-y-4 sm:space-y-6" aria-label="Featured treatments showcase">
           <div class="treat-marquee-row">
             <div id="treatments-marquee-top" class="treat-marquee-track treat-track-right"></div>
           </div>
@@ -1214,7 +1410,7 @@
         </div>
 
         <!-- Complete Searchable 19-Service Directory -->
-        <div id="care-directory" class="atelier-frame mt-12 bg-sand rounded-2xl p-7 sm:p-9 border border-gold/30 shadow-[0_18px_42px_-28px_rgba(30,20,15,0.2)] scroll-mt-24">
+        <div id="care-directory" class="atelier-frame mt-8 sm:mt-12 bg-sand rounded-2xl p-5 sm:p-9 border border-gold/30 shadow-[0_18px_42px_-28px_rgba(30,20,15,0.2)] scroll-mt-24">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
               <p class="text-xs font-bold uppercase tracking-[0.2em] text-cocoa">Complete Directory</p>
@@ -1227,7 +1423,7 @@
                 class="w-full rounded-full bg-ivory border border-espresso/20 focus:border-cocoa px-5 py-2.5 text-sm text-espresso placeholder:text-espresso-soft/60 focus:outline-none" />
             </div>
           </div>
-          <div id="directory-list" class="flex flex-wrap gap-2.5 text-sm font-medium text-espresso">
+          <div id="directory-list" class="flex flex-wrap gap-2 sm:gap-2.5 text-xs sm:text-sm font-medium text-espresso">
             <a href="#booking" data-prefill="Acne treatment"
               class="prefill-trigger directory-pill px-4 py-2 rounded-full bg-ivory border border-espresso/15 hover:border-cocoa hover:bg-espresso hover:text-ivory transition-colors">Acne
               Treatment</a>
@@ -1290,52 +1486,52 @@
     <!-- ===================================================================== -->
     <!-- 7. INTERACTIVE CONCERN PROTOCOL FINDER                                -->
     <!-- ===================================================================== -->
-    <section id="concerns" class="py-14 lg:py-20 bg-sand/70 border-b border-espresso/10">
-      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
+    <section id="concerns" class="py-10 sm:py-14 lg:py-20 bg-sand/70 border-b border-espresso/10">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
         <div class="mb-10">
           <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">Guided Diagnosis</p>
-          <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+          <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
             What Brings You to <span class="font-editorial-italic text-cocoa">SKINIC?</span>
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <div class="lg:col-span-5 flex flex-col gap-3">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-stretch">
+          <div class="lg:col-span-5 flex flex-col gap-3 mobile-tabs-rail">
             <button type="button" data-concern-key="pigmentation"
-              class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-espresso text-ivory border-espresso shadow-md">
-              <span class="font-serif text-xl sm:text-2xl font-medium">Pigmentation &amp; Dark Spots</span>
+              class="concern-item text-left px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl border transition-all flex items-center justify-between gap-2 bg-espresso text-ivory border-espresso shadow-md">
+              <span class="font-serif text-base sm:text-2xl font-medium">Pigmentation &amp; Dark Spots</span>
               <span class="text-gold text-base">→</span>
             </button>
             <button type="button" data-concern-key="acne"
-              class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
-              <span class="font-serif text-xl sm:text-2xl font-medium">Acne, Breakouts &amp; Scars</span>
+              class="concern-item text-left px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl border transition-all flex items-center justify-between gap-2 bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
+              <span class="font-serif text-base sm:text-2xl font-medium">Acne, Breakouts &amp; Scars</span>
               <span class="text-cocoa text-base">→</span>
             </button>
             <button type="button" data-concern-key="hairfall"
-              class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
-              <span class="font-serif text-xl sm:text-2xl font-medium">Hair Fall &amp; Scalp Concerns</span>
+              class="concern-item text-left px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl border transition-all flex items-center justify-between gap-2 bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
+              <span class="font-serif text-base sm:text-2xl font-medium">Hair Fall &amp; Scalp Concerns</span>
               <span class="text-cocoa text-base">→</span>
             </button>
             <button type="button" data-concern-key="aging"
-              class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
-              <span class="font-serif text-xl sm:text-2xl font-medium">Wrinkles &amp; Skin Laxity</span>
+              class="concern-item text-left px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl border transition-all flex items-center justify-between gap-2 bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
+              <span class="font-serif text-base sm:text-2xl font-medium">Wrinkles &amp; Skin Laxity</span>
               <span class="text-cocoa text-base">→</span>
             </button>
             <button type="button" data-concern-key="laser"
-              class="concern-item text-left px-6 py-4 rounded-xl border transition-all flex items-center justify-between bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
-              <span class="font-serif text-xl sm:text-2xl font-medium">Unwanted Hair &amp; Skin Tags</span>
+              class="concern-item text-left px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl border transition-all flex items-center justify-between gap-2 bg-ivory text-espresso border-espresso/15 hover:border-cocoa">
+              <span class="font-serif text-base sm:text-2xl font-medium">Unwanted Hair &amp; Skin Tags</span>
               <span class="text-cocoa text-base">→</span>
             </button>
           </div>
 
           <div id="proto-card"
-            class="lg:col-span-7 bg-ivory rounded-2xl p-8 sm:p-10 border border-espresso/15 flex flex-col justify-between shadow-sm">
+            class="lg:col-span-7 bg-ivory rounded-2xl p-5 sm:p-10 border border-espresso/15 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-center justify-between gap-4 pb-5 border-b border-espresso/10">
                 <div>
                   <span id="proto-category" class="text-xs font-bold uppercase tracking-[0.2em] text-cocoa">Clinical
                     Dermatology</span>
-                  <h3 id="proto-title" class="font-serif text-3xl sm:text-4xl font-medium text-espresso mt-1">
+                  <h3 id="proto-title" class="font-serif text-2xl sm:text-4xl font-medium text-espresso mt-1">
                     Pigmentation &amp; Dark Spots</h3>
                 </div>
                 <span
@@ -1348,7 +1544,7 @@
                 Targeted peels, laser toning, and medical skincare for pigmentation.
               </p>
 
-              <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="mt-6 sm:mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 mobile-slider-md mobile-slider-compact">
                 <div class="bg-sand/70 rounded-xl p-4 border border-espresso/10">
                   <p class="text-xs font-bold uppercase tracking-[0.14em] text-cocoa">Options</p>
                   <p id="proto-treatments" class="text-sm font-bold text-espresso mt-1.5">Peels + Laser + Skincare</p>
@@ -1379,15 +1575,15 @@
     <!-- ===================================================================== -->
     <!-- 8. MEET DR. APURVA ADITI + FULL QUALIFICATIONS DRAWER                 -->
     <!-- ===================================================================== -->
-    <section id="founder" class="py-14 lg:py-20 bg-espresso-deep text-ivory relative overflow-hidden">
+    <section id="founder" class="py-10 sm:py-14 lg:py-20 bg-espresso-deep text-ivory relative overflow-hidden">
       <div
         class="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-cocoa/20 blur-3xl pointer-events-none ambient-drift">
       </div>
 
-      <div class="relative z-10 max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           <!-- Left: Arched Portrait Showcase -->
-          <div class="lg:col-span-5 relative max-w-md mx-auto lg:max-w-none w-full">
+          <div class="lg:col-span-5 relative max-w-[260px] sm:max-w-sm lg:max-w-none mx-auto w-full">
             <div class="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_center,rgba(203,164,103,0.16),transparent_68%)] pointer-events-none"></div>
             <div class="atelier-frame relative z-10 p-3.5 border border-gold/45 rounded-t-[220px] rounded-b-2xl bg-espresso/45 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.6)]">
               <div class="aspect-[4/4.6] rounded-t-[208px] rounded-b-xl overflow-hidden bg-espresso ring-1 ring-gold/25">
@@ -1409,9 +1605,9 @@
                 Dermatologist</span>
             </div>
 
-            <h2 class="font-serif text-4xl sm:text-5xl lg:text-[54px] font-medium text-ivory leading-[1.08]">
+            <h2 class="font-serif text-[32px] sm:text-5xl lg:text-[54px] font-medium text-ivory leading-[1.08]">
               Dr. Apurva Aditi
-              <span class="block font-editorial-italic text-2xl sm:text-3xl text-gold-light mt-2">
+              <span class="block font-editorial-italic text-xl sm:text-3xl text-gold-light mt-1.5 sm:mt-2">
                 M.D. Dermatology, Venereology &amp; Leprosy
               </span>
             </h2>
@@ -1427,21 +1623,21 @@
               M.D. dermatologist with 6+ years of experience (LHMC, N.K.P. Salve Institute, Kaya Clinic Green Park) and founder of Skinic MD.
             </p>
 
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-5 py-6 border-y border-ivory/15">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 py-5 sm:py-6 border-y border-ivory/15 mobile-slider-md mobile-slider-compact">
               <div>
-                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-medium">6+</p>
+                <p class="font-serif text-2xl sm:text-4xl text-gold-light font-medium">6+</p>
                 <p class="text-xs uppercase tracking-[0.12em] text-ivory/80 mt-1">Years Experience</p>
               </div>
               <div>
-                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-medium">19</p>
+                <p class="font-serif text-2xl sm:text-4xl text-gold-light font-medium">19</p>
                 <p class="text-xs uppercase tracking-[0.12em] text-ivory/80 mt-1">Treatments Offered</p>
               </div>
               <div>
-                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-medium">LHMC</p>
+                <p class="font-serif text-2xl sm:text-4xl text-gold-light font-medium">LHMC</p>
                 <p class="text-xs uppercase tracking-[0.12em] text-ivory/80 mt-1">MBBS, Delhi Univ.</p>
               </div>
               <div>
-                <p class="font-serif text-3xl sm:text-4xl text-gold-light font-medium">CBAM</p>
+                <p class="font-serif text-2xl sm:text-4xl text-gold-light font-medium">CBAM</p>
                 <p class="text-xs uppercase tracking-[0.12em] text-ivory/80 mt-1">Canada Certified</p>
               </div>
             </div>
@@ -1453,7 +1649,7 @@
                 <p class="text-[10px] font-bold uppercase tracking-[0.26em] text-ivory/65 mt-1.5">Founder &amp; Chief Dermatologist</p>
               </div>
               <a href="#booking"
-                class="btn-royal-gold inline-flex items-center gap-3 text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] px-8 py-4 rounded-full">
+                class="btn-royal-gold inline-flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full">
                 <span>Consult With Dr. Apurva</span>
                 <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
               </a>
@@ -1462,7 +1658,7 @@
         </div>
 
         <!-- Tabbed Qualifications & Clinical Background -->
-        <div class="mt-12 bg-espresso rounded-3xl p-6 sm:p-9 border border-gold/25">
+        <div class="mt-8 sm:mt-12 bg-espresso rounded-2xl sm:rounded-3xl p-5 sm:p-9 border border-gold/25">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-ivory/15">
             <div>
               <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold-light">Qualifications &amp; Background
@@ -1470,7 +1666,7 @@
               <h3 class="font-serif text-2xl sm:text-3xl font-medium text-ivory mt-1">The Experience Behind Your Care
               </h3>
             </div>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mobile-tabs-rail">
               <button type="button" data-cv-tab="practice"
                 class="cv-tab px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.12em] bg-gold text-espresso-deep transition-all">01
                 · Practice</button>
@@ -1486,7 +1682,7 @@
             </div>
           </div>
 
-          <div id="cv-panel-practice" class="cv-panel pt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div id="cv-panel-practice" class="cv-panel pt-5 sm:pt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mobile-slider-md">
             <div class="bg-espresso-deep/70 rounded-2xl p-6 border border-ivory/10">
               <p class="text-xs font-bold text-gold-light uppercase tracking-wider">Feb 2024 – Present</p>
               <h4 class="font-serif text-2xl text-ivory mt-1">Consultant Dermatologist</h4>
@@ -1507,7 +1703,7 @@
             </div>
           </div>
 
-          <div id="cv-panel-education" class="cv-panel hidden pt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div id="cv-panel-education" class="cv-panel hidden pt-5 sm:pt-6 grid grid-cols-1 md:grid-cols-3 gap-5 mobile-slider-md">
             <div class="bg-espresso-deep/70 rounded-2xl p-6 border border-ivory/10">
               <p class="text-xs font-bold text-gold-light uppercase tracking-wider">2021 – 2022</p>
               <h4 class="font-serif text-2xl text-ivory mt-1">CBAM, Canada</h4>
@@ -1525,7 +1721,7 @@
             </div>
           </div>
 
-          <div id="cv-panel-expertise" class="cv-panel hidden pt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div id="cv-panel-expertise" class="cv-panel hidden pt-5 sm:pt-6 grid grid-cols-1 md:grid-cols-3 gap-5 mobile-slider-md">
             <div class="bg-espresso-deep/70 rounded-2xl p-6 border border-ivory/10">
               <h4 class="font-serif text-2xl text-ivory mb-2">Lasers &amp; Devices</h4>
               <p class="text-sm text-ivory/80 leading-relaxed">HIFU, Thermage, MNRF, Dermafrac, CO2, Er:Glass, Q-switched Nd:YAG, and diode.</p>
@@ -1540,7 +1736,7 @@
             </div>
           </div>
 
-          <div id="cv-panel-research" class="cv-panel hidden pt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div id="cv-panel-research" class="cv-panel hidden pt-5 sm:pt-6 grid grid-cols-1 md:grid-cols-2 gap-5 mobile-slider-md">
             <div class="bg-espresso-deep/70 rounded-2xl p-6 border border-ivory/10">
               <h4 class="font-serif text-2xl text-ivory mb-3">Published Research</h4>
               <ul class="space-y-2 text-sm text-ivory/80">
@@ -1565,18 +1761,18 @@
     <!-- ===================================================================== -->
     <!-- 9. WHY CHOOSE SKINIC & INTERACTIVE VISUAL COMPARISON                  -->
     <!-- ===================================================================== -->
-    <section id="results" class="py-14 lg:py-20 bg-ivory border-b border-espresso/10">
-      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
+    <section id="results" class="py-10 sm:py-14 lg:py-20 bg-ivory border-b border-espresso/10">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
         <!-- Why Choose Skinic 4-Card Row -->
         <div class="mb-12">
           <div class="mb-8">
             <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">Why Skinic</p>
-            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+            <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
               Medical Expertise. <span class="font-editorial-italic text-cocoa">Thoughtful Care.</span>
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mobile-slider-lg mobile-slider-compact mobile-slider-bleed">
             <div class="royal-card-elev bg-gradient-to-b from-sand/90 to-ivory rounded-2xl p-6 border border-gold/25 hover:border-gold/60 transition-all">
               <span class="text-xs font-bold uppercase tracking-[0.16em] text-cocoa">01 · Assessment</span>
               <h3 class="font-serif text-2xl font-semibold text-espresso mt-2">A Personal Assessment</h3>
@@ -1598,8 +1794,8 @@
 
         <!-- 3 Draggable Comparison Sliders -->
         <div class="pt-8 border-t border-espresso/10">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-            <h3 class="font-serif text-3xl sm:text-4xl font-medium text-espresso">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <h3 class="font-serif text-2xl sm:text-4xl font-medium text-espresso">
               Illustrative Focus Areas
             </h3>
             <p class="text-sm text-espresso-soft">
@@ -1607,7 +1803,7 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mobile-slider-md mobile-slider-wide mobile-slider-bleed">
             <div class="royal-card-elev bg-gradient-to-b from-ivory to-sand/75 rounded-2xl p-4 border border-gold/25 transition-all">
               <div class="ba-box relative overflow-hidden rounded-xl aspect-[4/3.2] bg-parchment select-none">
                 <img src="assets/home/stock-acne-refinement.jpg" alt="Illustrative acne and skin texture renewal"
@@ -1693,18 +1889,18 @@
     <!-- ===================================================================== -->
     <!-- 10. YOUR FIRST VISIT (4-Step Checklist + Editorial Collage)           -->
     <!-- ===================================================================== -->
-    <section id="your-visit" class="py-14 lg:py-20 bg-sand">
+    <section id="your-visit" class="py-10 sm:py-14 lg:py-20 bg-sand">
       <div
-        class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         <div class="lg:col-span-6 space-y-6">
           <div>
             <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">First Visit</p>
-            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+            <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
               During Your <span class="font-editorial-italic text-cocoa">Consultation</span>
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mobile-slider-md mobile-slider-compact mobile-slider-bleed">
             <div class="royal-card-elev bg-gradient-to-b from-ivory to-sand/45 rounded-2xl p-5 border border-gold/25 hover:border-gold/60 transition-all">
               <p class="text-xs font-bold uppercase tracking-[0.14em] text-cocoa">Step I</p>
               <h3 class="font-serif text-xl font-semibold text-espresso mt-1.5">Your Concern, in Detail</h3>
@@ -1736,26 +1932,22 @@
           </div>
         </div>
 
-        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
-          <div class="space-y-4">
-            <div class="rounded-2xl overflow-hidden aspect-[4/4.6] bg-parchment">
-              <img src="assets/home/patient-consult.webp" alt="Clinician reviewing patient notes" loading="lazy"
-                class="w-full h-full object-cover" />
-            </div>
-            <div class="rounded-2xl overflow-hidden aspect-[4/3.6] bg-parchment">
-              <img src="assets/home/stock-exam-room.jpg" alt="Clinical examination room" loading="lazy"
-                class="w-full h-full object-cover" />
-            </div>
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4 items-center mobile-slider-md mobile-slider-compact mobile-slider-bleed">
+          <div class="rounded-2xl overflow-hidden aspect-[4/4.2] bg-parchment">
+            <img src="assets/home/patient-consult.webp" alt="Clinician reviewing patient notes" loading="lazy"
+              class="w-full h-full object-cover" />
           </div>
-          <div class="space-y-4 pt-6">
-            <div class="rounded-2xl overflow-hidden aspect-[4/3.6] bg-parchment">
-              <img src="assets/home/stock-peel-application.jpg" alt="Practitioner applying a skin peel" loading="lazy"
-                class="w-full h-full object-cover" />
-            </div>
-            <div class="rounded-2xl overflow-hidden aspect-[4/4.6] bg-parchment">
-              <img src="assets/home/stock-scalp-procedure.jpg" alt="Scalp care procedure" loading="lazy"
-                class="w-full h-full object-cover object-top" />
-            </div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/4.2] md:aspect-[4/3.6] bg-parchment md:translate-y-4">
+            <img src="assets/home/stock-peel-application.jpg" alt="Practitioner applying a skin peel" loading="lazy"
+              class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/4.2] md:aspect-[4/3.6] bg-parchment">
+            <img src="assets/home/stock-exam-room.jpg" alt="Clinical examination room" loading="lazy"
+              class="w-full h-full object-cover" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/4.2] bg-parchment md:translate-y-4">
+            <img src="assets/home/stock-scalp-procedure.jpg" alt="Scalp care procedure" loading="lazy"
+              class="w-full h-full object-cover object-top" />
           </div>
         </div>
       </div>
@@ -1764,10 +1956,10 @@
     <!-- ===================================================================== -->
     <!-- 11. FROM THE DOCTOR (@skinic_md) + PATIENT FAQs                       -->
     <!-- ===================================================================== -->
-    <section id="faqs" class="py-14 lg:py-20 bg-ivory border-y border-espresso/10">
-      <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14 space-y-14">
+    <section id="faqs" class="py-10 sm:py-14 lg:py-20 bg-ivory border-y border-espresso/10">
+      <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14 space-y-14">
         <!-- From the Doctor Social Row -->
-        <div id="media" class="bg-sand/85 rounded-3xl p-7 sm:p-10 border border-espresso/15 scroll-mt-24">
+        <div id="media" class="bg-sand/85 rounded-2xl sm:rounded-3xl p-5 sm:p-10 border border-espresso/15 scroll-mt-24">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-7">
             <div>
               <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa">From the Dermatologist</p>
@@ -1789,7 +1981,7 @@
             </a>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mobile-slider-md">
             <a href="https://www.instagram.com/reel/DeMeRmnzxSX/" target="_blank" rel="noopener noreferrer"
               class="group bg-ivory rounded-2xl p-6 border border-espresso/10 hover:border-cocoa transition-all flex flex-col justify-between">
               <div>
@@ -1860,7 +2052,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div class="lg:col-span-5">
             <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">FAQs</p>
-            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+            <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
               Have <span class="font-editorial-italic text-cocoa">Questions?</span>
             </h2>
             <a href="#booking"
@@ -1870,9 +2062,9 @@
           </div>
 
           <div class="lg:col-span-7 space-y-3">
-            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-6 py-5">
+            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-4 py-3.5 sm:px-6 sm:py-5">
               <summary
-                class="flex items-center justify-between gap-4 cursor-pointer font-serif text-xl sm:text-2xl font-medium text-espresso">
+                class="flex items-center justify-between gap-3 cursor-pointer font-serif text-lg sm:text-2xl font-medium text-espresso">
                 <span>Do I need to know which treatment I want?</span>
                 <span class="faq-plus text-2xl text-cocoa transition-transform">+</span>
               </summary>
@@ -1881,9 +2073,9 @@
               </p>
             </details>
 
-            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-6 py-5">
+            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-4 py-3.5 sm:px-6 sm:py-5">
               <summary
-                class="flex items-center justify-between gap-4 cursor-pointer font-serif text-xl sm:text-2xl font-medium text-espresso">
+                class="flex items-center justify-between gap-3 cursor-pointer font-serif text-lg sm:text-2xl font-medium text-espresso">
                 <span>Can I visit just for a skincare routine?</span>
                 <span class="faq-plus text-2xl text-cocoa transition-transform">+</span>
               </summary>
@@ -1892,9 +2084,9 @@
               </p>
             </details>
 
-            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-6 py-5">
+            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-4 py-3.5 sm:px-6 sm:py-5">
               <summary
-                class="flex items-center justify-between gap-4 cursor-pointer font-serif text-xl sm:text-2xl font-medium text-espresso">
+                class="flex items-center justify-between gap-3 cursor-pointer font-serif text-lg sm:text-2xl font-medium text-espresso">
                 <span>Do you offer both skin and hair care?</span>
                 <span class="faq-plus text-2xl text-cocoa transition-transform">+</span>
               </summary>
@@ -1903,9 +2095,9 @@
               </p>
             </details>
 
-            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-6 py-5">
+            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-4 py-3.5 sm:px-6 sm:py-5">
               <summary
-                class="flex items-center justify-between gap-4 cursor-pointer font-serif text-xl sm:text-2xl font-medium text-espresso">
+                class="flex items-center justify-between gap-3 cursor-pointer font-serif text-lg sm:text-2xl font-medium text-espresso">
                 <span>What should I ask before a treatment?</span>
                 <span class="faq-plus text-2xl text-cocoa transition-transform">+</span>
               </summary>
@@ -1914,9 +2106,9 @@
               </p>
             </details>
 
-            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-6 py-5">
+            <details class="bg-sand/70 rounded-2xl border border-espresso/15 px-4 py-3.5 sm:px-6 sm:py-5">
               <summary
-                class="flex items-center justify-between gap-4 cursor-pointer font-serif text-xl sm:text-2xl font-medium text-espresso">
+                class="flex items-center justify-between gap-3 cursor-pointer font-serif text-lg sm:text-2xl font-medium text-espresso">
                 <span>How do I arrange my first consultation?</span>
                 <span class="faq-plus text-2xl text-cocoa transition-transform">+</span>
               </summary>
@@ -1932,20 +2124,20 @@
     <!-- ===================================================================== -->
     <!-- 12. THE SKINIC CLINIC & APPOINTMENT ENQUIRY                           -->
     <!-- ===================================================================== -->
-    <section id="clinic" class="py-14 lg:py-20 bg-sand">
+    <section id="clinic" class="py-10 sm:py-14 lg:py-20 bg-sand">
       <div
-        class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+        class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
         <!-- Left: Clinic Bento Gallery -->
         <div class="lg:col-span-6 flex flex-col justify-between gap-6">
           <div>
             <p class="text-[13px] font-bold uppercase tracking-[0.2em] text-cocoa mb-2">Green Park, New Delhi</p>
-            <h2 class="font-serif text-4xl sm:text-5xl font-medium text-espresso leading-[1.12]">
+            <h2 class="font-serif text-[30px] sm:text-5xl font-medium text-espresso leading-[1.12]">
               Calm Clinical Care in <span class="font-editorial-italic text-cocoa">New Delhi</span>
             </h2>
           </div>
 
           <div class="grid grid-cols-12 gap-4 flex-1">
-            <div class="col-span-7 rounded-2xl overflow-hidden bg-parchment min-h-[260px]">
+            <div class="col-span-7 rounded-2xl overflow-hidden bg-parchment min-h-[190px] sm:min-h-[260px]">
               <img src="assets/home/medical-room.webp" alt="Skinic clinical consultation room" loading="lazy"
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
@@ -1961,7 +2153,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-espresso-soft">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-espresso-soft mobile-slider-md mobile-slider-bleed">
             <div class="bg-ivory rounded-xl p-5 border border-espresso/15">
               <p class="text-xs font-bold uppercase tracking-[0.16em] text-cocoa mb-1">Location</p>
               <p class="font-bold text-espresso text-base">E-35, Green Park Main</p>
@@ -2004,10 +2196,10 @@
 
         <!-- Right: Appointment Concierge Card -->
         <div id="booking"
-          class="atelier-frame lg:col-span-6 bg-gradient-to-b from-ivory to-[#F8F1E6] rounded-3xl p-8 sm:p-11 border border-gold/45 shadow-[0_24px_56px_-24px_rgba(30,20,15,0.22)] scroll-mt-24 flex flex-col justify-center">
+          class="atelier-frame lg:col-span-6 bg-gradient-to-b from-ivory to-[#F8F1E6] rounded-2xl sm:rounded-3xl p-5 sm:p-11 border border-gold/45 shadow-[0_24px_56px_-24px_rgba(30,20,15,0.22)] scroll-mt-24 flex flex-col justify-center">
           <p class="text-[13px] font-bold uppercase tracking-[0.24em] text-cocoa mb-2">Appointment Enquiry</p>
           <div class="atelier-rule w-20 mb-2" aria-hidden="true"></div>
-          <h3 class="font-serif text-3xl sm:text-4xl font-medium text-espresso leading-tight">
+          <h3 class="font-serif text-2xl sm:text-4xl font-medium text-espresso leading-tight">
             Let&rsquo;s Talk About Your Concern
           </h3>
           <p class="text-[15px] text-espresso-soft font-normal mt-2 mb-7">
@@ -2020,14 +2212,14 @@
                 <label for="input-name"
                   class="block text-xs font-bold uppercase tracking-[0.14em] text-espresso mb-2">Full Name *</label>
                 <input id="input-name" type="text" required placeholder="Enter your name"
-                  class="w-full rounded-xl royal-input px-4 py-3 text-base text-espresso placeholder:text-espresso-soft/50 focus:outline-none transition-all" />
+                  class="w-full rounded-xl royal-input px-3.5 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-espresso placeholder:text-espresso-soft/50 focus:outline-none transition-all" />
               </div>
               <div>
                 <label for="input-phone"
                   class="block text-xs font-bold uppercase tracking-[0.14em] text-espresso mb-2">Phone / WhatsApp
                   *</label>
                 <input id="input-phone" type="tel" required placeholder="+91 98XXX XXXXX"
-                  class="w-full rounded-xl royal-input px-4 py-3 text-base text-espresso placeholder:text-espresso-soft/50 focus:outline-none transition-all" />
+                  class="w-full rounded-xl royal-input px-3.5 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-espresso placeholder:text-espresso-soft/50 focus:outline-none transition-all" />
               </div>
             </div>
 
@@ -2036,24 +2228,24 @@
                 Focus</span>
               <div class="flex flex-wrap gap-2" id="concern-chip-group">
                 <button type="button" data-value="General dermatology consultation"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-espresso text-ivory border border-espresso transition-all">General
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-espresso text-ivory border border-espresso transition-all">General
                   Dermatology</button>
                 <button type="button" data-value="Pigmentation treatment"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Pigmentation</button>
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Pigmentation</button>
                 <button type="button" data-value="Hair fall & hair loss"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Hair
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Hair
                   &amp; Scalp</button>
                 <button type="button" data-value="Acne treatment"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Acne
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Acne
                   &amp; Scars</button>
                 <button type="button" data-value="Scars & open pores"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Scars
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Scars
                   &amp; Pores</button>
                 <button type="button" data-value="Skin sagging treatments"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Firming
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Firming
                   &amp; Lift</button>
                 <button type="button" data-value="Wrinkle treatments"
-                  class="concern-chip px-4 py-2 rounded-full text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Wrinkle
+                  class="concern-chip px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-sand/75 text-espresso border border-espresso/20 hover:border-cocoa transition-all">Wrinkle
                   Care</button>
               </div>
               <input type="hidden" id="selected-concern" value="General dermatology consultation" />
@@ -2064,14 +2256,14 @@
                 <label for="input-date"
                   class="block text-xs font-bold uppercase tracking-[0.14em] text-espresso mb-2">Preferred Date</label>
                 <input id="input-date" type="date"
-                  class="w-full rounded-xl royal-input px-4 py-3 text-base text-espresso focus:outline-none transition-all" />
+                  class="w-full rounded-xl royal-input px-3.5 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-espresso focus:outline-none transition-all" />
               </div>
               <div>
                 <label for="input-slot"
                   class="block text-xs font-bold uppercase tracking-[0.14em] text-espresso mb-2">Preferred
                   Window</label>
                 <select id="input-slot"
-                  class="w-full rounded-xl royal-input px-4 py-3 text-base text-espresso focus:outline-none transition-all">
+                  class="w-full rounded-xl royal-input px-3.5 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-espresso focus:outline-none transition-all">
                   <option value="Morning">Morning</option>
                   <option value="Afternoon">Afternoon</option>
                   <option value="Evening">Evening</option>
@@ -2095,9 +2287,9 @@
   <!-- ===================================================================== -->
   <!-- 13. LUXURY FOOTER WITH OFFICIAL LOGO & WATERMARK                      -->
   <!-- ===================================================================== -->
-  <footer class="relative bg-espresso-deep text-ivory/85 pt-14 pb-6 border-t border-gold/25 overflow-hidden">
-    <div class="max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-ivory/15">
+  <footer class="relative bg-espresso-deep text-ivory/85 pt-10 sm:pt-14 pb-6 border-t border-gold/25 overflow-hidden">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-7 sm:gap-10 pb-8 sm:pb-12 border-b border-ivory/15">
         <div class="lg:col-span-4 space-y-5">
           <div class="inline-flex items-center bg-ivory px-6 py-3 rounded-2xl border border-gold/55 ring-1 ring-inset ring-gold/30 shadow-[0_12px_30px_-14px_rgba(203,164,103,0.35)]">
             <img src="assets/brand/skinic-logo.png" alt="Skinic by Dr. Apurva" width="325" height="260" loading="lazy"
@@ -2636,6 +2828,9 @@
         };
         syncImageWidth();
         window.addEventListener('resize', syncImageWidth);
+        if ('ResizeObserver' in window) {
+          new ResizeObserver(syncImageWidth).observe(box);
+        }
 
         slider.addEventListener('input', (e) => {
           const pct = `${e.target.value}%`;
